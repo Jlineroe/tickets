@@ -1,0 +1,1223 @@
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\AIBTicketsMVC.dll.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\csc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\csc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\csc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\csi.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\csi.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\System.AppContext.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\vbc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\vbc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\vbc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\VBCSCompiler.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\Antlr3.Runtime.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\Newtonsoft.Json.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.Helpers.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.Mvc.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.Optimization.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.WebPages.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\WebGrease.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.Helpers.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.Mvc.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.Optimization.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.WebPages.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\System.Web.WebPages.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\Newtonsoft.Json.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\Antlr3.Runtime.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\es\System.Web.Helpers.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\es\System.Web.Mvc.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\es\System.Web.Optimization.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\es\System.Web.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\es\System.Web.WebPages.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\obj\Debug\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\AIBTicketsMVC.dll.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\csc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\csc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\csc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\csi.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\csi.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\System.AppContext.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\vbc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\vbc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\vbc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\VBCSCompiler.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\Antlr3.Runtime.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\Newtonsoft.Json.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.Helpers.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.Mvc.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.Optimization.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.WebPages.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.WebPages.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\WebGrease.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.Helpers.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.Mvc.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.Optimization.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.WebPages.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\System.Web.WebPages.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\Newtonsoft.Json.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\Antlr3.Runtime.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\es\System.Web.Helpers.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\es\System.Web.Mvc.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\es\System.Web.Optimization.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\es\System.Web.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\es\System.Web.WebPages.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\obj\Debug\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMCV_V1\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\AIBTicketsMVC.dll.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\csc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\csc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\csc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\csi.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\csi.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\System.AppContext.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\vbc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\vbc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\vbc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\VBCSCompiler.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\Antlr3.Runtime.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\Newtonsoft.Json.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.Helpers.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.Mvc.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.Optimization.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.WebPages.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.WebPages.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\WebGrease.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.Helpers.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.Mvc.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.Optimization.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.WebPages.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\System.Web.WebPages.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\Newtonsoft.Json.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\Antlr3.Runtime.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\es\System.Web.Helpers.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\es\System.Web.Mvc.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\es\System.Web.Optimization.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\es\System.Web.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\es\System.Web.WebPages.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\obj\Debug\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC - Julio\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\ClosedXML.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\DocumentFormat.OpenXml.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\ExcelNumberFormat.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\FastMember.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\ClosedXML.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\ClosedXML.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\DocumentFormat.OpenXml.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTicketsMVC\bin\ExcelNumberFormat.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\AIBTicketsMVC.dll.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\csc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\csc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\csc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\csi.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\csi.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\System.AppContext.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\vbc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\vbc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\vbc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\VBCSCompiler.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\Antlr3.Runtime.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\ClosedXML.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\DocumentFormat.OpenXml.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\ExcelNumberFormat.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\FastMember.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\Newtonsoft.Json.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.Helpers.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.Mvc.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.Optimization.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.WebPages.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.WebPages.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\WebGrease.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\ClosedXML.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\ClosedXML.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\DocumentFormat.OpenXml.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\ExcelNumberFormat.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.Helpers.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.Mvc.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.Optimization.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.WebPages.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\System.Web.WebPages.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\Newtonsoft.Json.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\Antlr3.Runtime.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\es\System.Web.Helpers.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\es\System.Web.Mvc.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\es\System.Web.Optimization.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\es\System.Web.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\es\System.Web.WebPages.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\obj\Debug\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\AIBTickets PQR\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\AIBTicketsMVC.dll.config
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\AIBTicketsMVC.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\AIBTicketsMVC.pdb
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\csc.exe
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\csc.exe.config
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\csc.rsp
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\csi.exe
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\csi.rsp
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.AppContext.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.Collections.Immutable.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.IO.FileSystem.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.Reflection.Metadata.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\vbc.exe
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\vbc.exe.config
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\vbc.rsp
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\VBCSCompiler.exe
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\VBCSCompiler.exe.config
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Antlr3.Runtime.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\ClosedXML.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\DocumentFormat.OpenXml.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\ExcelNumberFormat.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\FastMember.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Security.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Web.Infrastructure.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Newtonsoft.Json.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Owin.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Helpers.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Mvc.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Optimization.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Razor.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Deployment.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Razor.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\WebGrease.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\ClosedXML.pdb
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\ClosedXML.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\DocumentFormat.OpenXml.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\ExcelNumberFormat.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.Core.pdb
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Security.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Helpers.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Mvc.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Optimization.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Razor.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Deployment.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Razor.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Newtonsoft.Json.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Antlr3.Runtime.pdb
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.Helpers.resources.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.Mvc.resources.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.Optimization.resources.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.Razor.resources.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.WebPages.resources.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.dll
+D:\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\AIBTicketsMVC.dll.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\csc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\csc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\csc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\csi.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\csi.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.AppContext.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\vbc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\vbc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\vbc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\VBCSCompiler.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Antlr3.Runtime.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\ClosedXML.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\DocumentFormat.OpenXml.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\ExcelNumberFormat.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\FastMember.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Security.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Newtonsoft.Json.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Owin.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Helpers.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Mvc.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Optimization.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\WebGrease.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\ClosedXML.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\ClosedXML.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\DocumentFormat.OpenXml.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\ExcelNumberFormat.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Security.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Helpers.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Mvc.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Optimization.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Newtonsoft.Json.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Antlr3.Runtime.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.Helpers.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.Mvc.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.Optimization.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.WebPages.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\AIBTicketsMVC.dll.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\AIBTicketsMVC.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\csc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\csc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\csc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\csi.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\csi.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\System.AppContext.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\vbc.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\vbc.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\vbc.rsp
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\VBCSCompiler.exe
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Antlr3.Runtime.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\ClosedXML.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\DocumentFormat.OpenXml.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\ExcelNumberFormat.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\FastMember.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Security.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Newtonsoft.Json.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Owin.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.Helpers.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.Mvc.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.Optimization.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Razor.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\WebGrease.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\ClosedXML.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\ClosedXML.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\DocumentFormat.OpenXml.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\ExcelNumberFormat.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.Owin.Security.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.Helpers.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.Mvc.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.Optimization.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\System.Web.WebPages.Razor.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Newtonsoft.Json.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Antlr3.Runtime.pdb
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\es\System.Web.Helpers.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\es\System.Web.Mvc.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\es\System.Web.Optimization.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\es\System.Web.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\es\System.Web.WebPages.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.dll
+C:\Users\bmercado\Google Drive\Proyectos\PROYECTOS BPO\3. AIBTICKETS\Tickets Unificado\obj\Debug\AIBTicketsMVC.pdb
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\wwwroot\assets\js\Forms\WorkOrderSolutions.js
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\AIBTicketsMVC.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\AIBTicketsMVC.pdb
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\csc.exe
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\csc.exe.config
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\csc.rsp
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\csi.exe
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\csi.rsp
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\Microsoft.CSharp.Core.targets
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\System.AppContext.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\System.Collections.Immutable.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\System.Diagnostics.StackTrace.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\System.IO.FileSystem.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\System.IO.FileSystem.Primitives.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\System.Reflection.Metadata.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\vbc.exe
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\vbc.exe.config
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\vbc.rsp
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\VBCSCompiler.exe
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\roslyn\VBCSCompiler.exe.config
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Antlr3.Runtime.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\ClosedXML.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\DocumentFormat.OpenXml.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\ExcelNumberFormat.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\FastMember.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.AspNet.SignalR.Core.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.Owin.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.Owin.Host.SystemWeb.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.Owin.Security.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.Web.Infrastructure.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Newtonsoft.Json.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Owin.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.Helpers.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.Mvc.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.Optimization.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.Razor.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.WebPages.Deployment.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.WebPages.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.WebPages.Razor.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\WebGrease.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Antlr3.Runtime.pdb
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\ClosedXML.pdb
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\ClosedXML.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\DocumentFormat.OpenXml.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\ExcelNumberFormat.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.AspNet.SignalR.Core.pdb
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.AspNet.SignalR.Core.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.Owin.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.Owin.Host.SystemWeb.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Microsoft.Owin.Security.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\Newtonsoft.Json.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.Helpers.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.Mvc.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.Optimization.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.Razor.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.WebPages.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.WebPages.Deployment.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\System.Web.WebPages.Razor.xml
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\es\System.Web.Helpers.resources.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\es\System.Web.Mvc.resources.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\es\System.Web.Optimization.resources.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\es\System.Web.Razor.resources.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\es\System.Web.WebPages.resources.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\es\System.Web.WebPages.Deployment.resources.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\es\System.Web.WebPages.Razor.resources.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\obj\Debug\AIBTicketsMVC.dll
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\obj\Debug\AIBTicketsMVC.pdb
+\\192.168.94.142\c$\Sitios\AIBTicketsTest2\1. BACKUP\20210823 17-14\bin\AIBTicketsMVC.dll.config
+C:\AIBTIKETS_25082021\bin\wwwroot\assets\js\Forms\WorkOrderSolutions.js
+C:\AIBTIKETS_25082021\bin\AIBTicketsMVC.dll.config
+C:\AIBTIKETS_25082021\bin\AIBTicketsMVC.dll
+C:\AIBTIKETS_25082021\bin\AIBTicketsMVC.pdb
+C:\AIBTIKETS_25082021\bin\roslyn\csc.exe
+C:\AIBTIKETS_25082021\bin\roslyn\csc.exe.config
+C:\AIBTIKETS_25082021\bin\roslyn\csc.rsp
+C:\AIBTIKETS_25082021\bin\roslyn\csi.exe
+C:\AIBTIKETS_25082021\bin\roslyn\csi.rsp
+C:\AIBTIKETS_25082021\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\AIBTIKETS_25082021\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\AIBTIKETS_25082021\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\AIBTIKETS_25082021\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\AIBTIKETS_25082021\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\AIBTIKETS_25082021\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\AIBTIKETS_25082021\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\AIBTIKETS_25082021\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\AIBTIKETS_25082021\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\AIBTIKETS_25082021\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\AIBTIKETS_25082021\bin\roslyn\System.AppContext.dll
+C:\AIBTIKETS_25082021\bin\roslyn\System.Collections.Immutable.dll
+C:\AIBTIKETS_25082021\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\AIBTIKETS_25082021\bin\roslyn\System.IO.FileSystem.dll
+C:\AIBTIKETS_25082021\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\AIBTIKETS_25082021\bin\roslyn\System.Reflection.Metadata.dll
+C:\AIBTIKETS_25082021\bin\roslyn\vbc.exe
+C:\AIBTIKETS_25082021\bin\roslyn\vbc.exe.config
+C:\AIBTIKETS_25082021\bin\roslyn\vbc.rsp
+C:\AIBTIKETS_25082021\bin\roslyn\VBCSCompiler.exe
+C:\AIBTIKETS_25082021\bin\roslyn\VBCSCompiler.exe.config
+C:\AIBTIKETS_25082021\bin\Antlr3.Runtime.dll
+C:\AIBTIKETS_25082021\bin\ClosedXML.dll
+C:\AIBTIKETS_25082021\bin\DocumentFormat.OpenXml.dll
+C:\AIBTIKETS_25082021\bin\ExcelNumberFormat.dll
+C:\AIBTIKETS_25082021\bin\FastMember.dll
+C:\AIBTIKETS_25082021\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\AIBTIKETS_25082021\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\AIBTIKETS_25082021\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\AIBTIKETS_25082021\bin\Microsoft.Owin.dll
+C:\AIBTIKETS_25082021\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\AIBTIKETS_25082021\bin\Microsoft.Owin.Security.dll
+C:\AIBTIKETS_25082021\bin\Microsoft.Web.Infrastructure.dll
+C:\AIBTIKETS_25082021\bin\Newtonsoft.Json.dll
+C:\AIBTIKETS_25082021\bin\Owin.dll
+C:\AIBTIKETS_25082021\bin\System.Web.Helpers.dll
+C:\AIBTIKETS_25082021\bin\System.Web.Mvc.dll
+C:\AIBTIKETS_25082021\bin\System.Web.Optimization.dll
+C:\AIBTIKETS_25082021\bin\System.Web.Razor.dll
+C:\AIBTIKETS_25082021\bin\System.Web.WebPages.Deployment.dll
+C:\AIBTIKETS_25082021\bin\System.Web.WebPages.dll
+C:\AIBTIKETS_25082021\bin\System.Web.WebPages.Razor.dll
+C:\AIBTIKETS_25082021\bin\WebGrease.dll
+C:\AIBTIKETS_25082021\bin\Antlr3.Runtime.pdb
+C:\AIBTIKETS_25082021\bin\ClosedXML.pdb
+C:\AIBTIKETS_25082021\bin\ClosedXML.xml
+C:\AIBTIKETS_25082021\bin\DocumentFormat.OpenXml.xml
+C:\AIBTIKETS_25082021\bin\ExcelNumberFormat.xml
+C:\AIBTIKETS_25082021\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\AIBTIKETS_25082021\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\AIBTIKETS_25082021\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\AIBTIKETS_25082021\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\AIBTIKETS_25082021\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\AIBTIKETS_25082021\bin\Microsoft.Owin.xml
+C:\AIBTIKETS_25082021\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\AIBTIKETS_25082021\bin\Microsoft.Owin.Security.xml
+C:\AIBTIKETS_25082021\bin\Newtonsoft.Json.xml
+C:\AIBTIKETS_25082021\bin\System.Web.Helpers.xml
+C:\AIBTIKETS_25082021\bin\System.Web.Mvc.xml
+C:\AIBTIKETS_25082021\bin\System.Web.Optimization.xml
+C:\AIBTIKETS_25082021\bin\System.Web.Razor.xml
+C:\AIBTIKETS_25082021\bin\System.Web.WebPages.xml
+C:\AIBTIKETS_25082021\bin\System.Web.WebPages.Deployment.xml
+C:\AIBTIKETS_25082021\bin\System.Web.WebPages.Razor.xml
+C:\AIBTIKETS_25082021\bin\es\System.Web.Helpers.resources.dll
+C:\AIBTIKETS_25082021\bin\es\System.Web.Mvc.resources.dll
+C:\AIBTIKETS_25082021\bin\es\System.Web.Optimization.resources.dll
+C:\AIBTIKETS_25082021\bin\es\System.Web.Razor.resources.dll
+C:\AIBTIKETS_25082021\bin\es\System.Web.WebPages.resources.dll
+C:\AIBTIKETS_25082021\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\AIBTIKETS_25082021\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\AIBTIKETS_25082021\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+C:\AIBTIKETS_25082021\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+C:\AIBTIKETS_25082021\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\AIBTIKETS_25082021\obj\Debug\AIBTicketsMVC.dll
+C:\AIBTIKETS_25082021\obj\Debug\AIBTicketsMVC.pdb
+C:\AIBTIKETS\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+C:\AIBTICKETS\bin\wwwroot\assets\js\Forms\WorkOrderSolutions.js
+C:\AIBTICKETS\bin\AIBTicketsMVC.dll.config
+C:\AIBTICKETS\bin\AIBTicketsMVC.dll
+C:\AIBTICKETS\bin\AIBTicketsMVC.pdb
+C:\AIBTICKETS\bin\roslyn\csc.exe
+C:\AIBTICKETS\bin\roslyn\csc.exe.config
+C:\AIBTICKETS\bin\roslyn\csc.rsp
+C:\AIBTICKETS\bin\roslyn\csi.exe
+C:\AIBTICKETS\bin\roslyn\csi.rsp
+C:\AIBTICKETS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\AIBTICKETS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\AIBTICKETS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\AIBTICKETS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\AIBTICKETS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\AIBTICKETS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\AIBTICKETS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\AIBTICKETS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\AIBTICKETS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\AIBTICKETS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\AIBTICKETS\bin\roslyn\System.AppContext.dll
+C:\AIBTICKETS\bin\roslyn\System.Collections.Immutable.dll
+C:\AIBTICKETS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\AIBTICKETS\bin\roslyn\System.IO.FileSystem.dll
+C:\AIBTICKETS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\AIBTICKETS\bin\roslyn\System.Reflection.Metadata.dll
+C:\AIBTICKETS\bin\roslyn\vbc.exe
+C:\AIBTICKETS\bin\roslyn\vbc.exe.config
+C:\AIBTICKETS\bin\roslyn\vbc.rsp
+C:\AIBTICKETS\bin\roslyn\VBCSCompiler.exe
+C:\AIBTICKETS\bin\roslyn\VBCSCompiler.exe.config
+C:\AIBTICKETS\bin\Antlr3.Runtime.dll
+C:\AIBTICKETS\bin\BouncyCastle.Crypto.dll
+C:\AIBTICKETS\bin\ClosedXML.dll
+C:\AIBTICKETS\bin\DocumentFormat.OpenXml.dll
+C:\AIBTICKETS\bin\EPPlus.dll
+C:\AIBTICKETS\bin\ExcelDataReader.DataSet.dll
+C:\AIBTICKETS\bin\ExcelDataReader.dll
+C:\AIBTICKETS\bin\ExcelNumberFormat.dll
+C:\AIBTICKETS\bin\FastMember.dll
+C:\AIBTICKETS\bin\ICSharpCode.SharpZipLib.dll
+C:\AIBTICKETS\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\AIBTICKETS\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\AIBTICKETS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\AIBTICKETS\bin\Microsoft.Owin.dll
+C:\AIBTICKETS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\AIBTICKETS\bin\Microsoft.Owin.Security.dll
+C:\AIBTICKETS\bin\Microsoft.Web.Infrastructure.dll
+C:\AIBTICKETS\bin\Newtonsoft.Json.dll
+C:\AIBTICKETS\bin\NPOI.dll
+C:\AIBTICKETS\bin\NPOI.OOXML.dll
+C:\AIBTICKETS\bin\NPOI.OpenXml4Net.dll
+C:\AIBTICKETS\bin\NPOI.OpenXmlFormats.dll
+C:\AIBTICKETS\bin\OpenXmlPowerTools.dll
+C:\AIBTICKETS\bin\Owin.dll
+C:\AIBTICKETS\bin\System.IO.Packaging.dll
+C:\AIBTICKETS\bin\System.Management.Automation.dll
+C:\AIBTICKETS\bin\System.Web.Helpers.dll
+C:\AIBTICKETS\bin\System.Web.Mvc.dll
+C:\AIBTICKETS\bin\System.Web.Optimization.dll
+C:\AIBTICKETS\bin\System.Web.Razor.dll
+C:\AIBTICKETS\bin\System.Web.WebPages.Deployment.dll
+C:\AIBTICKETS\bin\System.Web.WebPages.dll
+C:\AIBTICKETS\bin\System.Web.WebPages.Razor.dll
+C:\AIBTICKETS\bin\WebGrease.dll
+C:\AIBTICKETS\bin\BouncyCastle.Crypto.xml
+C:\AIBTICKETS\bin\ClosedXML.pdb
+C:\AIBTICKETS\bin\ClosedXML.xml
+C:\AIBTICKETS\bin\DocumentFormat.OpenXml.xml
+C:\AIBTICKETS\bin\EPPlus.xml
+C:\AIBTICKETS\bin\ExcelDataReader.pdb
+C:\AIBTICKETS\bin\ExcelDataReader.xml
+C:\AIBTICKETS\bin\ExcelDataReader.DataSet.pdb
+C:\AIBTICKETS\bin\ExcelDataReader.DataSet.xml
+C:\AIBTICKETS\bin\ExcelNumberFormat.xml
+C:\AIBTICKETS\bin\ICSharpCode.SharpZipLib.pdb
+C:\AIBTICKETS\bin\ICSharpCode.SharpZipLib.xml
+C:\AIBTICKETS\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\AIBTICKETS\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\AIBTICKETS\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\AIBTICKETS\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\AIBTICKETS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\AIBTICKETS\bin\Microsoft.Owin.xml
+C:\AIBTICKETS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\AIBTICKETS\bin\Microsoft.Owin.Security.xml
+C:\AIBTICKETS\bin\NPOI.xml
+C:\AIBTICKETS\bin\NPOI.OOXML.xml
+C:\AIBTICKETS\bin\System.Web.Helpers.xml
+C:\AIBTICKETS\bin\System.Web.Mvc.xml
+C:\AIBTICKETS\bin\System.Web.Optimization.xml
+C:\AIBTICKETS\bin\System.Web.Razor.xml
+C:\AIBTICKETS\bin\System.Web.WebPages.xml
+C:\AIBTICKETS\bin\System.Web.WebPages.Deployment.xml
+C:\AIBTICKETS\bin\System.Web.WebPages.Razor.xml
+C:\AIBTICKETS\bin\Newtonsoft.Json.xml
+C:\AIBTICKETS\bin\Antlr3.Runtime.pdb
+C:\AIBTICKETS\bin\es\System.Web.Helpers.resources.dll
+C:\AIBTICKETS\bin\es\System.Web.Mvc.resources.dll
+C:\AIBTICKETS\bin\es\System.Web.Optimization.resources.dll
+C:\AIBTICKETS\bin\es\System.Web.Razor.resources.dll
+C:\AIBTICKETS\bin\es\System.Web.WebPages.resources.dll
+C:\AIBTICKETS\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\AIBTICKETS\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\AIBTICKETS\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+C:\AIBTICKETS\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+C:\AIBTICKETS\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\AIBTICKETS\obj\Debug\AIBTicketsMVC.dll
+C:\AIBTICKETS\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\wwwroot\assets\js\Forms\WorkOrderSolutions.js
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\AIBTicketsMVC.dll.config
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\AIBTicketsMVC.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\AIBTicketsMVC.pdb
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\csc.exe
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\csc.exe.config
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\csc.rsp
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\csi.exe
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\csi.rsp
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\System.AppContext.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\vbc.exe
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\vbc.exe.config
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\vbc.rsp
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\VBCSCompiler.exe
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Antlr3.Runtime.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\BouncyCastle.Crypto.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ClosedXML.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\DocumentFormat.OpenXml.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\EPPlus.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ExcelDataReader.DataSet.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ExcelDataReader.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ExcelNumberFormat.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\FastMember.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.Owin.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.Owin.Security.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Newtonsoft.Json.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\NPOI.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\NPOI.OOXML.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\NPOI.OpenXml4Net.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\NPOI.OpenXmlFormats.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\OpenXmlPowerTools.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Owin.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.IO.Packaging.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Management.Automation.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.Helpers.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.Mvc.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.Optimization.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.Razor.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.WebPages.Deployment.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.WebPages.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.WebPages.Razor.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\WebGrease.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\BouncyCastle.Crypto.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ClosedXML.pdb
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ClosedXML.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\DocumentFormat.OpenXml.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\EPPlus.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ExcelDataReader.pdb
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ExcelDataReader.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ExcelDataReader.DataSet.pdb
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ExcelDataReader.DataSet.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ExcelNumberFormat.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ICSharpCode.SharpZipLib.pdb
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\ICSharpCode.SharpZipLib.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.Owin.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Microsoft.Owin.Security.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\NPOI.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\NPOI.OOXML.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.Helpers.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.Mvc.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.Optimization.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.Razor.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.WebPages.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.WebPages.Deployment.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\System.Web.WebPages.Razor.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Newtonsoft.Json.xml
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\Antlr3.Runtime.pdb
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\es\System.Web.Helpers.resources.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\es\System.Web.Mvc.resources.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\es\System.Web.Optimization.resources.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\es\System.Web.Razor.resources.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\es\System.Web.WebPages.resources.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\obj\Debug\AIBTicketsMVC.dll
+C:\Users\lescorcia\Source\Repos\TicketsUnificado\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\jocastro\Documents\TickestUnificados\bin\wwwroot\assets\js\Forms\WorkOrderSolutions.js
+C:\Users\jocastro\Documents\TickestUnificados\bin\AIBTicketsMVC.dll.config
+C:\Users\jocastro\Documents\TickestUnificados\bin\AIBTicketsMVC.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\AIBTicketsMVC.pdb
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\csc.exe
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\csc.exe.config
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\csc.rsp
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\csi.exe
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\csi.rsp
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\System.AppContext.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\vbc.exe
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\vbc.exe.config
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\vbc.rsp
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\VBCSCompiler.exe
+C:\Users\jocastro\Documents\TickestUnificados\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jocastro\Documents\TickestUnificados\bin\Antlr3.Runtime.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\BouncyCastle.Crypto.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\ClosedXML.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\DocumentFormat.OpenXml.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\EPPlus.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\ExcelDataReader.DataSet.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\ExcelDataReader.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\ExcelNumberFormat.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\FastMember.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.Owin.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.Owin.Security.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\Newtonsoft.Json.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\NPOI.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\NPOI.OOXML.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\NPOI.OpenXml4Net.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\NPOI.OpenXmlFormats.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\OpenXmlPowerTools.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\Owin.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.IO.Packaging.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Management.Automation.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.Helpers.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.Mvc.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.Optimization.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.Razor.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.WebPages.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.WebPages.Razor.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\WebGrease.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\BouncyCastle.Crypto.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\ClosedXML.pdb
+C:\Users\jocastro\Documents\TickestUnificados\bin\ClosedXML.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\DocumentFormat.OpenXml.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\EPPlus.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\ExcelDataReader.pdb
+C:\Users\jocastro\Documents\TickestUnificados\bin\ExcelDataReader.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\ExcelDataReader.DataSet.pdb
+C:\Users\jocastro\Documents\TickestUnificados\bin\ExcelDataReader.DataSet.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\ExcelNumberFormat.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\ICSharpCode.SharpZipLib.pdb
+C:\Users\jocastro\Documents\TickestUnificados\bin\ICSharpCode.SharpZipLib.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.Owin.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\Microsoft.Owin.Security.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\NPOI.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\NPOI.OOXML.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.Helpers.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.Mvc.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.Optimization.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.Razor.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.WebPages.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\System.Web.WebPages.Razor.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\Newtonsoft.Json.xml
+C:\Users\jocastro\Documents\TickestUnificados\bin\Antlr3.Runtime.pdb
+C:\Users\jocastro\Documents\TickestUnificados\bin\es\System.Web.Helpers.resources.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\es\System.Web.Mvc.resources.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\es\System.Web.Optimization.resources.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\es\System.Web.Razor.resources.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\es\System.Web.WebPages.resources.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\jocastro\Documents\TickestUnificados\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\jocastro\Documents\TickestUnificados\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+C:\Users\jocastro\Documents\TickestUnificados\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+C:\Users\jocastro\Documents\TickestUnificados\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\Users\jocastro\Documents\TickestUnificados\obj\Debug\AIBTicketsMVC.dll
+C:\Users\jocastro\Documents\TickestUnificados\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\wwwroot\assets\js\Forms\WorkOrderSolutions.js
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\AIBTicketsMVC.dll.config
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\AIBTicketsMVC.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\AIBTicketsMVC.pdb
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\csc.exe
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\csc.exe.config
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\csc.rsp
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\csi.exe
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\csi.rsp
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\System.AppContext.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\vbc.exe
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\vbc.exe.config
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\vbc.rsp
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\VBCSCompiler.exe
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Antlr3.Runtime.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\BouncyCastle.Crypto.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ClosedXML.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\DocumentFormat.OpenXml.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\EPPlus.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.DataSet.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ExcelNumberFormat.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\FastMember.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.Security.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Newtonsoft.Json.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\NPOI.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\NPOI.OOXML.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\NPOI.OpenXml4Net.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\NPOI.OpenXmlFormats.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\OpenXmlPowerTools.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Owin.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.IO.Packaging.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Management.Automation.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.Helpers.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.Mvc.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.Optimization.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.Razor.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.Razor.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\WebGrease.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\BouncyCastle.Crypto.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ClosedXML.pdb
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ClosedXML.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\DocumentFormat.OpenXml.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\EPPlus.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.pdb
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.DataSet.pdb
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.DataSet.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ExcelNumberFormat.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ICSharpCode.SharpZipLib.pdb
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\ICSharpCode.SharpZipLib.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.Security.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\NPOI.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\NPOI.OOXML.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.Helpers.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.Mvc.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.Optimization.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.Razor.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.Razor.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Newtonsoft.Json.xml
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\Antlr3.Runtime.pdb
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\es\System.Web.Helpers.resources.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\es\System.Web.Mvc.resources.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\es\System.Web.Optimization.resources.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\es\System.Web.Razor.resources.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\es\System.Web.WebPages.resources.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\obj\Debug\AIBTicketsMVC.csprojAssemblyReference.cache
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\obj\Debug\AIBTicketsMVC.csproj.CopyComplete
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\obj\Debug\AIBTicketsMVC.dll
+C:\Users\jocastro\source\repos\TicketsUnificadoBog\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\obj\Debug\AIBTicketsMVC.csproj.AssemblyReference.cache
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\obj\Debug\AIBTicketsMVC.csproj.CoreCompileInputs.cache
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\obj\Debug\AIBTicketsMVC.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\obj\Debug\AIBTicketsMVC.pdb
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\wwwroot\assets\js\Forms\WorkOrderSolutions2.js
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\wwwroot\assets\js\Forms\WorkOrderSolutions.js
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\AIBTicketsMVC.dll.config
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\AIBTicketsMVC.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\AIBTicketsMVC.pdb
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\csc.exe
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\csc.exe.config
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\csc.rsp
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\csi.exe
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\csi.rsp
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\System.AppContext.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\vbc.exe
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\vbc.exe.config
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\vbc.rsp
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\VBCSCompiler.exe
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Antlr3.Runtime.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\BouncyCastle.Crypto.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ClosedXML.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\DocumentFormat.OpenXml.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\EPPlus.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.DataSet.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ExcelNumberFormat.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\FastMember.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.Security.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Newtonsoft.Json.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\NPOI.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\NPOI.OOXML.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\NPOI.OpenXml4Net.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\NPOI.OpenXmlFormats.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\OpenXmlPowerTools.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Owin.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.IO.Packaging.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Management.Automation.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.Helpers.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.Mvc.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.Optimization.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.Razor.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.Deployment.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.Razor.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\WebGrease.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\BouncyCastle.Crypto.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ClosedXML.pdb
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ClosedXML.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\DocumentFormat.OpenXml.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\EPPlus.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.pdb
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.DataSet.pdb
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ExcelDataReader.DataSet.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ExcelNumberFormat.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ICSharpCode.SharpZipLib.pdb
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\ICSharpCode.SharpZipLib.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Microsoft.Owin.Security.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Newtonsoft.Json.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\NPOI.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\NPOI.OOXML.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.Helpers.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.Mvc.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.Optimization.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.Razor.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.Deployment.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\System.Web.WebPages.Razor.xml
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\Antlr3.Runtime.pdb
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\es\System.Web.Helpers.resources.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\es\System.Web.Mvc.resources.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\es\System.Web.Optimization.resources.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\es\System.Web.Razor.resources.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\es\System.Web.WebPages.resources.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\JLINERO\source\repos\TicketsUnificadoBog\obj\Debug\AIBTicketsMVC.csproj.CopyComplete

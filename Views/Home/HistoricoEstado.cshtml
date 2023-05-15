@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.HistoryState>
+
+
+<div class="card">
+    <h5 class="card-header"><i class="far fa-calendar"></i> &nbsp Histórico de Estados</i></h5>
+    <div class="card-body">
+        <table class="table table-striped table-bordered text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model)
+                    {
+                                <tr>
+                                    <td>@item.NameStatus</td>
+                                    <td>@item.Cantidad</td>
+
+                                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@*<table id="HistoricoEstados" class="table table-sm table-bordered table-hover" style="width:100%;" border="1">
+    <thead>
+        <tr style=" background-color: darkblue; color: white">
+            <th>Estado</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int par = 1;
+            foreach (var item in Model)
+            {
+                var bg = "";
+                var col = "";
+                if (par == 0)
+                {
+                    bg = "cornflowerblue";
+                    col = "black";
+                    par = 1;
+                }
+                else
+                {
+                    bg = "white";
+                    col = "black";
+                    par = 0;
+                }
+                <tr style= "background-color:@bg; color: @col;">
+                    <td>@item.Cantidad</td>
+                    <td>@item.NameStatus</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>*@

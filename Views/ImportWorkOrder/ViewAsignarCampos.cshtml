@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.FieldsUDF>
+    <form id="formFields">
+        <div class="form-group row">
+            <div class="col-md-12">
+                <p>
+                    Las columnas del documento se han rellenado en los cuadros seleccionados
+                    junto a cada etiqueta de campo.
+                    Es necesario realizar asignaciones para los campos de las solicitudes con
+                    los nombres de campo del archivo.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <strong class="col-sm-4 col-form-label">
+                Seleccionar Hoja:
+                <span class="text-danger">*</span>
+            </strong>
+            <div class="col-sm-4">
+                <select type="text" class="form-control required" id="DdlHojaExcel" onchange="OnChangeHojaExcel(this.value);">
+                </select>
+                <span id="DdlHojaExcel-error" class="invalid-feedback"></span>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <div class="list-group">
+                    <div class="list-group-item list-group-item-info">
+                        <b>Campos de las solicitudes</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @Html.Partial("TypesFields", Model)
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <div class="list-group">
+                    <div class="list-group-item list-group-item-info">
+                        <b>Campos adicionales</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="divFieldsTemplate"></div>
+        <div class="form-group row">
+            <div class="col-md text-right" id="Btns2">
+                <button type="submit" class="btn btn-primary" id="BtnSiguiente2">Siguiente »</button>
+                <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                    <span class="spinner-border spinner-border-sm"></span>
+                    Loading...
+                </button>
+            </div>
+        </div>
+    </form>

@@ -1,0 +1,105 @@
+﻿@model AIBTicketsMVC.Models.FieldsUDF
+@{
+    int NumColums = 3;
+    if (Model.FieldType.IdFieldsTypesUDF == 8) //Campo Tipo busqueda de Puestos
+    {
+        NumColums = 6;
+    }
+}
+
+<div class="col-md-@NumColums numDivFields" id="divNewInput_@Model.IdFieldsUDF">
+    <div class="form-group">
+        @{
+            string claseDisabled = "";
+            if (Model.State == false)
+            {
+                claseDisabled = "border-danger";
+            }
+        }
+        <div class="card @claseDisabled">
+            <div class="card-body rounded-sm shadow" style="padding: 10px;">
+                <div class="text-center">
+                    @{
+                        int IdFieldsTypes = Model.FieldType.IdFieldsTypesUDF;
+                        if (IdFieldsTypes == 1) //Fecha
+                        {
+                            <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">@Model.NameField</strong>
+                            <div class="input-group date">
+                                <span class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                                <input type="text" class="form-control form-control-sm datepicker" placeholder="@Model.FieldType.NameTypeFieldsShort" id="field_@Model.IdFieldsUDF" />
+                            </div>
+                        }
+                        else if (IdFieldsTypes == 2) //Numero
+                        {
+                            <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">@Model.NameField</strong>
+                            <input type="number" class="form-control form-control-sm" placeholder="@Model.FieldType.NameTypeFieldsShort" maxlength="4" onkeypress="return solonumeros(event);" id="field_@Model.IdFieldsUDF" />
+                        }
+                        else if (IdFieldsTypes == 3) //Linea de texto simple
+                        {
+                            <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">@Model.NameField</strong>
+                            <input type="text" class="form-control form-control-sm" placeholder="@Model.FieldType.NameTypeFieldsShort" maxlength="@Model.Longitud" id="field_@Model.IdFieldsUDF" />
+                        }
+                        else if (IdFieldsTypes == 5) //Caja de verificacion
+                        {
+                            <div class="text-center">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="field_@Model.IdFieldsUDF" />
+                                    <label id="lbl_@Model.IdFieldsUDF" class="custom-control-label" for="field_@Model.IdFieldsUDF">@Model.NameField</label>
+                                </div>
+                            </div>
+                        }
+                        else if (IdFieldsTypes == 6) //Lista desplegable
+                        {
+                            <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">@Model.NameField</strong>
+                            <select class="form-control form-control-sm" id="field_@Model.IdFieldsUDF">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var disp in Model.Dispositions)
+                                {
+                                    <option value="@disp.IdFieldsDispositions">@disp.Dispositions</option>
+                                }
+                            </select>
+                        }
+                        else if (IdFieldsTypes == 8) //Campo Tipo busqueda de Puestos
+                        {
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <strong for="DdlSedes-@Model.IdFieldsUDF">Sede</strong>
+                                    <select id="DdlSedes-@Model.IdFieldsUDF" class="form-control form-control-sm InputSedes">
+                                        <option value="">--Seleccionar--</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <strong for="DdlPlataforma-@Model.IdFieldsUDF">Plataforma</strong>
+                                    <select id="DdlPlataforma-@Model.IdFieldsUDF" class="form-control form-control-sm">
+                                        <option value="">--Seleccionar--</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">@Model.NameField</strong>
+                                    <input type="text" class="form-control form-control-sm" placeholder="Nombre, Extension o IP" maxlength="100" id="field_@Model.IdFieldsUDF" />
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="card-footer @claseDisabled" style="padding-top: 7px;padding-bottom: 7px;">
+                <div class="text-center divBtns">
+                    <button type="button" class="btn btn-link" onclick="ModalEditAjaxInput(@Model.IdFieldsUDF);" style="padding-top: 0px;padding-bottom: 0px;">Editar</button>
+                    @if (Model.State == true)
+                    {
+                        <button type="button" class="btn btn-link BtnDisabled" onclick="DisabledFieldUDF(@Model.IdFieldsUDF);" style="padding-top: 0px;padding-bottom: 0px;">Desactivar</button>
+                    }
+                    else
+                    {
+                        <button type="button" class="btn btn-link BtnEnabled" onclick="EnabledFieldUDF(@Model.IdFieldsUDF);" style="padding-top: 0px;padding-bottom: 0px;">Activar</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

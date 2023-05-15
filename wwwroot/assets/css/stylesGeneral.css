@@ -1,0 +1,20 @@
+﻿.chosen-container {
+    width: 100% !important;
+}
+.inputRequired-error {
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    background-color: #FFF0F0;
+}
+
+.inputRequired-good {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    background-color: white;
+}
+
+.popover {
+    z-index: 99999999999 !important;
+}

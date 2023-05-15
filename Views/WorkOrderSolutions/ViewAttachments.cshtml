@@ -1,0 +1,17 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.WorkOrder_Attachments>
+<div class="card-header">
+    <div class="row">
+        <h5 class="col-md-3 font-weight-bold text-primary">Documentos adjuntos:</h5>
+        <div class="col-md-4">
+            <input type="file" id="FileAddAttachments" onchange="changeAgregarAdjunto();">
+        </div>
+    </div>
+</div>
+<div class="card-body">
+    <div id="divAdjuntos" class="form-group row">
+        @foreach (var Adjunt in Model)
+        {
+            @Html.Action("DivAttachment", Adjunt)
+        }
+    </div>
+</div>

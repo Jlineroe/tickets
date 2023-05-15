@@ -1,0 +1,100 @@
+﻿@model AIBTicketsMVC.Models.ListasDesplegables
+<div class="card-body overflow-auto" id="global">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Filtros</h4>
+        </div>
+        <div class="col-md-12">
+            <label for="TxtIdWorkOrder">Id Ticket</label>
+            <input type="text" class="divFilterIdWorkOrder" id="TxtIdWorkOrder" data-role="tagsinput">
+        </div>
+        <div class="col-md-12">
+            <label for="TxtTitle">Titulo</label>
+            <input type="text" class="form-control" placeholder="Titulo" id="TxtTitle">
+        </div>
+        <div class="col-md-12">
+            <label for="TxtDescription">Descripcion</label>
+            <input type="text" class="form-control" placeholder="Descripcion" id="TxtDescription">
+        </div>
+        <div class="col-md-12">
+            <label for="TxtPQRBog">PQR</label>
+            <input type="number" class="form-control" placeholder="PQR" onkeypress="return solonumeros(event);" id="TxtPQRBog">
+        </div>
+        <div class="col-md-12">
+            <label for="TxtCuentaBog">Cuenta</label>
+            <input type="number" class="form-control" placeholder="Cuenta" onkeypress="return solonumeros(event);" id="TxtCuentaBog">
+        </div>
+        <div class="col-md-12">
+            <label for="TxtX_COORDINATE">X_COORDINATE</label>
+            <input type="text" class="form-control" placeholder="X_COORDINATE" id="TxtX_COORDINATE">
+        </div>
+        <div class="col-md-12">
+            <label for="TxtNumero_MIN">Numero - MIN</label>
+            <input type="number" class="form-control" placeholder="Numero-MIN" onkeypress="return solonumeros(event);" id="TxtNumero_MIN">
+        </div>
+        <div class="col-md-12">
+            <label for="DdlTemplates">Plantilla</label>
+            <select id="DdlTemplates" data-placeholder="Seleccionar plantilla..." class="form-control divFilterTemplates chosen-select">
+                <option value="">--Seleccionar--</option>
+                @foreach (var item in Model.ListTemplates)
+                {
+                    <option value="@item.IdTemplates">@item.NameTemplate</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-12">
+            <label for="DdlEstado">Estados</label>
+            <select id="DdlEstado" data-placeholder="Seleccionar Estados..." multiple class="form-control divFilterStatus chosen-select">
+                @foreach (var item in Model.Estados)
+                {
+                    <option value="@item.IdStatusDefinition">@item.NameStatus</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-12">
+            <label for="DdlGruposAsignados">Grupos Asignados</label>
+            <select id="DdlGruposAsignados" data-placeholder="Seleccionar Grupos asignados..." multiple class="form-control divFilterGroupsAssign chosen-select">
+                @foreach (var item in Model.Grupos)
+                {
+                    <option value="@item.IdMasterGroups">@item.NameGroup</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-12">
+            <label for="DdlUserCrea">Usuario Crea</label>
+            <select id="DdlUserCrea" data-placeholder="Seleccionar Usuarios..." multiple class="form-control divFilterUsersCrea chosen-select">
+                @foreach (var item in Model.Usuarios)
+                {
+                    <option value="@item.IdMasterUsers">@item.Nombres @item.PrimerApellido @item.SegundoApellido - @item.Identificacion</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-12">
+            <label for="DdlUserAssign">Usuario Asignado</label>
+            <select id="DdlUserAssign" data-placeholder="Seleccionar Usuarios..." multiple class="form-control divFilterUsersAssign chosen-select">
+                @foreach (var item in Model.Usuarios)
+                {
+                    <option value="@item.IdMasterUsers">@item.Nombres @item.PrimerApellido @item.SegundoApellido - @item.Identificacion</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-12">
+            <label for="DdlUserScaled">Usuario Escalado</label>
+            <select id="DdlUserScaled" data-placeholder="Seleccionar Usuarios..." multiple class="form-control divFilterUsersScaled chosen-select">
+                @foreach (var item in Model.Usuarios)
+                {
+                    <option value="@item.IdMasterUsers">@item.Nombres @item.PrimerApellido @item.SegundoApellido - @item.Identificacion</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-12">
+            <br />
+            <button type="button" class="btn btn-success btn-icon-split" onclick="GetListOrderXPagination();">
+                <span class="icon text-white-50">
+                    <i class="fas fa-filter"></i>
+                </span>
+                <span class="text">Aplicar Filtros</span>
+            </button>
+        </div>
+    </div>
+</div>

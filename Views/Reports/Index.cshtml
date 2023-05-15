@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Reportes";
+    @model AIBTicketsMVC.Models.ListasDesplegables
+}
+@section Styles {
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/datapicker/datepicker3.css" rel="stylesheet" />
+    <style type="text/css">
+        th, td {
+            white-space: nowrap;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/datapicker/bootstrap-datepicker.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen-clickable-optgroup.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/Reports.js"></script>
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Exportar Reportes</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">Exportacion de reportes por plantilla</h6>
+            </div>
+            <div class="card-body">
+                @using (Html.BeginForm("ExportarExcel", "Reports", FormMethod.Post))
+                {
+                    <div class="form-group row">
+                        <div class="col-md-2">
+                            <strong for="DdlStatus">Estados</strong>
+                            <select id="DdlStatus" name="DdlStatus" data-placeholder="Seleccionar Estados..." title="clickable_optgroup" multiple class="super-chosen form-control form-control-chosen-optgroup">
+                                <optgroup label="Todos">
+                                    @foreach (var item in Model.Estados)
+                                    {
+                                        <option value="@item.IdStatusDefinition">@item.NameStatus</option>
+                                    }
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <strong for="DdlGroups">Grupos</strong>
+                            <select id="DdlGroups" name="DdlGroups" data-placeholder="Seleccionar Grupos..." title="clickable_optgroup" multiple class="super-chosen form-control form-control-chosen-optgroup">
+                                <optgroup label="Todos">
+                                    @foreach (var item in Model.Grupos)
+                                    {
+                                        <option value="@item.IdMasterGroups">@item.NameGroup</option>
+                                    }
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <strong for="DdlPlantilla">Plantilla</strong>
+                            <select id="DdlPlantilla" name="DdlPlantilla" class="form-control">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.ListTemplates)
+                                {
+                                    <option value="@item.IdTemplates">@item.NameTemplate</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>Rango fecha creacion</strong>
+                            <div class="input-daterange input-group">
+                                <input type="text" class="form-control required" required id="TxtInicio" name="TxtInicio" placeholder="yyyy/mm/dd">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">a</span>
+                                </div>
+                                <input type="text" class="form-control required" required id="TxtFin" name="TxtFin" placeholder="yyyy/mm/dd">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <button id="BtnExportar" type="submit" class="btn btn-success btn-icon-split" style="margin-top: 25px;">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Exportar</span>
+                            </button>
+                        </div>
+                    </div>
+                }
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</div>

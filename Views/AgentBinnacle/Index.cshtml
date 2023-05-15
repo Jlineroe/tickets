@@ -1,0 +1,309 @@
+﻿@{
+    @model AIBTicketsMVC.Models.ListasDesplegables
+    ViewData["Title"] = "Gestión Bitacora Agentes";
+}
+
+@section Styles {
+    <link href="~/wwwroot/assets/css/stylesGeneral.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/datapicker/datepicker3.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.css" rel="stylesheet" />
+    <style type="text/css">
+        hr {
+            margin: 0px;
+        }
+
+        h3, h4, h5, h6 {
+            margin: 0;
+        }
+    </style>
+
+    
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.min.js"></script>
+    <script src="~/wwwroot/vendor/datapicker/bootstrap-datepicker.js"></script>
+    <script src="~/wwwroot/vendor/toastr/toastr.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/AgentBinnacle.js"></script>
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Crear Gestión Bitacora Agentes</h1>
+</div>
+<form id="formCreate" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <h3 class="col-sm-6 m-0 font-weight-bold text-primary">Nueva Gestión Bitacora Agente</h3>
+                        <h4 class="col-sm-6 font-weight-bold text-right text-primary"></h4>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h6 class="m-0 font-weight-bold text-primary">Detalle</h6>
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <strong>PQR</strong>
+                            <input type="number" id="txtPQR" class="form-control required" placeholder="PQR" onkeypress="return solonumeros(event);" />
+                            <strong id="lblGrupos-error" class="text-danger"></strong>
+                        </div>
+
+                        <div class="col-md-3">
+                            <strong for="DdlCategory">Base</strong>
+                            <select id="DdlCategory" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Bases)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <strong for="DdlImagen">Imagen</strong>
+                            <select id="DdlImagen" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Imagenes)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>MIN</strong>
+                            <input type="number" id="txtMIN" class="form-control" placeholder="MIN" onkeypress="return solonumeros(event);" />
+                            <strong id="lblGrupos-error" class="text-danger"></strong>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>Fecha Activación</strong>
+                            <div class="input-group date">
+                                <span class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                                <input type="text" class="form-control datepicker datepicker-days" placeholder="fecha Activación" id="field_Fech_Activa" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>Fecha Desactivación</strong>
+                            <div class="input-group date">
+                                <span class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                                <input type="text" class="form-control datepicker datepicker-days" placeholder="fecha Desactivación" id="field_Fech_Desactiva" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>CUSCODE</strong>
+                            <input type="number" id="txtCUSCODE" class="form-control" placeholder="CUSCODE" />
+                            <strong id="lblGrupos-error" class="text-danger"></strong>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>Titular</strong>
+                            <input type="text" id="txtTitular" class="form-control" placeholder="Titular" />
+                            <strong id="lblGrupos-error" class="text-danger"></strong>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>Apellido</strong>
+                            <input type="text" id="txtApellido" class="form-control" placeholder="Apellido" />
+                            <strong id="lblGrupos-error" class="text-danger"></strong>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>Cedula</strong>
+                            <input type="number" id="txtCedula" class="form-control" placeholder="Cedula" onkeypress="return solonumeros(event);" />
+                            <strong id="lblGrupos-error" class="text-danger"></strong>
+                        </div>
+                        <div class="col-md-3">
+                            <strong for="DdlAscard">Ascard</strong>
+                            <select id="DdlAscard" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Ascard)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-1" style="text-align:center">
+                            <strong>Activar</strong>
+                            <br />
+                            <input type="checkbox" id="txtActivar" class="" placeholder="Activar" />
+                            <strong id="lblGrupos-error" class="text-danger"></strong>
+                        </div>
+                        <div class="col-md-2">
+                            <strong>Fecha Reposición</strong>
+                            <div class="input-group date">
+                                <span class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                                <input type="text" class="form-control datepicker datepicker-days" placeholder="fecha Reposición" id="field_Fech_Repo" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <strong for="DdlContrato">Contrato</strong>
+                            <select id="DdlContrato" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Contrato)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <strong for="DdlGrabac">Grabación</strong>
+                            <select id="DdlGrabac" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Grabacion)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <strong for="DdlReasignac">Reasignación</strong>
+                            <select id="DdlReasignac" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Reasignacion)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <strong for="DdlCanal">Canal</strong>
+                            <select id="DdlCanal" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Canal)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <strong for="DdlLiegaliz">Legalizado</strong>
+                            <select id="DdlLiegaliz" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Legalizado)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+
+
+                        <div class="col-md-3">
+                            <strong for="DdlAreaRad">Área que Radica</strong>
+                            <select id="DdlAreaRad" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Legalizado)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <strong for="DdlTipRecla">Tipo Reclamo</strong>
+                            <select id="DdlTipRecla" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.TipoReclamo)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <strong for="DdlCanal">Estado</strong>
+                            <select id="DdlCanal" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.EstadoBitacora)
+                                {
+                                    <option value="@item.Id"> @item.Descripcion</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <strong>Rango Edad Probable</strong>
+                            <input type="text" id="txtEdad" class="form-control" placeholder="Rango Edad Probable" />
+                            <strong id="lblGrupos-error" class="text-danger"></strong>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>Dirección informada por el cliente</strong>
+                            <input type="text" id="txtDireccion" class="form-control" placeholder="Dirección informada por el cliente" />
+                            <strong id="lblGrupos-error" class="text-danger"></strong>
+                        </div>
+
+                        <div class="col-md-3">
+                            <strong>Fecha de Recibido</strong>
+                            <div class="input-group date">
+                                <span class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                                <input type="text" class="form-control datepicker datepicker-days" placeholder="fecha de Recibido" id="field_Fech_Recibido" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <strong>Observación</strong>
+                            <input id="TxtObservacion" type="text" class="form-control required" placeholder="Tipo de Reclamo" maxlength="2000" />
+                        </div>
+
+
+                    </div>
+                </div>
+                <hr />
+                <div class="card-body divFields" style="display:none;">
+                    <div class="row divFields" id="divLoadinFields">
+                        <div class="col-md">
+                            <div class="form-inline">
+                                <div class="form-group mb-2">
+                                    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <h4 style="margin-left: 10px;margin-top: 12px;">
+                                        Cargardo campos de la plantilla, por favor espere...
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divFields" class="row divFields" style="display:none;"></div>
+                </div>
+                
+                <hr />
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md text-right">
+                            <button type="button" class="btn btn-primary btn-lg btn-icon-split" id="BtnGuardar" onclick="SetGuardarTickets(this)">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-flag"></i>
+                                </span>
+                                <span class="text">Crear Bitacora</span>
+                            </button>
+                            <button id="BtnGuardar-load" class="btn btn-primary btn-lg BtnLoading" type="button" style="display:none;" disabled>
+                                <span class="spinner-border spinner-border-sm"></span>
+                                Loading...
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

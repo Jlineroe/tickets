@@ -1,0 +1,36 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.Sites>
+    <form id="formCargarData" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="DdlSites">Sitios</label>
+                <select id="DdlSites" class="form-control required" onchange="changeSitios(this.value);">
+                    <option value="">--Seleccionar--</option>
+                    @*@foreach (var item in Model)
+                    {*@
+                <option value="5"> CLARO PQR MOVIL ESCRITAS</option>
+                    @*}*@
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="DdlTemplate">Plantillas</label>
+                <select id="DdlTemplate" class="form-control required">
+                    <option value="12">plantilla_pqr_movil_escritas</option>>
+                </select>
+            </div>
+            <div class="col-md-5">
+                <label>Cargar excel</label>
+                <div class="custom-file">
+                    <input type="file" id="fileID" name="fileID" onchange="changeFile();" class="custom-file-input required">
+                    <label class="custom-file-label" for="fileID" id="lbl-fileID">Seleccionar...</label>
+                    <span id="fileID-error" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md" id="Btns1">
+                <button type="submit" class="btn btn-primary" id="BtnSiguiente1" style="margin-top: 32px;">Siguiente »</button>
+                <button class="btn btn-primary BtnLoading" type="submit" style="display:none;margin-top: 32px;" disabled>
+                    <span class="spinner-border spinner-border-sm"></span>
+                    Loading...
+                </button>
+            </div>
+        </div>
+    </form>

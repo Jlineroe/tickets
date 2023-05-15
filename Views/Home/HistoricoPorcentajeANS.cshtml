@@ -1,0 +1,69 @@
+﻿@model IEnumerable <AIBTicketsMVC.Models.HistoryPercentage>
+
+<div class="card">
+    <h5 class="card-header"><i class="fas fa-percentage"></i> &nbsp Porcentaje ANS</i></h5>
+    <div class="card-body">
+        <table class="table table-striped table-bordered text-center">
+            <thead>
+                <tr>
+                    <th scope="col">0/5</th>
+                    <th scope="col">6/11</th>
+                    <th scope="col">12/15</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @{
+                        var totalporc = 0;
+                        foreach (var items in Model)
+                        {
+                            totalporc = totalporc + items.Cantidad;
+                        }
+
+                        var porc = 0;
+                        foreach (var item in Model)
+                        {
+                            porc = ((item.Cantidad * 100) / totalporc);
+                            <td>@porc %</td>
+                            porc = 0;
+                        }
+                    }
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@*<table class="col-md-12" border="1" style="text-align:center">
+    <thead>
+        <tr>
+            <th colspan="12" style=" background-color: darkblue; color: white">
+                Porcentaje ANS
+            </th>
+        </tr>
+        <tr style="background-color: lightblue; color: black;">
+            <td colspan="4">0/5</td>
+            <td colspan="4">6/11</td>
+            <td colspan="4">12/15</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background-color: white; color: black;">
+            @{
+                var totalporc = 0;
+                foreach (var items in Model)
+                {
+                    totalporc = totalporc + items.Cantidad;
+                }
+
+                var porc = 0;
+                foreach (var item in Model)
+                {
+                    porc = ((item.Cantidad * 100) / totalporc);
+                    <td colspan="4">@porc %</td>
+                    porc = 0;
+                }
+            }
+        </tr>
+    </tbody>
+</table>*@

@@ -1,0 +1,361 @@
+﻿@model AIBTicketsMVC.Models.WorkOrder
+
+<input type="text" value="@Model.IdWorkOrder" id="IdWorkOrderh2" hidden />
+<div class="form-group row">
+    <div class="col-md-12">
+        <strong class="col-form-label">Resoluciones</strong>
+        <div class="summernote" id="TxtResolution">@Model.WorkOrderSolution.Resolutions</div>
+    </div>
+</div>
+@if (Model.Template.IdTemplates == 12)
+ {
+    <div class="form-group row">
+        <div class="col-md-12">
+            <input type="hidden" value="@Model.Template.IdTemplates" id="IdTemplate_Suiche" />
+            <div class="col-md-1">
+                <strong class="col-form-label">
+                    Ajustes
+                </strong>
+            </div>
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="BtBPB" onclick="showAdjustScreen1()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Pospago&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="Acard1" onclick="showAdjustScreen2()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Ascard&nbsp;&nbsp;</span>@*Se cambia Cuotas Ascard a Ascard*@
+            </button>
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="btncuotaAcard" onclick="showAdjustScreen3()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Cuotas Ascard&nbsp;&nbsp;</span>@*Se cambia Ascard a Cuotas Ascard*@
+            </button>
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="btnprepago" onclick="showAdjustScreen4()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Prepago&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="btnEliminacionCentrales" onclick="showAdjustScreen6()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Eliminacion de Centrales&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-primary btn-icon-split" id="botonexport" onclick="showAdjustScreen7()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Exportar&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-primary btn-icon-split" id="Exportarprepago" onclick="exportarpre()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Exportar&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-primary btn-icon-split" id="Exportarascard" onclick="exportarascard()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Exportar&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-primary btn-icon-split" id="Exportarcuotas" onclick="exportarcuotas()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Exportar&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-primary btn-icon-split" id="ExportarEliminarCentrales" onclick="exportarEliminarCentrales()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Exportar&nbsp;&nbsp;</span>
+            </button>
+        </div>
+    </div>
+ }
+
+@if (Model.Template.IdTemplates == 13)
+ {
+    <div class="form-group row">
+        <div class="col-md-12">
+            <input type="hidden" value="@Model.Template.IdTemplates" id="IdTemplate_Suiche" />
+            <div class="col-md-1">
+                <strong class="col-form-label">
+                    Ajustes
+                </strong>
+            </div>
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="BtBPB" onclick="showAdjustScreen11()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Pospago&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="Acard1" onclick="showAdjustScreen21()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Ascard&nbsp;&nbsp;</span>@*Se cambia Cuotas Ascard a Ascard*@
+            </button>
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="btncuotaAcard" onclick="showAdjustScreen31()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Cuotas Ascard&nbsp;&nbsp;</span>@*Se cambia Ascard a Cuotas Ascard*@
+            </button>
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="btnprepago" onclick="showAdjustScreen41()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Prepago&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="btnEliminacionCentrales" onclick="showAdjustScreen61()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Eliminacion de Centrales&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-primary btn-icon-split" id="botonexport" onclick="showAdjustScreen71()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Exportar&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-primary btn-icon-split" id="Exportarprepago" onclick="exportarpre1()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Exportar&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-primary btn-icon-split" id="Exportarascard" onclick="exportarascard1()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Exportar&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-primary btn-icon-split" id="Exportarcuotas" onclick="exportarcuotas1()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Exportar&nbsp;&nbsp;</span>
+            </button>
+            <button type="button" style="color: white" class="btn btn-primary btn-icon-split" id="ExportarEliminarCentrales" onclick="exportarEliminarCentrales1()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Exportar&nbsp;&nbsp;</span>
+            </button>
+        </div>
+    </div>
+ }
+
+
+@if (Model.Template.IdTemplates == 28)
+ {
+    <div class="form-group row">
+        <div class="col-md-12">
+            <input type="hidden" value="@Model.Template.IdTemplates" id="IdTemplate_SuicheMovil" />
+            <div class="col-md-1">
+                <strong class="col-form-label">
+                    Ajustes
+                </strong>
+            </div>
+
+            <button type="button" style="color: white" class="btn btn-success btn-icon-split" id="Acard21" onclick="showAdjustScreen5()">
+                <span class="icon text-white-50">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span class="text">&nbsp;&nbsp;&nbsp;Planilla ajuste movil&nbsp;&nbsp;</span>
+            </button>
+        </div>
+    </div>
+ }
+
+<div class="form-group row">
+    <div class="col-md-3" id="comboestado">
+        <strong class="col-form-label">
+            Cambiar estado a
+        </strong>
+        <select class="form-control" id="DdlStatus" onchange="changeEstados(this.value);">
+            @foreach (var item in ViewBag.ListEstados)
+             {
+                string selected = "";
+                if (Model.Status.IdStatusDefinition == item.IdStatusDefinition)
+                {
+                    selected = "selected";
+                }
+                    <option value="@item.IdStatusDefinition" @selected> @item.NameStatus</option>            
+             }
+        </select>
+    </div>
+    <input type="hidden" id="cmbsubstate" value="@Model.Template.IdTemplates" />
+    <div class="col-md-3" id="combosubestado">
+         <strong class="col-form-label">
+             Sub estado
+             <span class="text-danger"></span>
+         </strong>
+         @{ string required = "requiredForever";
+                         if (ViewBag.PermisosFull.Count > 0) { required = ""; }
+                         if (!Model.Template.Sitio.RequiredSubStatus) { required = ""; } }
+         <select class="form-control @required" id="DdlSubStatus">
+             @foreach (var item in ViewBag.ListSubEstados)
+              {
+                 string selected = "";
+                 if (Model.SubStatus.IdStatusDefinition == item.IdStatusDefinition) { selected = "selected"; }
+                 <option value="@item.IdStatusDefinition" @selected> @item.NameStatus</option>            
+              }
+         </select>
+    </div>
+    <div class="col-md-3 divScaled" style="display:none;">
+        <strong class="col-form-label">
+            Grupo a escalar
+            <span class="text-danger">*</span>
+        </strong>
+        <select class="form-control requiredForever" id="DdlGroupScale" onchange="changeTypesScaled(this.value);" disabled>
+            <option value="">--Seleccionar--</option>
+            @if (ViewBag.ListGroupsScaled.Count > 0)
+            {
+                foreach (var item in ViewBag.ListGroupsScaled)
+                {
+                    string selected = "";
+                    if (Model.WorkOrderSolution.WorkOrderEscalations.GroupsScaled.IdMasterGroups == item.IdMasterGroups) { selected = "selected"; }
+                    <option value="@item.IdMasterGroups" @selected> @item.NameGroup</option>                
+                }
+             }
+        </select>
+        <strong class="text-danger" id="DdlGroupScale-error"></strong>
+    </div>
+    <div class="col-md-3 divScaled" style="display:none;">
+        <strong class="col-form-label">
+            Tipo Escalamiento
+            <span class="text-danger">*</span>
+        </strong>
+        <select class="form-control requiredForever" id="DdlTypeScaled" disabled>
+            <option value="">--Seleccionar--</option>
+            @if (ViewBag.ListTypesScaled.Count > 0)
+             {
+                foreach (var item in ViewBag.ListTypesScaled)
+                {
+                    string selected = "";
+                    if (Model.WorkOrderSolution.WorkOrderEscalations.TypeScaling == item) { selected = "selected"; }
+                    <option value="@item" @selected> @item</option>                
+                }
+             }
+        </select>
+    </div>
+</div>
+<div id="divCommentsScaled" class="form-group row divScaled" style="display:none;">
+    <div class="col-md-12">
+        <strong for="TxtCommentsScaled">Comentarios de escalamiento</strong>
+        <textarea id="TxtCommentsScaled" class="form-control required" placeholder="Comentarios" disabled></textarea>
+    </div>
+</div>
+<div class="row">
+    @foreach (var item in Model.ListFielsUDFSolution)
+     {
+        @Html.Partial("TypeField", item) 
+        if (Model.Template.IdTemplates == 12)
+        {
+            <div class="row" id="divCta_Contable" style="display:none;">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <strong class="col-form-label">
+                            BPB_SERVICIO
+                        </strong>
+                        <span class="input-group-btn">
+                            <button type="button" ID="BtnServicio" onclick="getDispositionsByServicio()" class="btn btn-primary btn-icon-split">Ir</button>
+                        </span>
+                        <input type="text" ID="TxtSearchServicio" class="form-control" />
+                        <span class="input-group-addon" style="padding-right: 0px; padding-left: 0px;"></span>
+                        <select ID="DdlServicio" class="form-control" onchange="getCtaContable()">
+                            @if (Model.WorkOrderSolution.BPBServicio.Nombre == null)
+                             {
+                                <option value=""> Seleccione...</option>
+                             }
+                            else
+                            {
+                                <option value="@Model.WorkOrderSolution.BPBServicio.ID">@Model.WorkOrderSolution.BPBServicio.Nombre</option>
+                            }
+                            @*@foreach (var item in ViewBag.ListEstados)
+                                {
+                                    string selected = "";
+                                    if (Model.Status.IdStatusDefinition == item.IdStatusDefinition)
+                                    {
+                                        selected = "selected";
+                                    }
+                                    <option value="@item.IdStatusDefinition" @selected> @item.NameStatus</option>
+                                }*@
+                        </select>
+                        <strong class="col-form-label">
+                            BPB_CTA_CONTABLE
+                        </strong>
+                        <select ID="DdlCTA_Contable" class="form-control">
+                            @if (Model.WorkOrderSolution.CtaContable.ID == null)
+                             {
+                                <option value=""> Seleccione...</option>
+                             }
+                            else
+                            {
+                                <option value="@Model.WorkOrderSolution.CtaContable.ID">@Model.WorkOrderSolution.CtaContable.ID</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+        }
+     }
+</div>
+<div class="form-group row">
+    <div class="col-md-12">
+        @{ if (ViewBag.PermisosEditar == true)
+           {
+                <button type="submit" class="btn btn-primary btn-icon-split" id="BtnGuardar_S">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-flag"></i>
+                    </span>
+                    <span class="text">Guardar Cambios</span>
+                </button>
+                <br /><br />
+                <div id="PlanillAjusteMovil">
+                    <div class="card-body" style="padding-top: 10px;padding-bottom: 10px;">
+                        <h5 class="font-weight-bold">Descargar excel por filtros de fecha</h5>
+                    </div>
+                    <hr />
+                    <div class="form-group row">
+                        <div class="col-md-2">
+                            <strong>Fecha Inicio</strong>
+                            <input type="date" id="txtFechaInicio" name="txtFechaInicio" class="form-control" value="@DateTime.Now.AddDays(-30).ToString("yyyy-MM-dd")" />
+                        </div>
+                        <div class="col-md-2">
+                            <strong>Fecha Final</strong>
+                            <input type="date" id="txtFechaFinal" name="txtFechaFinal" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                        </div>
+                        <div class="col-md-4" style="text-align:center;">
+                            <br />
+                            <button type="button" class="btn btn-success btn-icon-split" id="BtnExcel" onclick="GenerarExcel(event)">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-file-excel"></i>
+                                </span>
+                                <span class="text">&nbsp;&nbsp;&nbsp;Generar Excel &nbsp;&nbsp;</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div> 
+           }
+           else
+           {
+                <h5 class="font-weight-bold text-danger">
+                    No puedes realizar cambios a esta solicitud, verifique si se encuentra a asignado o escalado a otro usuario.
+                </h5> 
+           } 
+         }
+
+    </div>
+</div>

@@ -1,0 +1,159 @@
+﻿
+@{
+
+    ViewData["Title"] = "";
+}
+@section Styles {
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <style type="text/css">
+        /*.modal-lg {
+            max-width: 900px;
+        }*/
+
+        label {
+            margin-bottom: 0px !important;
+            margin-top: 0px !important;
+        }
+
+        th, td {
+            white-space: nowrap;
+        }
+
+        .ml-1 {
+            margin-left: 5px !important;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/toastr/toastr.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen-clickable-optgroup.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/Users.js"></script>
+}
+
+
+<div class="card-body">
+    <form id="formCreate">
+        <div class="form-group row">
+            <div class="col-md-3">
+                <strong><label for="txtNoSR">No SR</label></strong>
+                @*<input type="text" id="txtNoSR" name="txtNoSR" class="form-control" onkeydown="validarNoSR(event)" />*@
+                <div class="input-group">
+
+                    <input type="text" id="txtNoSRPre" class="form-control required" style="font-weight:bold" onchange="NoSR()">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="">-</span>
+                    </div>
+                    <input type="text" id="txtNoSR" name="txtNoSR" class="form-control required" style="font-weight:bold; width:180px" onkeydown="validarNoSR(event)" onkeypress="SoloNumeros()">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <strong><label for="cboSegmento">Segmento</label></strong>
+                <select id="cboSegmento" class="form-control required" onchange="ValidarCombo(this.value)">
+                    <option value="">--Seleccionar--</option>
+                    @foreach (var item in ViewBag.Segmento)
+                    {
+                        <option value="@item.IdFieldsDispositions" data-IdFieldsUDF="@item.IdFieldsUDF">@item.Dispositions</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-3">
+                <strong><label for="cbotipologia">Tipología</label></strong>
+                <select id="cbotipologia" class="chosen-select required">
+                    <option value="">--Seleccionar--</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <strong><label for="cboEstado">Estado</label></strong>
+                <select id="cboEstado" class="form-control required">
+                    <option value="">--Seleccionar--</option>
+                    @foreach (var item in ViewBag.Estado)
+                    {
+                        <option value="@item.IdFieldsDispositions">@item.Dispositions</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-3">
+                <strong><label for="cboSeguimiento">Seguimiento pendiente</label></strong>
+                <select id="cboSeguimiento" name="cboSeguimiento" class="chosen-select required" onchange="BS_SeguimientoPendiente(this)">
+                    <option value="">--Seleccionar--</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <strong><label for="txtFechaCreacion">Fecha de creación</label></strong>
+                <input type="date" id="txtFechaCreacion" name="txtFechaCreacion" class="form-control required" value="@DateTime.Now.ToString("dd/MM/yyyy")" />
+            </div>
+            <div id="FechaEnvioCampo" class="col-md-3">
+                <strong><label for="txtFechaEnvioCampo">Fecha de envío a campo</label></strong>
+                <input type="date" id="txtFechaEnvioCampo" name="txtFechaEnvioCampo" class="form-control required" value="@DateTime.Now.ToString("dd/MM/yyyy")" />
+            </div>
+            <div class="col-md-3">
+                <strong><label for="txtFechaActualizacionEstado">Fecha Actualizacion Estado</label></strong>
+                <input type="date" id="txtFechaActualizacionEstado" name="txtFechaActualizacionEstado" class="form-control required" value="" disabled />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-3">
+                <strong><label for="txtFechaProximaAccion">Fecha de proxima acción</label></strong>
+                <input type="date" id="txtFechaProximaAccion" name="txtFechaProximaAccion" class="form-control required" value="" onchange="ProximaAccion()" />
+            </div>
+            <div id="FechaBackOffice" class="col-md-3">
+                <strong><label for="txtFechaBackOffice">Fecha Back Office</label></strong>
+                <input type="date" id="txtFechaBackOffice" name="txtFechaBackOffice" class="form-control required" value="@DateTime.Now.ToString("dd/MM/yyyy")" />
+            </div>
+            <div id="DetalleGestion" class="col-md-3">
+                <strong><label for="cboDetalleGestion">Detalle de gestión</label></strong>
+                <select id="cboDetalleGestion" class="form-control required">
+                    <option value="">--Seleccionar--</option>
+                    @foreach (var item in ViewBag.DetalleGestion)
+                    {
+                        <option value="@item.IdFieldsDispositions">@item.Dispositions</option>
+                    }
+                </select>
+            </div>
+            <div id="Canal" class="col-md-3">
+                <strong><label for="cboCanal">Canal</label></strong>
+                <select id="cboCanal" class="form-control required">
+                    <option value="">--Seleccionar--</option>
+                    @foreach (var item in ViewBag.Canal)
+                    {
+                        <option value="@item.IdFieldsDispositions">@item.Dispositions</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-12">
+                <strong><label for="txtObservaciones">Observaciones</label></strong>
+                <textarea id="txtObservaciones" class="form-control required" placeholder="Descripcion" maxlength="500" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="col-md-12 text-right">
+                <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnGuardar" onclick="guardarGestionOBE()">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-save"></i>
+                    </span>
+                    <span class="text">Guardar cambios</span>
+                </button>
+            </div>
+        </div>
+        
+    </form>
+</div>
+    
+ 
+
+
+
+

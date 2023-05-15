@@ -1,0 +1,56 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.CasosPqrMovilEscrita>
+
+<table id="TableGeneral3" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>IdSolutions</th>
+            <th>Numero Credito</th>
+            <th>Valor Ajuste</th>
+            <th>Descripcion_Motivo_Ajuste</th>
+            <th>Area_Solicita_Ajuste</th>
+            <th>Comentario</th>
+            <th>Documento_Usuario</th>
+            <th>Reclamo_del_Usuario</th>
+            <th>Custcode_Asociado_al_Crédito</th>
+            <th>Motivo_Ajuste</th>
+            <th>Nombre_de_Quien_Solicita</th>
+            <th>CUN_NR</th>
+            <th>Tipo_Reclamo</th>
+            <th>Aliado</th>
+            <th>Estado</th>
+            @*<th>Actualizacion_Anterior</th>*@
+            <th>Ultima_Actualizacion</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td></td>
+            <td>@item.WorKOrder</td>
+            <td>@item.Ascard1_Numero_Credito_V</td>
+            <td>@item.Ascard1_Valor_Ajuste_V</td>
+            <td>@item.Ascard1_Descripcion_Motivo_ajuste_V</td>
+            <td>@item.Ascard1_Area_Solicitante_V</td>
+            <td>@item.Ascard1_Comentario_V</td>
+            <td>@item.Ascard1_Documento_Usuario_V</td>
+            <td>@item.Ascard1_Reclamo_del_Usuario_V</td>
+            <td>@item.Ascard1_Custcode_Asociado_al_Crédito_V</td>
+            <td>@item.Ascard1_Motivo_Ajuste_V</td>
+            <td>@item.Ascard1_Nombre_de_Quien_Solicita_V</td>
+            <td>@item.Ascard1_CUN_NR_V</td>
+            <td>@item.Ascard1_Tipo_Reclamo_V</td>
+            <td>@item.Ascard1_Aliado_V</td>
+            <td>@item.Ascard1_Estado_V</td>
+            @*<td>@item.Ascard1_Actualizacion_Anterior</td>*@
+            <td>@item.Ascard1_Ultima_Actualizacion_V</td>
+           
+
+        </tr>
+        }
+
+    </tbody>
+</table>
+

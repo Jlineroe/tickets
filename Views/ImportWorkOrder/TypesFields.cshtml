@@ -1,0 +1,25 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.FieldsUDF>
+
+@foreach (var item in Model)
+{
+    <div class="form-group row">
+        <strong id="lblField_@item.IdFieldsUDF" class="col-md-4 col-form-label">
+            <span class="labelsColumns" data-idfields="@item.IdFieldsUDF" data-namefieldsudf="@item.NameFieldsUDF">
+            @item.NameField
+            </span>
+            (@item.FieldType.NameTypeFieldsShort)
+            @if (item.TypeRequired.IdTypeRequired == 2)
+            {<span data-idfieldsudf="@item.IdFieldsUDF" class="text-danger lblrequired">*</span>}
+        </strong>
+        <div class="col-md-4">
+            <select type="text" class="form-control colummnExcel chosen-select saveColummn" 
+                    id="DdlFielsUDF_@item.IdFieldsUDF" 
+                    data-namefieldsudf="@item.NameFieldsUDF" 
+                    data-idfieldsudf="@item.IdFieldsUDF" 
+                    onchange="onChangeValDataColumn(this);">
+                <option value="">--Seleccionar--</option>
+            </select>
+        </div>
+        <b id="DdlFielsUDF_@item.IdFieldsUDF-error" class="col-md-4 col-form-label text-danger lblErrores"></b>
+    </div>
+}

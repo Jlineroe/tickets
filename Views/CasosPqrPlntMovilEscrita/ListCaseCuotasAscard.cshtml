@@ -1,0 +1,43 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.CasosPqrMovilEscrita>
+
+<table id="TableGeneral4" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>IdSolutions</th>
+            <th>Numero Credito</th>
+            <th>Valor nueva cuota</th>
+            <th>Ascard2_Concepto</th>
+            <th>Ascard2_Área_soliciita_ajuste</th>
+            <th>Ascard2_Reclamo_Usuario</th>
+            <th>Ascard2_Cantidad_cuotas</th>
+            <th>Ascard2_Aliado</th>
+            <th>Ascard2_Estado</th>
+            @*<th>Ascard2_Actualizacion_Anterior</th>*@
+            <th>Ascard2_Ultima_Actualizacion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td></td>
+            <td>@item.WorKOrder</td>
+            <td>@item.Ascard2_Numero_de_credito</td>
+            <td>@item.Ascard2_Valor_Nueva_Cuota</td>
+            <td>@item.Ascard2_Concepto</td>
+            <td>@item.Ascard2_Área_soliciita_ajuste</td>
+            <td>@item.Ascard2_Reclamo_Usuario</td>
+            <td>@item.Ascard2_Cantidad_cuotas</td>
+            <td>@item.Ascard2_Aliado</td>
+            <td>@item.Ascard2_Estado</td>
+            @*<td>@item.Ascard2_Actualizacion_Anterior</td>*@
+            <td>@item.Ascard2_Ultima_Actualizacion</td>
+           
+
+        </tr>
+        }
+
+    </tbody>
+</table>
+

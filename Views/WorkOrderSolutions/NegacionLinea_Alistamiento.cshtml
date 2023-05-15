@@ -1,0 +1,90 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.NegacionLinea>
+
+<div id="DivBtnSave" class="form-group row">
+    <div class="col-md-12">
+        <a href="#"  data-toggle="modal" data-target="#myModalNegacion" class="btn btn-primary btn-icon-split">
+            <span class="icon text-white-50">
+                <i class="fa fa-plus"></i>
+            </span>
+            <span class="text">Crear Alistamiento</span>
+        </a>
+
+        @{
+            
+            var i = 1;
+            foreach (var item in Model)
+            {
+                if (i == 1)
+                {
+                    <input type="text" id="h_IdWorkOrder" value="@item.IdWorkOrder"   hidden />
+                    i = 0;
+                }
+            }
+        }
+
+        <button type="button" class="btn btn-success btn-icon-split" id="BtnExcel" onclick="GenerarExcelNegacionLineaPendiente(event)">
+            <span class="icon text-white-50">
+                <i class="fas fa-file-excel"></i>
+            </span>
+            <span class="text">&nbsp;&nbsp;&nbsp;Exportar pendiente&nbsp;&nbsp;</span>
+        </button>
+        <button type="button" class="btn btn-success btn-icon-split" id="BtnExcel" onclick="GenerarExcelNegacionLinea(event)">
+            <span class="icon text-white-50">
+                <i class="fas fa-file-excel"></i>
+            </span>
+            <span class="text">&nbsp;&nbsp;&nbsp;Exportar Todo&nbsp;&nbsp;</span>
+        </button>
+        <a href="#" onclick="" data-toggle="modal" data-target="#myModalCargarExcelNegacion" class="btn btn-primary btn-icon-split">
+            <span class="icon text-white-50">
+                <i class="fa fa-plus"></i>
+            </span>
+            <span class="text">Cargar Definiciones</span>
+        </a>
+
+    </div>
+</div>
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+
+    <thead>
+        <tr>
+            <th></th>
+            <th>Base</th>
+            <td>Ascard</td>
+            <th>Min</th>
+            <th>Custcode</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+
+            <th>Exportado</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            string inactivo = "", disabled = ""; ;
+
+        <tr class="@inactivo">
+            <td>
+                <div>
+                    <input type="button" name="anular" value="Anular" onclick="DeletelineaNegacion2(@item.Id);" />
+                </div>
+            </td>
+
+            <td>@item.Base</td>
+            <td>@item.Ascard</td>
+            <td>@item.MIN</td>
+            <td>@item.Curcode</td>
+            <td>@item.Nombre</td>
+            <td>@item.Apellido</td>
+
+            <td>@item.EsExportado</td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+@Html.Partial("ModalCrearNegacionLinea", Model)
+@Html.Partial("ModalCargaExcel", Model)

@@ -1,0 +1,102 @@
+﻿@model AIBTicketsMVC.Models.ListasDesplegables
+<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Campos de plantilla</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <input type="hidden" id="HdIdInput" />
+                    <input type="hidden" id="HdSolutionField" />
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label for="DdlTipoCampo">Tipo de campo</label>
+                            <select id="DdlTipoCampo" class="form-control required noEdit" onchange="changeTipoCampo(this.value);">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.FieldsTypes)
+                                {
+                                    <option class="FieldsTypes-@item.IdFieldsTypesUDF" value="@item.IdFieldsTypesUDF">@item.NameTypeFields</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="DdlTipoObligatorio">Comportamiento</label>
+                            <select id="DdlTipoObligatorio" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.ListTypesRequired)
+                                {
+                                    <option class="TemplateSolutions TS-@item.TemplateSolutions.ToString().ToLower()" value="@item.IdTypeRequired">@item.NameTypeRequired</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="TxtNombreCampo">Nombre campo</label>
+                            <input type="text" id="TxtNombreCampo" class="form-control required" placeholder="Nombre campo" maxlength="100" />
+                        </div>
+                        <div class="col-md-2 divFields divFieldsTypes3" style="display:none;">
+                            <label for="TxtLongitudCampo">Longitud</label>
+                            <input type="number" id="TxtLongitudCampo" disabled="disabled" class="noEdit form-control required" placeholder="Longitud Campo" maxlength="4" onkeypress="return solonumeros(event);" />
+                        </div>
+                    </div>
+                    <div class="form-group row divFields divFieldsTypes6">
+                        <div class="col-md-12">
+                            <b id="msjListas"></b>
+                        </div>
+                    </div>
+                    <div class="form-group row divFields divFieldsTypes6">
+                        <div class="col-md-4">
+                            <label for="DdlListDependent">Lista de la que dependera</label>
+                            <select id="DdlListDependent" class="form-control" onchange="changeListDependent(this.value);">
+                                <option value="">--Ninguna--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="DdlItemDependent">Item del que dependera</label>
+                            <select id="DdlItemDependent" class="form-control required noEdit" onchange="changeListItemDependent(this.value);">
+                                <option value="">--Seleccionar--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row divFields divFieldsTypes6" style="display:none;">
+                        <div class="col-md-4">
+                            <label for="TxtItemLista">Item de lista:</label>
+                            <input type="text" id="TxtItemLista" onkeyup="ValidaItemListas(this.value)" class="form-control" placeholder="Item lista desplegable" maxlength="2000" />
+                            <span id="TxtItemLista-error" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" style="margin-top: 23px;" class="btn btn-success" title="Agregar" onclick="AddOptionItemListas();">
+                                <i class="fa fa-plus"></i>
+                                Agregar
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="DdlItemLista">Eliminar item de esta lista:</label>
+                            <select id="DdlItemLista" class="form-control">
+                                <option value="">--Seleccionar--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" style="margin-top: 23px;" class="btn btn-danger" onclick="DeleteItemLista();">
+                                <i class="fa fa-trash-alt"></i>
+                                Eliminar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    @*<input type="submit" class="btn btn-primary" id="BtnGuardar" value="Guardar" />*@
+                    <button id="BtnGuardarInput" type="button" class="btn btn-primary" onclick="SetGuardarNuevoCampo(this)">Guardar</button>
+                    <button id="BtnGuardarInput-load" class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

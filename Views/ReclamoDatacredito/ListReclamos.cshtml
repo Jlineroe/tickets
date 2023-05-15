@@ -1,0 +1,103 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.ReclamoDatacredito>
+
+@*<table id="tblAnalysis" class="table table-sm table-bordered table-hover" style="width:100%;">*@
+@*<table id="tblAnalysis" class="table table-sm table-bordered table-hover dataTable no-footer" style="width:100%;">*@
+<table id="tblAnalysis" class="display" style="width:100%;">
+    <thead>
+        <tr>
+            @if (ViewBag.user == "SUPERCENTRALES")
+            {
+                <th>Estado&nbsp&nbsp&nbsp&nbsp</th>
+            }
+
+            <th>Numero ID</th>
+            <th>Estado</th>
+            <th>SubEstado</th>
+            <th>Tipo Ident</th>
+            <th>Nombre</th>
+            <th>Entidad</th>
+            <th>NIT</th>
+            <th>No Cuenta</th>
+            <th>No Reclamo</th>
+            <th>Reclamo Entidad</th>
+            <th>Estado</th>
+            <th>Tipo Reclamo</th>
+            <th>Subtipo Reclamo</th>
+            <th>Leyenda Reclamo</th>
+            <th>Tipo Solucion</th>
+            <th>Fecha Colocacion</th>
+            <th>Fecha Aplicacion</th>
+            <th>Canal</th>
+            <th>Origen</th>
+            <th>Empresa Origen</th>
+            <th>Estado Robot</th>
+
+            @*<th>EstadoProceso</th>
+        <th>Observacion</th>
+        <th>Fecha_Procesamiento</th>
+        <th>HostName</th>
+        <th>WinUser</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            foreach (var item in Model)
+            {
+
+                <tr>
+                    @if (ViewBag.user == "SUPERCENTRALES")
+                    {
+                        <td>
+                            <div class="btn-group">
+                                <a href="/ReclamoDatacredito/FormEditEstados/reclamo?@item.No_Reclamo" class="btn btn-sm btn-primary BtnEdit">
+                                    <i class="fas fa-edit fa-sm"></i>
+                                    Gestionar
+                                </a>
+                            </div>
+                        </td>
+                    }
+                    <th scope="row">@item.Numero_ID</th>
+                    <td>@item.Estad</td>
+                    @if (@item.SubEstad == "0")
+                    {
+                        <td></td>
+                    }
+                    else
+                    {
+                        <td>@item.SubEstad</td>
+                    }
+
+                    <td>@item.Tipo_Identificacion</td>
+                    <td>@item.Nombre</td>
+                    <td>@item.Entidad</td>
+                    <td>@item.NIT</td>
+                    <td>@item.No_Cuenta</td>
+                    <td><label id="No_Reclamo">@item.No_Reclamo</label></td>
+                    <td>@item.Reclamo_Entidad</td>
+                    <td>@item.Estado</td>
+                    <td>@item.Tipo_Reclamo</td>
+                    <td>@item.Subtipo_Reclamo</td>
+                    <td>@item.Leyenda_Reclamo</td>
+                    <td>@item.Tipo_Solucion</td>
+                    <td>@item.Fecha_Colocacion</td>
+                    <td>@item.Fecha_Aplicacion</td>
+                    <td>@item.Canal</td>
+                    <td>@item.Origen</td>
+                    <td>@item.Empresa_Origen</td>
+                    <td>@item.Estado_Robot</td>
+
+
+
+                    @*<td>@item.EstadoProceso</td>
+        <td>@item.Observacion</td>
+        <td>@item.Fecha_Procesamiento</td>
+        <td>@item.HostName</td>
+        <td>@item.WinUser</td>*@
+                </tr>
+                i++;
+
+            }
+        }
+    </tbody>
+</table>

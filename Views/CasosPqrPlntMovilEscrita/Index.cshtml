@@ -1,0 +1,158 @@
+﻿
+@{
+
+    ViewData["Title"] = "Casos PQR";
+    @model AIBTicketsMVC.Models.ListasDesplegables
+}
+@section Styles {
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <style type="text/css">
+        /*.modal-lg {
+            max-width: 900px;
+        }*/
+
+        label {
+            margin-bottom: 0px !important;
+            margin-top: 0px !important;
+        }
+
+        th, td {
+            white-space: nowrap;
+        }
+
+        .ml-1 {
+            margin-left: 5px !important;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/toastr/toastr.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen-clickable-optgroup.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/Users.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/CasosPQRMovil.js"></script>
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Listado de casos PQR móvil escritas y verbales</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">Filtros</h6>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-3" hidden>
+                        <strong><label for="txtFechaInicio">Fecha Inicio</label></strong>
+                        <input type="date" id="txtFechaInicio" name="txtFechaInicio" class="form-control" value="@DateTime.Now.AddDays(-30).ToString("yyyy-MM-dd")" />
+                    </div>
+                    <div class="col-3" hidden>
+                        <strong><label for="txtFechaFinal">Fecha Final</label></strong>
+                        <input type="date" id="txtFechaFinal" name="txtFechaFinal" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                    </div>
+                    <div class="col-3">
+                        <strong><label for="txtCuscode">Cuscode</label></strong>
+                        <input type="text" id="txtCuscode" name="txtCuscode" class="form-control" />
+                    </div>
+                    <div class="col-3">
+                        <strong><label for="txtIdSolutions">IdSolutions</label></strong>
+                        <input type="text" id="txtIdSolutions" name="txtIdSolutions" class="form-control" />
+                    </div>
+                    <div class="col-6 mt-4">
+                        <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnPrepago" onclick="ViewCasosPrepago(this)">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">Prepago</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnPospago" onclick="ViewCasosPospago(this)">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">Pospago</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnAscard" onclick="ViewCasosAscard(this)">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">Ascard</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnCuotasAscard" onclick="ViewCasosCuotasAscard(this)">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">Cuotas Ascard</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnPrepago13" onclick="ViewCasosPrepago13(this)">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">Prepago_V</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnPospago13" onclick="ViewCasosPospago13(this)">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">Pospago_V</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnAscard13" onclick="ViewCasosAscard13(this)">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">Ascard_V</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnCuotasAscard13" onclick="ViewCasosCuotasAscard13(this)">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">Cuotas Ascard_V</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnEliminacionCentrales" onclick="ViewCasosEliminacionCentrales(this)">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">Eliminacion Centrales</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnEliminacionCentrales13" onclick="ViewCasosEliminacionCentrales13(this)">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <span class="text">Eliminacion Centrales_V</span>
+                        </button>
+                    </div>
+                   
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">Listado de casos PQR móvil escritas y verbales</h6>
+            </div>
+            <div class="card-body">
+                <div id="DivBtnSave" class="form-group row"></div>
+                <div class="form-group row">
+                    <div class="table-responsive" id="divTable">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

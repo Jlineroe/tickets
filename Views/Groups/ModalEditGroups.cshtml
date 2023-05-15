@@ -1,0 +1,105 @@
+﻿@model AIBTicketsMVC.Models.ListasDesplegables
+<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h5 class="modal-title">Grupos resolutores</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="HdIdGrupo" />
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label for="TxtNameGroup">Nombre grupo</label>
+                            <input type="text" id="TxtNameGroup" class="form-control required" onkeyup="VerifyNameGroup(this.value)" placeholder="Nombre Grupo" maxlength="30" />
+                            <span id="TxtNameGroup-error" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="DdlLOB">Linea de negocio</label>
+                            <select id="DdlLOB" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.LineasNegocios)
+                                {
+                                    <option value="@item.Id"> @item.Nombre</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="DdlSitio">Sitio</label>
+                            <select id="DdlSitio" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Sitios)
+                                {
+                                    <option value="@item.IdMasterSites"> @item.NameSite</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <br />
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ChkDevolver">
+                                <label class="custom-control-label" for="ChkDevolver">Devolver a usuario que escala</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="TxtDescriptionGroup">Descripcion del grupo</label>
+                            <textarea id="TxtDescriptionGroup" class="form-control" placeholder="Descripcion" maxlength="1000"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="DdlGruposAEscalar">Grupos a los que este grupo puede escalar</label>
+                            <select id="DdlGruposAEscalar" data-placeholder="Seleccione grupos a escalar..." multiple class="chosen-select">
+                                @foreach (var item in Model.Grupos)
+                                {
+                                    <option value="@item.IdMasterGroups">@item.NameGroup</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="DdlEstado">Estado</label>
+                            <select id="DdlEstado" class="form-control" disabled>
+                                <option value="1">Activo</option>
+                                <option value="0">Inactivo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="TxtTipoEscalamiento">Tipo Escalamineto</label>
+                            <input type="text" id="TxtTipoEscalamiento" class="form-control" maxlength="500" />
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" style="margin-top: 23px;" class="btn btn-success" title="Agregar" onclick="AddOptionTipoEscalamiento();">
+                                <i class="fa fa-plus"></i>
+                                Agregar
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="DdlTipoEscalamiento">Listado tipos Escalaminetos</label>
+                            <select id="DdlTipoEscalamiento" class="form-control">
+                                <option value="">--Seleccionar--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" style="margin-top: 23px;" class="btn btn-danger" title="Eliminar" onclick="DeleteTipoEscalamiento();">
+                                <i class="fa fa-trash-alt"></i>
+                                Desactivar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" id="BtnGuardar" value="Guardar" />
+                    <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

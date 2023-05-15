@@ -1,0 +1,162 @@
+﻿@{
+    @model AIBTicketsMVC.ViewModels.ViewModelListOrders
+    ViewData["Title"] = "Solicitudes";
+}
+@section Styles {
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/datapicker/datepicker3.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/animate.css/animate.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/tagsinput/tagsinput.css" rel="stylesheet" />
+    <style type="text/css">
+        th, td {
+            white-space: nowrap;
+        }
+
+        #global {
+            height: 530px;
+            position: static;
+            border-bottom-width: 1px !important;
+            border-left-width: 1px !important;
+            border-top-width: 0px !important;
+            border-right-width: 0px !important;
+            border: 1px solid #ddd;
+            overflow-y: auto;
+        }
+
+        .card-body {
+            padding: 1.25rem;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/toastr/toastr.min.js"></script>
+    <script src="~/wwwroot/vendor/datapicker/bootstrap-datepicker.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen-clickable-optgroup.js"></script>
+    <script src="~/wwwroot/vendor/tagsinput/tagsinput.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/ListWorkOrders.js"></script>
+}
+
+<input type="text" id="txtPerfil" name="perfil" value="@ViewBag.Perfil" hidden /> @*Perfil de usuario*@
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Listado de solicitudes</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header" id="divCardHeader">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="form-inline">
+                            <div class="form-group mr-2">
+                                <div id="DivOrderarPor" class="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="font-weight-light">Ordenar por: </span>
+                                    <button id="BtnOrderBy" class="btn btn-sm btn-light dropdown-toggle" type="button">
+                                        Fecha de creacion
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a id="divOrderDateLog" class="dropdown-item OrderBy" href="#" onclick="clickOrderBy('DateLog');">Fecha de creacion</a>
+                                        <a id="divOrderDateSAP" class="dropdown-item OrderBy" href="#" onclick="clickOrderBy('DateSAP');">Fecha SAP</a>
+                                        <a id="divOrderDateUltModi" class="dropdown-item OrderBy" href="#" onclick="clickOrderBy('DateUltModi');">Ultima Modificacion</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a id="divTypeOrderasc" class="dropdown-item TypeOrder" href="#" onclick="clickOrderType('asc');">Ascendente</a>
+                                        <a id="divTypeOrderdesc" class="dropdown-item TypeOrder" href="#" onclick="clickOrderType('desc');">Descendente</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="hddOrderBy" value="DateLog" />
+                            <input type="hidden" id="hddTypeOrder" value="asc" />
+                            <div class="form-group">
+                                <div class="dropdown dropright">
+                                    <button class="btn btn-sm btn-dark btn-icon-split" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-cogs"></i>
+                                        </span>
+                                        <span class="text dropdown-toggle">Acciones </span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item DivCrearTickets" href="/CreateWorkOrder">Crear tickets</a>
+                                        <a class="dropdown-item DivImportSolicitudes" href="/ImportWorkOrder">Importar solicitudes</a>
+                                        <a class="dropdown-item DivDisabledData" href="/DataDisabled">Desactivar Datas</a>
+                                        <a class="dropdown-item DivReports" href="/Reports">Exportar Reportes</a>
+                                        <a class="dropdown-item DivReports" href="/ImportarPQR">Importar PQRs</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <div class="form-inline text-right">
+                            <div class="form-group mr-2">
+                                <button type="button" class="btn btn-sm btn-danger btn-icon-split" onclick="cleanFilters();">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-broom"></i>
+                                    </span>
+                                    <span class="text">Limpiar filtros</span>
+                                </button>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-sm btn-success btn-icon-split" onclick="onClickFiltros();">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-filter"></i>
+                                    </span>
+                                    <span class="text" id="NameBtnFiltros">Mostrar Filtros</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @Html.Action("ViewReassign")
+            <div class="row">
+                <div class="col-md-12" id="divListWorkOrders">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md">
+                                <label>
+                                    Mostrar
+                                    <select id="DdlTopData" onchange="changeMostrarTop(this.value);" style="width: auto;display: inline-block;" class="custom-select custom-select-sm form-control form-control-sm">
+
+                                        @foreach (var Top in Model.Pagination.TopDefault)
+                                        {
+                                            string selected = "";
+                                            if (Model.Pagination.RegisXPagina == Top)
+                                            {
+                                                selected = "selected";
+                                            }
+                                            <option value="@Top" @selected>@Top</option>
+                                        }
+                                    </select> registros
+                                </label>
+                            </div>
+                        </div>
+                        <div class="divPagination">
+                            @Html.Partial("Pagination", Model.Pagination)
+                        </div>
+                        <div class="form-group row">
+                            <input type="hidden" id="hddPagina" value="@Model.Pagination.PaginaActual" />
+                            <div class="col-md table-responsive" id="divTable">
+                                @Html.Partial("ListOrders", Model.ListWorkOrder)
+                            </div>
+                        </div>
+                        <div class="divPagination">
+                            @Html.Partial("Pagination", Model.Pagination)
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" id="divMasterFilters" style="display:none;">
+                    @Html.Action("ViewFilters", "ListWorkOrders")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

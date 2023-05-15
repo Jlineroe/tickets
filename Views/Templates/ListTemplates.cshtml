@@ -1,0 +1,61 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.Templates>
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Nombre Plantilla</th>
+            <th>Descripcion</th>
+            <th>Sitio</th>
+            <th>Fecha Creacion</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a href="/Templates/FormEditTemplates/@item.IdTemplates" class="btn btn-sm btn-primary BtnEdit">
+                            <i class="fas fa-edit fa-sm"></i>
+                            Editar
+                        </a>
+                        @if (item.State == true)
+                        {
+                            <button onclick="DeleteTemplate(@item.IdTemplates);" class="btn btn-sm btn-danger BtnDelete">
+                                <i class="fas fa-trash-alt fa-sm"></i>
+                                Desactivar
+                            </button>
+                        }
+                        else
+                        {
+                            <button onclick="ActivarTemplate(@item.IdTemplates);" class="btn btn-sm btn-success BtnDelete">
+                                <i class="fas fa-check fa-sm"></i>
+                                Activar
+                            </button>
+                        }
+                    </div>
+                </td>
+                <td>@item.NameTemplate</td>
+                <td class="text-truncate" style="max-width: 400px;">
+                    @item.DescriptionTemplate
+                </td>
+                <td>@item.Sitio.NameSite</td>
+                <td>@item.DateLog</td>
+                <td>
+                    @if (item.State == true)
+                    {
+                        <span class="badge badge-success text-wrap" style="font-size: 90%;">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-danger text-wrap" style="font-size: 90%;">Inactivo</span>
+
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

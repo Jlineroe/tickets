@@ -1,0 +1,85 @@
+﻿@model AIBTicketsMVC.Models.ListasDesplegables
+<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form id="formSemaforo">
+                <div class="modal-header">
+                    <h5 class="modal-title">Semaforo por edad del caso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="HdIdSemaphore" />
+                    <div class="form-group row">
+                        <div class="col-md-3 divSemaphore">
+                            <label for="DdlSitio">Sitio</label>
+                            <select id="DdlSitio" class="form-control required" onchange="VerifySite(this.value)">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in Model.Sitios)
+                                {
+                                    <option value="@item.IdMasterSites"> @item.NameSite</option>
+                                }
+                            </select>
+                            <span id="DdlSitio-error" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-3 divCategories">
+                            <label for="TxtCategory">Categoria</label>
+                            <input type="text" id="TxtCategory" class="form-control" disabled />
+                        </div>
+                        <div class="col-md-3 divCategories">
+                            <label for="TxtSubCategory">Sub Categoria</label>
+                            <input type="text" id="TxtSubCategory" class="form-control" disabled />
+                            <input type="hidden" id="HdIdSubCategory" />
+                        </div>
+                        <div class="col-md-3 divSemaphore">
+                            <label for="TxtHorasSLA">Horas SLA:</label>
+                            <input type="number" id="TxtHorasSLA" class="form-control required" placeholder="Horas SLA" onkeyup="changeInputSLASemaforo(this)" min="0" onkeypress="return solonumeros(event);" />
+                            <span id="TxtHorasSLA-error" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <strong class="text-success">Verde</strong>
+                            <div class="input-group">
+                                <input type="text" placeholder="0" class="form-control" disabled>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Entre</span>
+                                </div>
+                                <input type="number" id="TxtVerdeHasta" class="form-control required" placeholder="Hasta" onkeyup="changeInputSLASemaforo(this)" onkeypress="return solonumeros(event);" min="0" />
+                            </div>
+                            <span id="TxtVerdeHasta-error" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <strong class="text-warning">Amarillo</strong>
+                            <div class="input-group">
+                                <input type="number" min="0" id="TxtNaranjaDesde" class="form-control" placeholder="Desde" onkeypress="return solonumeros(event);" disabled />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Entre</span>
+                                </div>
+                                <input type="number" min="0" id="TxtNaranjaHasta" class="form-control required" placeholder="Hasta" onkeyup="changeInputSLASemaforo(this)" onkeypress="return solonumeros(event);" />
+                            </div>
+                            <span id="TxtNaranjaHasta-error" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <strong class="text-danger">Rojo</strong>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Mayor a</span>
+                                </div>
+                                <input type="number" min="0" id="TxtRojoMayorA" class="form-control" onkeypress="return solonumeros(event);" disabled />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" id="BtnGuardar" value="Guardar" />
+                    <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

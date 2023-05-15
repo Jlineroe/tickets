@@ -1,0 +1,54 @@
+﻿@{
+    @model AIBTicketsMVC.Models.ListasDesplegables
+    ViewData["Title"] = "Importar solicitudes";
+}
+@section Styles {
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <style type="text/css">
+        hr {
+            margin: 0px;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/toastr/toastr.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen-clickable-optgroup.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/ImportWorkOrder.js"></script>
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Asistente De Importación De Solicitudes</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div id="divArchivo" class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">1. Cargar archivo</h6>
+            </div>
+            <div class="card-body">
+                @Html.Partial("ViewCargarData", Model.Sitios)
+            </div>
+            <hr />
+            <div id="divCampos" class="card-header divCampos" style="display:none;">
+                <h6 class="m-0 font-weight-bold text-primary">2. Asignacion de campos</h6>
+            </div>
+            <div class="card-body divCampos" style="display:none;">
+                @Html.Action("ViewAsignarCampos")
+            </div>
+            <hr />
+            <div id="divGrupos" class="card-header divGroups" style="display:none;">
+                <h6 class="m-0 font-weight-bold text-primary">3. Asignar grupos y usuarios</h6>
+            </div>
+            <div class="card-body divGroups" style="display:none;" >
+                @Html.Partial("ViewAsignarGroups",Model)
+            </div>
+        </div>
+    </div>
+</div>

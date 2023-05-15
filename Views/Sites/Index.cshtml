@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewData["Title"] = "Sitios";
+}
+
+@section Styles {
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <style type="text/css">
+        th, td {
+            white-space: nowrap;
+        }
+        #divTable .badge {
+            font-size: 100%;
+        }
+        hr {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/Sites.js"></script>
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Sitios</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <a id="cardCollapse" href="#collapseNewSitio" class="d-block card-header" data-toggle="collapse" role="button">
+                <h6 class="m-0 font-weight-bold text-primary">Crear nuevo sitio</h6>
+            </a>
+            <div class="collapse show" id="collapseNewSitio">
+                <div class="card-body">
+                    <form id="FormSite">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="TxtNameSite">Nombre </label>
+                                <input type="text" id="TxtNameSite" class="form-control required" placeholder="Nombre del sitio" onkeyup="VerifyNameSite(this.value);" maxlength="50" />
+                                <span id="TxtNameSite-error" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="custom-control custom-checkbox" style="padding-top: 28px">
+                                    <input type="checkbox" class="custom-control-input" id="chkSubStatus">
+                                    <label class="custom-control-label" for="chkSubStatus">Sub estado obligatorio</label>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <label for="TxtDescripcionSite">Descripcion</label>
+                                <input type="text" id="TxtDescripcionSite" class="form-control required" placeholder="Descripcion Sitio" maxlength="500" />
+                            </div>
+                            <div class="col-md-2" style="margin-top: 32px;">
+                                <button id="BtnGuardar" type="submit" class="btn btn-primary btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-flag"></i>
+                                    </span>
+                                    <span class="text">Guardar</span>
+                                </button>
+                                <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                    Loading...
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr />
+            <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">Listado de sitios</h6>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <div id="divTable" class="table-responsive">
+                        @Html.Action("ListSitios", "Sites")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("ModalEditarSitio")
+

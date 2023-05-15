@@ -1,0 +1,52 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.TimeList>
+
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Nombre Agente</th>
+            <th>IdWorkOrder</th>
+            <th>Grupo</th>
+            @*<th>Fecha Apertura/Hora</th>*@
+            @*<th>Fecha Dia</th>*@
+            @*<th>Fecha Cierre</th>*@
+            <th>Tiempo Actual de Gestion (Minutos)</th>
+            @*<th>Estado</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var bg = "";
+            var col = "";
+            if (item.TiempoTranscurrido <= 20)
+            {
+                bg = "#1cc88a";
+                col = "white";
+            }
+            else if (item.TiempoTranscurrido > 20 && item.TiempoTranscurrido <= 30)
+            {
+                bg = "yellow";
+                col = "black";
+            }
+            else
+            {
+                bg = "#e74a3b";
+                col = "white";
+            }
+        <tr>
+            <td></td>
+            <td>@item.NombreAgente</td>
+            <td>@item.IdWorkOrder</td>
+            <td>@item.Grupo</td>
+            @*<td>@item.FechaApertura</td>*@
+            @*<td>@item.FechaDia</td>*@
+            @*<td>@item.FechaCierre</td>*@
+            <td style="background-color:@bg; color: @col;">@item.TiempoTranscurrido</td>
+            @*<td>@item.Estado</td>*@
+        </tr>
+        }
+
+    </tbody>
+</table>
+

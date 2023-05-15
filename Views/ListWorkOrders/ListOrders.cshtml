@@ -1,0 +1,105 @@
+﻿@*@model AIBTicketsMVC.ViewModels.ListOrdersViewModel*@
+@model IEnumerable<AIBTicketsMVC.Models.WorkOrder>
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th class="text-center" style="padding-right: 4px;">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="ChkWO-All" onclick="ClickAllCheck(this)">
+                    <label class="custom-control-label" for="ChkWO-All"></label>
+                </div>
+            </th>
+            <th></th>
+            <th>Id</th>
+            <th>Id Reference</th>
+            <th>Titulo</th>
+            <th>Días PQR</th>
+            <th>Estado</th>
+            <th>Sub Estado</th>
+            <th>PQR</th>
+            <th>CUENTA</th>
+            <th style="visibility:hidden">X_COORDINATE</th>
+            <th>NUMERO</th>
+            <th>Usuario Crea</th>
+            <th>Usuario Asignado</th>
+            <th>Grupo Asignado</th>
+            <th>Usuario Escalado</th>
+            <th>Tipo de escalamiento</th>
+            <th>Plantilla</th>
+            <th>Fecha SAP</th>
+            <th>Ult Modificacion</th>
+            <th>Fecha de creacion</th>
+            <th>Fecha Correo</th>
+            <th>Fecha Correo VIP</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+
+            foreach (var item in Model)
+            {
+                var bg = "";
+                var col = "";
+                if (item.DiasPQR <= 5)
+                {
+                    bg = "#1cc88a";
+                    col = "white";
+                }
+                else if(item.DiasPQR > 5 && item.DiasPQR <= 11)
+                {
+                    bg = "yellow";
+                    col = "black";
+                }
+                else
+                {
+                    bg = "#e74a3b";
+                    col = "white";
+                }
+                <tr>
+                    <td class="text-center">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input ChkWorkOrder" data-idworkorder="@item.IdWorkOrder" onclick="ClickCheckUni()" id="ChkWO-@item.IdWorkOrder">
+                            <label class="custom-control-label" for="ChkWO-@item.IdWorkOrder"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-info btn-icon-split" onclick="clickOrderStatus(@item.IdWorkOrder, @item.Status.IdStatusDefinition, @item.GrupoAsignado.IdMasterGroups)">
+                            <span class="text">Ver</span>
+                        </button>
+                    </td>
+                    <td>
+                        <a>
+                            <strong>@item.IdWorkOrder</strong>
+                        </a>
+                    </td>
+                    <td> <strong>  @item.IdWorkOrderReference </strong> </td>
+                    <td>
+                        <a>
+                            <strong>@item.Title</strong>
+                        </a>
+                    </td>
+                    <td style="background-color:@bg; color: @col;">@item.DiasPQR</td>
+                    <td>@item.Status.NameStatus</td>
+                    <td>@item.SubStatus.NameStatus</td>
+                    <td>@item.PQR</td>
+                    <td>@item.Cuenta</td>
+                    <td style="visibility:hidden">@item.X_COORDINATE </td>
+                    <td>@item.NUMERO</td>
+                    <td>@item.UsersCreate.FullName</td>
+                    <td>@item.UsersAssigned.FullName</td>
+                    <td>@item.GrupoAsignado.NameGroup</td>
+                    <td>@item.UsersScaled.FullName</td>
+                    <td>@item.WorkOrderSolution.WorkOrderEscalations.TypeScaling</td>
+                    <td>@item.Template.NameTemplate</td>
+                    <td>@item.DateSAP</td>
+                    <td>@item.DateModification</td>
+                    <td>@item.DateLog</td>
+                    <td>@item.FechaCorreo</td>
+                    <td>@item.FechaCorreoVIP</td>
+                </tr>
+            }
+        }
+        
+    </tbody>
+</table>

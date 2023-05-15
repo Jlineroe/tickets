@@ -1,0 +1,63 @@
+﻿
+<table id="tblAnalysis" class="display" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Identificacion</th>
+            <th>Nombre Completo</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Especialidades</th>
+            <th>Ciudad de Residencia</th>
+            <th>Tipo de Credito</th>
+            <th>Tipificacion 1</th>
+            <th>Tipificacion 2</th>
+            <th>Tipificacion 3</th>
+            <th>Tipificacion 4</th>
+            @*<th>NombreArchivo</th>
+                <th>DataActiva</th>
+                <th>FechaCreacion</th>
+                <th>FechaCarga</th>
+                <th>FechaModificacion</th>
+                <th>HostName</th>
+                <th>winuser</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <div class="btn-group">
+                            <a href="" class="btn btn-sm btn-success BtnEdit" onclick="MostrarInforEstado(@item.Id)">
+                                <i class="fas fa-eye fa-sm"></i>
+                                Ver
+                            </a>
+                        </div>
+                    </td>
+                    <th>@item.Identificacion</th>
+                    <td>@item.NombreCompleto</td>
+                    <td>@item.Telefono</td>
+                    <td>@item.Email</td>
+                    <td>@item.Especialidades</td>
+                    <td>@item.CiudadResidencia</td>
+                    <td>@item.TipoCredito</td>
+                    <td>@item.Tipificacion1</td>
+                    <td>@item.Tipificacion2</td>
+                    <td>@item.Tipificacion3</td>
+                    <td>@item.Tipificacion4</td>
+                    @*<td>@item.NombreArchivo</td>
+                        <td>@item.DataActiva</td>
+                        <td>@item.FechaCreacion</td>
+                        <td>@item.FechaCarga</td>
+                        <td>@item.FechaModificacion</td>
+                        <td>@item.HostName</td>
+                        <td>@item.winuser</td>*@
+                </tr>
+                i++;
+            }
+        }
+    </tbody>
+</table>

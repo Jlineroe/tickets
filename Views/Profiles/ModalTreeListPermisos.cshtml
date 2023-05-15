@@ -1,0 +1,124 @@
+﻿@model AIBTicketsMVC.Models.NivelesMenu
+<ul>
+    @foreach (var menu1 in Model.MenuLvl1)
+    {
+        //MENU LVL 1
+        <li>
+            @*Name Menu and Check*@
+            <span>
+                <i class="fa fa-lg fa-plus-circle"></i>
+                <label class="custom-control-inline custom-control custom-checkbox">
+                    <input type="checkbox" name="checkbox-inline" id="ChkM_@menu1.IdMasterMenu" class="chkModulos custom-control-input" />
+                    @*<label class="custom-control-indicator"></label>*@
+                    <div class="custom-control-label">@menu1.Name</div>
+                </label>
+            </span>
+            @*Sub Menu*@
+            <ul>
+                @if (Model.MenuLvl2.Any(element => element.Parent_IdMenu == menu1.IdMasterMenu))
+                {
+                    foreach (var menu2 in Model.MenuLvl2)
+                    {
+                        if (menu2.Parent_IdMenu == menu1.IdMasterMenu)
+                        {
+                            //MENU LVL 2
+                            <li style="display:none">
+                                @*Name Menu and Check*@
+                                <span>
+                                    <i class="fa fa-lg fa-plus-circle"></i>
+                                    <label class="custom-control-inline custom-control custom-checkbox">
+                                        <input type="checkbox" name="checkbox-inline" id="ChkM_@menu2.IdMasterMenu" class="chkModulos custom-control-input" />
+                                        @*<label class="custom-control-indicator"></label>*@
+                                        <div class="custom-control-label">@menu2.Name</div>
+                                    </label>
+                                </span>
+                                @*Sub Menu*@
+                                <ul>
+                                    @if (Model.Actions.Any(element => element.Parent_IdMenu == menu2.IdMasterMenu))
+                                    {
+                                        //SI NO EXISTE LVL 3 ADD ACTIONS LVL2
+                                        foreach (var action in Model.Actions)
+                                        {
+                                            if (action.Parent_IdMenu == menu2.IdMasterMenu)
+                                            {
+                                                @*ACTIONS LVL 2*@
+                                                <li style="display:none">
+                                                    <span>
+                                                        <label class="custom-control-inline custom-control custom-checkbox">
+                                                            <input type="checkbox" name="checkbox-inline" id="ChkA_@action.IdMasterMenu" class="chkModulos custom-control-input" />
+                                                            @*<label class="custom-control-indicator"></label>*@
+                                                            <div class="custom-control-label">@action.Name</div>
+                                                        </label>
+                                                    </span>
+                                                </li>
+                                            }
+                                        }
+                                    }
+                                    @if (Model.MenuLvl3.Any(element => element.Parent_IdMenu == menu2.IdMasterMenu))
+                                    {
+                                        //SI EXISTE LVL 3 ADD ACTIONS LVL3
+                                        foreach (var menu3 in Model.MenuLvl3)
+                                        {
+                                            if (menu3.Parent_IdMenu == menu2.IdMasterMenu)
+                                            {
+                                                @*ACTIONS LVL 3*@
+                                                <li style="display:none">
+                                                    <span>
+                                                        <i class="fa fa-lg fa-plus-circle"></i>
+                                                        <label class="custom-control-inline custom-control custom-checkbox">
+                                                            <input type="checkbox" name="checkbox-inline" id="ChkM_@menu3.IdMasterMenu" class="chkModulos custom-control-input" />
+                                                            @*<label class="custom-control-indicator"></label>*@
+                                                            <div class="custom-control-label">@menu3.Name</div>
+                                                        </label>
+                                                    </span>
+                                                    <ul>
+                                                        @foreach (var action in Model.Actions)
+                                                        {
+                                                            if (action.Parent_IdMenu == menu3.IdMasterMenu)
+                                                            {
+                                                                <li style="display:none">
+                                                                    <span>
+                                                                        <label class="custom-control-inline custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="checkbox-inline" id="ChkA_@action.IdMasterMenu" class="chkModulos custom-control-input" />
+                                                                            @*<label class="custom-control-indicator"></label>*@
+                                                                            <div class="custom-control-label">@action.Name</div>
+                                                                        </label>
+                                                                    </span>
+                                                                </li>
+                                                            }
+                                                        }
+                                                    </ul>
+                                                </li>
+                                            }
+                                        }
+                                    }
+                                </ul>
+                            </li>
+                        }
+                    }
+                }
+
+                @if (Model.Actions.Any(element => element.Parent_IdMenu == menu1.IdMasterMenu))
+                {
+                    //SI NO EXISTE LVL 2 ADD ACTIONS LVL1
+                    foreach (var action in Model.Actions)
+                    {
+                        if (action.Parent_IdMenu == menu1.IdMasterMenu)
+                        {
+                            //ACTIONS LVL 1
+                            <li style="display:none">
+                                <span>
+                                    <label class="custom-control-inline custom-control custom-checkbox">
+                                        <input type="checkbox" name="checkbox-inline" id="ChkA_@action.IdMasterMenu" class="chkModulos custom-control-input" />
+                                        @*<label class="custom-control-indicator"></label>*@
+                                        <div class="custom-control-label">@action.Name</div>
+                                    </label>
+                                </span>
+                            </li>
+                        }
+                    }
+                }
+            </ul>
+        </li>
+    }
+</ul>

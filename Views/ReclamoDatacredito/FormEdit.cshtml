@@ -1,0 +1,208 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.ReclamoDatacredito>
+@{ ViewData["Title"] = "Reclamo centrales de riesgo";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+@section Styles {
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <!-- se agrega de formateo de datatable-->
+    <link href="~/wwwroot/vendor/jquery/jquery.dataTables.min.css" rel="stylesheet" />
+    <style type="text/css">
+        th, td {
+            white-space: nowrap;
+        }
+
+        .encabezados {
+            background-color: #4E73DF;
+            color: white;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js?@(DateTime.Now.Ticks)"></script>
+    <script src="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen-clickable-optgroup.js?@(DateTime.Now.Ticks)"></script>
+    <script src="~/wwwroot/assets/js/Forms/JSReclamoDatacredito.js"></script>
+
+    <!-- ingresados para datatable-->
+    <script src="~/wwwroot/vendor/jquery/jquery-3.5.1.js"></script>
+    <script src="~/wwwroot/vendor/jquery/jquery.dataTables.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('#tblAnalysis').DataTable({
+                "oLanguage": {
+                    "sProcessing": "Procesando...",
+                    "sLengthMenu": "Mostrar _MENU_ registros",
+                    "sZeroRecords": "No se encontraron resultados",
+                    "sEmptyTable": "Ningún dato disponible en esta tabla",
+                    "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sSearch": "Ingrese Fecha:",
+                    "sUrl": "",
+                    "sInfoThousands": ",",
+                    "sLoadingRecords": "Cargando...",
+                    "oPaginate": {
+                        "sFirst": "Primero",
+                        "sLast": "Último",
+                        "sNext": "Siguiente",
+                        "sPrevious": "Anterior"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                    },
+                    "buttons": {
+                        "copy": "Copiar",
+                        "colvis": "Visibilidad"
+                    }
+                }
+            });
+        });
+
+
+        $("#fuSubirExcel").on('change', function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+
+        })
+
+        $("#Importar").on('click', function () {
+            $(this).show;
+
+        })
+
+        async function guardarTablaProduccion() {
+            var params = new Object()
+            var Result = await $.ajax({
+                type: "post",
+                url: '/ReclamoDatacredito/SaveTablaProduccion',
+                data: params
+            })
+            //swal("Guardado Correctamente", "Datos Guardados Correctamente...", "success")
+            alert("guardado correctamente")
+            $("#btnCargarBD").hide();
+            Limpiar();
+
+            //await ListCargaDataRPAActivacionLineaCTITemp();
+            //await ListCargaDataRPAActivacionLinea();
+        }
+
+        async function Limpiar() {
+            var params = new Object()
+            var Result = await $.ajax({
+                type: "post",
+                url: '/ReclamoDatacredito/LimpiarTabla',
+                data: params
+            })
+            alert("Limpiado correctamente")
+            //swal("Guardado Correctamente", "Datos Guardados Correctamente...", "success")
+
+            $("#tblAnalysis").hide();
+        }
+
+        $()
+    </script>
+}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Cambio de estado</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <form id="formTemplate">
+                <div class="modal-body">
+                    <input type="hidden" id="HdIdInput" class="form-control" />
+                    <input type="hidden" id="HdSolutionField" class="form-control" />
+                    <div class="form-group row">
+
+                        @*<div class="col-md-4">
+                <label for="TxtNoReclamo">No reclamo</label>
+                <input type="text" id="TxtNoReclamo" value="@Model." class="form-control required" maxlength="100" />
+                <span id="TxtNoReclamo-error" class="text-danger inputError"></span>
+            </div>
+            <div class="col-md-4">
+                <label for="TxtNombre">Nombre</label>
+                <input type="text" id="TxtNombre" class="form-control required" maxlength="100" />
+                <span id="TxtNombre-error" class="text-danger inputError"></span>
+            </div>*@
+                        @*<div class="col-md-2 divFields divFieldsTypes3" style="display:none;">
+                <label for="TxtLongitudCampo">Longitud</label>
+                <input type="number" id="TxtLongitudCampo" disabled="disabled" class="noEdit form-control required" placeholder="Longitud Campo" maxlength="4" onkeypress="return solonumeros(event);" />
+            </div>*@
+                    </div>
+                    <div class="form-group row divFields divFieldsTypes5">
+                        <div class="col-md-12">
+                            <b id="msjListas"></b>
+                        </div>
+                    </div>
+
+                    <div class="form-group row divFields divFieldsTypes5">
+                        <div class="col-md-4" id="estados">
+                            <label for="DdlListDependent">Estado</label>
+                            <select id="estados" class="form-control" onchange="cambio(this.value);">
+                                <option value=""> --Seleccionar-- </option>
+                                @foreach (var item1 in ViewBag.EstadoReclamo)
+                                {
+
+                    <option value="@item1.Text"> @item1.Text</option>}
+                            </select>
+                        </div>
+                        <div class="col-md-4" id="subestados">
+                            <label for="DdlItemDependent">SubEstado</label>
+                            <select id="subestados" class="form-control hide">
+                                <option value=""> --Seleccionar-- </option>
+                                @foreach (var item1 in ViewBag.SubEst)
+                                {
+                    <option value="@item1.Text"> @item1.Text</option>}
+                            </select>
+                        </div>
+                    </div>
+                    @*<div class="form-group row divFields divFieldsTypes5" style="display:none;">
+            <div class="col-md-4">
+                <label for="TxtItemLista">Item de lista:</label>
+                <input type="text" id="TxtItemLista" onkeyup="ValidaItemListas(this.value)" class="form-control" placeholder="Item lista desplegable" maxlength="100" />
+                <span id="TxtItemLista-error" class="text-danger"></span>
+            </div>
+            <div class="col-md-2">
+                <button type="button" style="margin-top: 23px;" class="btn btn-success" title="Agregar" onclick="AddOptionItemListas();">
+                    <i class="fa fa-plus"></i>
+                    Agregar
+                </button>
+            </div>
+            <div class="col-md-4">
+                <label for="DdlItemLista">Eliminar item de esta lista:</label>
+                <select id="DdlItemLista" class="form-control">
+                    <option value="">--Seleccionar--</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button type="button" style="margin-top: 23px;" class="btn btn-danger" onclick="DeleteItemLista();">
+                    <i class="fa fa-trash-alt"></i>
+                    Eliminar
+                </button>
+            </div>
+        </div>*@
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button id="BtnGuardarInput" type="button" class="btn btn-primary" onclick="GuardarEstado(this)">Guardar</button>
+                    <button id="BtnGuardarInput-load" class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@*@Html.Partial("ModalEditInput")*@

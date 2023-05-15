@@ -1,0 +1,38 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.CaseHistorySummary>
+
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Estado</th>
+            <th>Grupo</th>
+            <th>Numero de Casos</th>
+            @*<th>Plantilla</th>
+            <th>Usuario Crea</th>
+            <th>Usuario Asignado</th>
+            <th>Grupo Asignado</th>
+            <th>Ult Modificacion</th>
+            <th>Días PQR</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td></td>
+            <td>@item.Estado</td>
+            <td>@item.Grupo</td>
+            <td>@item.NumeroCasos</td>
+            @*<td>@item.Template.NameTemplate</td>
+            <td>@item.UsersCreate.FullName</td>
+            <td>@item.UsersAssigned.FullName</td>
+            <td>@item.GrupoAsignado.NameGroup</td>
+            <td>@item.DateModification</td>
+            <td>@item.DiasPQR</td>*@
+
+        </tr>
+        }
+
+    </tbody>
+</table>
+

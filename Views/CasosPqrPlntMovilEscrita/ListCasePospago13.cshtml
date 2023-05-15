@@ -1,0 +1,70 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.CasosPqrMovilEscrita>
+
+<table id="TableGeneral2" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>SOLUTIONS</th>
+            <th>MIN</th>
+            <th>CUN</th>
+            <th>BPB_CUSTCODE</th>
+            <th>BPB_CUSTOMER_ID</th>
+            <th>BPB_AREA_QUE_GENERO_INCONSISTENCIA</th>
+            <th>BPB_USUARIO_RESPONSABLE</th>
+            <th>BPB_ANALISTA</th>
+            <th>BPB_USER_RED</th>
+            <th>BPB_TIPO_RECLAMO</th>
+            <th>BPB_Valor</th>
+            <th>BPB_Justificación</th>
+            <th>BPB_Periodo_ajustar_desde</th>
+            <th>BPB_Periodo_ajustar_Hasta</th>
+            <th>BPB_SERVICIO</th>
+            <th>BPB_CTA_CONTABLE</th>
+            <th>BPB_IVA</th>
+            <th>BPB_GERENCIA</th>
+            <th>BPB_CENTRALES</th>
+            <th>BPB_ALIADO</th>
+            <th>BPB_CAUSAL</th>
+            <th>BPB_ESTADO</th>
+            @*<th>BPB_ACTUALIZACION_ANTERIOR</th>*@
+            <th>BPB_ULTIMA_ACTUALIZACION</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td></td>
+            <td>@item.WorKOrder</td>
+            <td>@item.BPB_MIN_V</td>
+            <td>@item.BPB_CUN_V</td>
+            <td>@item.BPB_CUSTCODE_V</td>
+            <td>@item.BPB_CUSTOMER_ID_V</td>
+            <td>@item.BPB_AREA_QUE_GENERO_INCONSISTENCIA_V</td>
+            <td>@item.BPB_USUARIO_AJUSTE_V</td>
+            <td>@item.BPB_ANALISTA_V</td>
+            <td>@item.BPB_USER_RED_V</td>
+            <td>@item.BPB_TIPO_RECLAMO_V</td>
+            <td>@item.BPB_Valor_V</td>
+            <td>@item.BPB_Justificación_V</td>
+            <td>@item.BPB_Periodo_a_ajustar_desde_V</td>
+            <td>@item.BPB_Hasta_V</td>
+            <td>@item.BPB_SERVICIO_V</td>
+            <td>@item.BPB_CTA_CONTABLE_V</td>
+            <td>@item.BPB_IVA_V</td>
+            <td>@item.BPB_GERENCIA_V</td>
+            <td>@item.BPB_CENTRALES_V</td>
+            <td>@item.BPB_ALIADO_V</td>
+            <td>@item.BPB_CAUSAL_V</td>
+            <td>@item.BPB_ESTADO_V</td>
+            @*<td>@item.BPB_ACTUALIZACION_ANTERIOR</td>*@
+            <td>@item.BPB_ULTIMA_ACTUALIZACION_V</td>
+           
+
+        </tr>
+        }
+
+    </tbody>
+</table>
+

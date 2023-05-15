@@ -1,0 +1,19 @@
+﻿@model AIBTicketsMVC.Models.WorkOrder_Attachments
+    <div class="col-md-3" id="@Model.NameEncryptedAttachment">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="fas fa-paperclip"></i>
+                </span>
+            </div>
+            <input type="text" class="form-control" value="@Model.NameAttachment @Model.FileSizeKB KB" disabled>
+            <div class="input-group-append">
+                <a class="btn btn-outline-success" href="@Model.FilePathDownload" title="Descargar" download="@Model.NameAttachment">
+                    <span class="fas fa-download"></span>
+                </a>
+                @*<button class="btn btn-outline-danger" type="button" onclick="deleteAdjunto('@Model.NameEncryptedAttachment');" title="Eliminar">
+                    <span class="fas fa-trash-alt"></span>
+                </button>*@
+            </div>
+        </div>
+    </div>

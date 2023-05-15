@@ -1,0 +1,64 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.Sites>
+<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h5 class="modal-title">Perfil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="HdIdProfile" />
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="TxtNameProfile">Nombre</label>
+                            <input type="text" id="TxtNameProfile" class="form-control required" placeholder="Nombre" onkeyup="VerifyNameProfile(this.value);" maxlength="50" />
+                            <span id="TxtNameProfile-error" class="invalid-feedback"></span>
+                        </div>
+                        <div class="col-md">
+                            <label for="DdlSitios">Sitios</label>
+                            <select id="DdlSitios" data-placeholder="Seleccionar Sitios..." title="clickable_optgroup" multiple class="super-chosen form-control form-control-chosen-optgroup">
+                                <optgroup label="Todos los sitios">
+                                    @foreach (var item in Model)
+                                    {
+                                        <option value="@item.IdMasterSites">@item.NameSite</option>
+                                    }
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="DdlEstado">Estado</label>
+                            <select id="DdlEstado" class="form-control " disabled>
+                                <option value="1">Activo</option>
+                                <option value="0">Inactivo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md">
+                            <label for="TxtDescriptionProfile">Descripcion</label>
+                            <input type="text" id="TxtDescriptionProfile" class="form-control " placeholder="Descripcion" maxlength="500" />
+                        </div>
+                    </div>
+                    <div id="treeview" class="tree">
+                        <ul>
+                            <li>
+                                <span><i class="fa fa-lg fa-plus-circle"></i> Permisos de acceso</span>
+                                @Html.Action("ModalTreeListPermisos", "Profiles")
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" id="BtnGuardar" value="Guardar" />
+                    <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.CasosPqrMovilEscrita>
+
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>IdSolutions</th>
+            <th>Cun</th>
+            <th>Tipo de Documento</th>
+            <th>Nombre</th>
+            <th>Cedula</th>
+            <th>Cuscode o Numero de Credito a Eliminar</th>
+            <th>Estado</th>
+            <th>Analista</th>
+            <th>Motivo de la Eliminacion</th>
+            <th>Estado de la Solicitud</th>
+            <th>Ultima Actualizacion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td></td>
+            <td>@item.WorKOrder</td>
+            <td>@item.CEN_CUN</td>
+            <td>@item.CEN_Tipo_Documento</td>
+            <td>@item.CEN_Nombre</td>
+            <td>@item.CEN_Cedula</td>
+            <td>@item.CEN_CUSTCODE_O_No_CREDITO_A_ELIMINAR</td>
+            <td>@item.CEN_Estado</td>
+            <td>@item.CEN_Motivo_Eliminacion</td>
+            <td>@item.CEN_Analista</td>
+            <td>@item.CEN_Estado_Solicitud</td>
+            <td>@item.CEN_Ultima_Actualizacion</td>
+
+        </tr>
+        }
+
+    </tbody>
+</table>
+

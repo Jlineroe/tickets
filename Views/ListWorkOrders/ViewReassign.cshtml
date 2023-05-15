@@ -1,0 +1,48 @@
+﻿@model AIBTicketsMVC.Models.ListasDesplegables
+<div class="card-header animated bounceInLeft" id="divCardReassign" style="display:none;">
+    <div class="row">
+        <div class="col-md">
+            <h5 class="m-0 font-weight-bold text-primary">
+                Reasignacion de solicitudes 
+                <small class="text-muted">(<strong id="divNumSelect">0</strong> Seleccionados)</small>
+            </h5>
+        </div>
+    </div>
+    <form method="post" id="formReasignar">
+        <div class="row">
+            <div class="col-md-3">
+                <label>Grupo a asignar</label>
+                <select class="form-control required" id="DdlGroups" onchange="onChangeGroups_ListUsers(this.value);">
+                    <option value="">--Seleccionar--</option>
+                    @foreach (var item in Model.Grupos)
+                    {
+                        <option value="@item.IdMasterGroups">@item.NameGroup</option>
+                    }
+                </select>
+                <label id="DdlGroups-error" class="text-danger"></label>
+            </div>
+            <div class="col-md-3">
+                <label>Usuarios</label>
+                <select data-placeholder="Seleccione usuarios..." multiple class="chosen-select" id="DdlUsuarios">
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label>Algoritmo</label>
+                <select class="form-control required" id="DdlAlgoritmo">
+                    <option value="">--Seleccionar--</option>
+                    @foreach (var item in Model.Algorithms)
+                    {
+                        <option value="@item.IdAlgorithmsAssignment">@item.NameAlgorithm</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-3">
+                <input id="BtnReassign" type="submit" value="Resignar solicitudes" class="btn btn-primary" style="margin-top:30px;" />
+                <button class="btn btn-primary BtnLoading" type="submit" style="display:none;margin-top:30px;" disabled>
+                    <span class="spinner-border spinner-border-sm"></span>
+                    Loading...
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

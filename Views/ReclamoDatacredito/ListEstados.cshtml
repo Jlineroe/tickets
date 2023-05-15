@@ -1,0 +1,387 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.Disposition>
+@{ ViewData["Title"] = "Reclamo centrales de riesgo";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+@section Styles {
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <!-- se agrega de formateo de datatable-->
+    <link href="~/wwwroot/vendor/jquery/jquery.dataTables.min.css" rel="stylesheet" />
+    <style type="text/css">
+        th, td {
+            white-space: nowrap;
+        }
+
+        .encabezados {
+            background-color: #4E73DF;
+            color: white;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js?@(DateTime.Now.Ticks)"></script>
+    <script src="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen-clickable-optgroup.js?@(DateTime.Now.Ticks)"></script>
+    <script src="~/wwwroot/assets/js/Forms/JSReclamoDatacredito.js"></script>
+
+    <!-- ingresados para datatable-->
+    <script src="~/wwwroot/vendor/jquery/jquery-3.5.1.js"></script>
+    <script src="~/wwwroot/vendor/jquery/jquery.dataTables.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('#tblAnalysis').DataTable({
+                "oLanguage": {
+                    "sProcessing": "Procesando...",
+                    "sLengthMenu": "Mostrar _MENU_ registros",
+                    "sZeroRecords": "No se encontraron resultados",
+                    "sEmptyTable": "Ningún dato disponible en esta tabla",
+                    "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sSearch": "Ingrese Fecha:",
+                    "sUrl": "",
+                    "sInfoThousands": ",",
+                    "sLoadingRecords": "Cargando...",
+                    "oPaginate": {
+                        "sFirst": "Primero",
+                        "sLast": "Último",
+                        "sNext": "Siguiente",
+                        "sPrevious": "Anterior"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                    },
+                    "buttons": {
+                        "copy": "Copiar",
+                        "colvis": "Visibilidad"
+                    }
+                }
+            });
+        });
+
+
+        $("#fuSubirExcel").on('change', function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+
+        })
+
+        $("#Importar").on('click', function () {
+            $(this).show;
+
+        })
+
+        async function guardarTablaProduccion() {
+            var params = new Object()
+            var Result = await $.ajax({
+                type: "post",
+                url: '/ReclamoDatacredito/SaveTablaProduccion',
+                data: params
+            })
+            //swal("Guardado Correctamente", "Datos Guardados Correctamente...", "success")
+            alert("guardado correctamente")
+            $("#btnCargarBD").hide();
+            Limpiar();
+
+            //await ListCargaDataRPAActivacionLineaCTITemp();
+            //await ListCargaDataRPAActivacionLinea();
+        }
+
+        async function Limpiar() {
+            var params = new Object()
+            var Result = await $.ajax({
+                type: "post",
+                url: '/ReclamoDatacredito/LimpiarTabla',
+                data: params
+            })
+            alert("Limpiado correctamente")
+            //swal("Guardado Correctamente", "Datos Guardados Correctamente...", "success")
+
+            $("#tblAnalysis").hide();
+        }
+
+        async function MostrarInforEstado(Id) {
+            //$('#Mymodal').modal({ show: true });
+            var params = new Object();
+            params["Id"] = Id;
+            var result = await $.ajax({
+                type: "post",
+                url: '/ReclamoDatacredito/ResulEstados',
+                data: params
+            });
+            limpiarCampos();
+            $('#div_tipo').hide();
+            $('#div_state').show();
+            if (document.getElementById("SUPER").value == "SUPERCENTRALES") {
+                $('#BtnActualizar').show();
+                $('#BtnUpdate').hide();
+            } else {
+                $('#BtnActualizar').hide();
+                $('#BtnUpdate').hide();
+            }
+                
+
+            $('#HdIdEstado').val(result.Id);
+            $('#TxtIdEstado').val(result.Id);
+            $('#TxtDescripcion').val(result.Descripcion);
+            //$('#DdlEstado').val(state).prop('disabled', result.state);
+            var tipo = (result.Estado == true ? 1 : 0);
+            $('#DdlTipo').val(tipo).prop('disabled', result.Estado);
+            var state = (result.state == true ? 1 : 0);
+            $('#DdlEstado').val(state).prop('enabled', result.state);
+
+
+        }
+        function limpiarCampos() {
+            $('#HdIdEstado').val('');
+            $('#TxtIdEstado').val('');
+            $('#TxtDescripcion').val('');
+            $('#DdlEstado').val('');
+            $('#DdlTipo').val('');
+        }
+
+        async function AbrirModal() {
+            limpiarCampos();
+            $('#div_tipo').show();
+            $('#div_State').hide();
+            $('#DdlTipo').val(1);
+            $('#BtnActualizar').hide();
+            if (document.getElementById("SUPER").value == "SUPERCENTRALES") {
+                $('#BtnActualizar').hide();
+                $('#BtnUpdate').show();
+            } else {
+                $('#BtnActualizar').hide();
+                $('#BtnUpdate').hide();
+            }
+        }
+
+
+        async function AddEstado() {
+
+
+            if ((document.getElementById("TxtDescripcion").value == '' || document.getElementById("TxtDescripcion").value == null)) {
+                swal("Datos incompletos", "Para ingresar el registro debe tener un nombre el estado", "error");
+            } else {
+
+                        swal({
+                            title: "¿Deseas actualizar este estado?",
+                            text: "¿Estas seguro?",
+                            type: "warning",
+                            showCancelButton: true,
+                            confirmButtonText: "Si, actualizar!",
+                            closeOnConfirm: false,
+                            showLoaderOnConfirm: true
+                        }, async function () {
+                            var params = new Object();
+                            params["Descripcion"] = $('#TxtDescripcion').val();
+                            if ($('#DdlTipo').val() == 1) {
+                                params["Estado"] = true
+                            } else {
+                                params["Estado"] = false
+                            }
+                            var result = await $.ajax({
+                                type: "post",
+                                url: '/ReclamoDatacredito/AddEstado',
+                                data: params
+                            });
+
+                            swal("Bien Hecho!", "Accion realizada correctamente!", "success");
+                            limpiarCampos();
+                            setInterval("location.reload()", 2000);
+                        });
+
+            }
+
+        }
+
+        async function ActualizarEstado() {
+
+            swal({
+                title: "¿Deseas actualizar este estado?",
+                text: "¿Estas seguro?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Si, actualizar!",
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true
+            }, async function () {
+                var params = new Object();
+                params["Id"] = $('#TxtIdEstado').val();
+                params["Descripcion"] = $('#TxtDescripcion').val();
+                if ($('#DdlEstado').val() == 1) {
+                    params["Estado"] = true
+                } else {
+                    params["Estado"] = false
+                }
+                var result = await $.ajax({
+                    type: "post",
+                    url: '/ReclamoDatacredito/ActualizarEstado',
+                    data: params
+                });
+                limpiarCampos();
+                $('#div_tipo').hide();
+                $('#HdIdEstado').val(result.Id);
+                $('#TxtIdEstado').val(result.Id);
+                $('#TxtDescripcion').val(result.Descripcion);
+                var state = (result.state == true ? 1 : 0);
+                $('#DdlEstado').val(state).prop('disabled', result.state);
+
+                swal("Bien Hecho!", "Accion realizada correctamente!", "success");
+                setInterval("location.reload()", 2000);
+
+            });
+
+
+            
+
+        }
+
+    </script>
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Gestion de estados y subestados</h1>
+</div>
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <div class="btn-group">
+        <button onclick="AbrirModal();" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#Mymodal">
+            <i class="fas fa-edit fa-sm"></i>
+            Agregar Estado
+        </button>
+    </div>
+</div>
+<!-- Button trigger modal -->
+@*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Mymodal" onclick="MostrarInforEstado();">
+    Launch demo modal
+</button>*@
+
+<!-- Modal -->
+
+<div id="Mymodal" class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Gestionar Estados</h5>
+                <input type="hidden" id="SUPER" value="@ViewBag.user" />
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div><h3></h3>
+            <div class="modal-body">
+                <input type="hidden" id="HdIdEstado" />
+                <div class="form-group row">
+                    <div class="col-md-2">
+                        <label for="TxtIdEstado">Id Estado </label>
+                        <input type="text" id="TxtIdEstado" class="form-control required" maxlength="50" disabled />
+                        <span id="TxtIdEstadomodal-error" class="invalid-feedback"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="TxtDescripcion">Descripcion del estado </label>
+                        <input type="text" id="TxtDescripcion" class="form-control required" placeholder="Nombre del estado" maxlength="50" />
+                        <span id="TxtDescripcion-error" class="invalid-feedback"></span>
+                    </div>
+                    <div class="col-md-3" id="div_tipo">
+                        <label for="DdlTipo">Tipo</label>
+                        <select id="DdlTipo" class="form-control">
+                            <option value="1">Estado</option>
+                            <option value="0">SubEstado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3" id="div_State">
+                        <label for="DdlEstado">Estado</label>
+                        <select id="DdlEstado" class="form-control">
+                            <option value="1">Activo</option>
+                            <option value="0">Inactivo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            @if (ViewBag.user == "SUPERCENTRALES")
+            {
+                <div class="modal-footer">
+                    <button id="BtnActualizar" type="button" class="btn btn-primary" onclick="ActualizarEstado()">
+                        <i class="fas fa-save fa-sm"></i>
+                     &nbspActualizar</button>
+                    <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button id="BtnUpdate" type="button" class="btn btn-primary" onclick="AddEstado()">
+                        <i class="fas fa-save fa-sm"></i>
+                    &nbspGuardar estado</button>
+                    <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+<!-- fin modal-->
+<table id="tblAnalysis" class="display" style="width:100%;">
+    <thead>
+        <tr>
+            <th>Estado</th>
+            <th>Id</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+            <th>SubEstado</th>
+            <th>Activo/Inactivo</th>
+            <th>Fecha de creacion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ int i = 0;
+            foreach (var item in Model)
+            {
+
+<tr class="isres">
+    <td>
+        <div class="btn-group">
+            <button onclick="MostrarInforEstado(@item.Id);" class="btn btn-sm btn-info BtnEdit" data-toggle="modal" data-target="#Mymodal">
+                <i class="fas fa-edit fa-sm"></i>
+                Editar
+            </button>
+        </div>
+    </td>
+    <th scope="row">@item.Id</th>
+    <td>@item.Descripcion</td>
+    @if (@item.Estado == true)
+    {
+<td><span><i class="fas fa-check"></i></span></td> }
+                else
+                {
+<td><span><i class="fas fa-mark"></i></span></td>}
+    @if (@item.Subestado == true)
+    {
+<td><span><i class="fas fa-check"></i></span></td> }
+                else
+                {
+<td><span><i class="fas fa-mark"></i></span></td>}
+    @if (@item.state == true)
+    {
+<td><span class="badge badge-success text-wrap" style="font-size: 100%;">Activo</span></td> }
+                else
+                {
+<td><span class="badge badge-danger text-wrap" style="font-size: 100%;">Inactivo</span></td>}
+    <td>@item.FechaCreacion</td>
+</tr> i++;
+
+            } }
+    </tbody>
+</table>
+

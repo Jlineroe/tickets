@@ -1,0 +1,85 @@
+﻿@{
+    @model AIBTicketsMVC.Models.HomeHistory
+}
+<div class="row">
+    <div class="col-md-4">
+        @Html.Partial("HistoricoPorcentajeANS", Model.ListHistoryPercentageANS)
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <h5 class="card-header"><i class="fas fa-clipboard-check"></i> &nbsp Cumplimiento del día</i></h5>
+            <div class="card-body">
+                <table class="table table-striped table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Cerrados</th>
+                            <th scope="col">Meta</th>
+                            <th scope="col">Cumplimiento(%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>@ViewBag.fechaHoy</th>
+                            @{
+                                if (Model.ListMeta.Count > 0)
+                                {
+                                    <td>@Model.ListMeta.FirstOrDefault().Cerrados</td>
+
+                                }
+                                else
+                                {
+                                    <td>0</td>
+
+                                }
+                            }
+
+                            @{
+                                if (Model.ListMeta.Count > 0)
+                                {
+                                    <td>@Model.ListMeta.FirstOrDefault().Meta</td>
+
+                                }
+                                else
+                                {
+                                    <td>0</td>
+
+                                }
+                            }
+
+                            @{
+                                if (Model.ListMeta.Count > 0)
+                                {
+                                    <td>@Model.ListMeta.FirstOrDefault().Cumplimiento</td>
+
+                                }
+                                else
+                                {
+                                    <td>0</td>
+
+                                }
+                            }
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-6">
+        @Html.Partial("HistoricoEstado", Model.ListHistoryState)
+    </div>
+    <div class="col-md-6">
+        @Html.Partial("HistoricoAsignado", Model.ListHistoryAsigne)
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        @Html.Partial("HistoricoCumplimiento", Model.ListHistoryCompliance)
+    </div>
+</div>
+

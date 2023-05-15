@@ -1,0 +1,129 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.ColocacionPrestamo>
+@{ ViewData["Title"] = "Scare - Colocacion de prestamos";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+@section Styles {
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <!-- se agrega de formateo de datatable-->
+    <link href="~/wwwroot/vendor/jquery/jquery.dataTables.min.css" rel="stylesheet" />
+    <style type="text/css">
+        th, td {
+            white-space: nowrap;
+        }
+
+        .encabezados {
+            background-color: #4E73DF;
+            color: white;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js?@(DateTime.Now.Ticks)"></script>
+    <script src="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen-clickable-optgroup.js?@(DateTime.Now.Ticks)"></script>
+    <script src="~/wwwroot/assets/js/Forms/JSReclamoDatacredito.js"></script>
+
+    <!-- ingresados para datatable-->
+    <script src="~/wwwroot/vendor/jquery/jquery-3.5.1.js"></script>
+    <script src="~/wwwroot/vendor/jquery/jquery.dataTables.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('#tblAnalysis').DataTable({
+                "oLanguage": {
+                    "sProcessing": "Procesando...",
+                    "sLengthMenu": "Mostrar _MENU_ registros",
+                    "sZeroRecords": "No se encontraron resultados",
+                    "sEmptyTable": "Ningún dato disponible en esta tabla",
+                    "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sSearch": "Ingrese Fecha:",
+                    "sUrl": "",
+                    "sInfoThousands": ",",
+                    "sLoadingRecords": "Cargando...",
+                    "oPaginate": {
+                        "sFirst": "Primero",
+                        "sLast": "Último",
+                        "sNext": "Siguiente",
+                        "sPrevious": "Anterior"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                    },
+                    "buttons": {
+                        "copy": "Copiar",
+                        "colvis": "Visibilidad"
+                    }
+                }
+            });
+        });
+
+
+    </script>
+}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Cambio de estado</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <form id="formTemplate">
+                <div class="modal-body">
+                    <input type="hidden" id="HdIdInput" class="form-control" />
+                    <input type="hidden" id="HdSolutionField" class="form-control" />
+                    <div class="form-group row">
+                    </div>
+                    <div class="form-group row divFields divFieldsTypes5">
+                        <div class="col-md-12">
+                            <b id="msjListas"></b>
+                        </div>
+                    </div>
+                    <div class="form-group row divFields divFieldsTypes5">
+                        <div class="col-md-4" id="estados">
+                            <label for="DdlListDependent">Estado</label>
+                            <select id="estados" class="form-control" onchange="cambio(this.value);">
+                                <option value=""> --Seleccionar-- </option>
+                                @foreach (var item1 in ViewBag.EstadoReclamo)
+                                {
+
+                    <option value="@item1.Text"> @item1.Text</option>
+}
+                            </select>
+                        </div>
+                        <div class="col-md-4" id="subestados">
+                            <label for="DdlItemDependent">SubEstado</label>
+                            <select id="subestados" class="form-control hide">
+                                <option value=""> --Seleccionar-- </option>
+                                @foreach (var item1 in ViewBag.SubEst)
+                                {
+                    <option value="@item1.Text"> @item1.Text</option>
+}
+                            </select>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button id="BtnGuardarInput" type="button" class="btn btn-primary" onclick="GuardarEstado(this)">Guardar</button>
+                    <button id="BtnGuardarInput-load" class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@*@Html.Partial("ModalEditInput")*@

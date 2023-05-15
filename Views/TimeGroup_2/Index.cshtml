@@ -1,0 +1,63 @@
+﻿
+@{
+
+    ViewData["Title"] = "Tablero de Tiempos";
+}
+@section Styles {
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <style type="text/css">
+        /*.modal-lg {
+            max-width: 900px;
+        }*/
+
+        label {
+            margin-bottom: 0px !important;
+            margin-top: 0px !important;
+        }
+
+        th, td {
+            white-space: nowrap;
+        }
+
+        .ml-1 {
+            margin-left: 5px !important;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/toastr/toastr.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen-clickable-optgroup.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/Users.js"></script>
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="m-0 font-weight-bold text-primary">Tiempo de PQR'S </h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="fas fa-tachometer-alt">Listado Actualizado</h3>
+            </div>
+            <div class="card-body">
+                <div id="DivBtnSave" class="form-group row"></div>
+                <div class="form-group row">
+                    <div class="table-responsive" id="divTable">
+                        @Html.Action("TimeList_2", "TimeGroup_2")
+                        @*@Html.Partial("TimeList")*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

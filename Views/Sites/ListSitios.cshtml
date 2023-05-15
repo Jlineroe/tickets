@@ -1,0 +1,55 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.Sites>
+    <table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+        <thead>
+            <tr>
+                <th><span class="invisible">Acciones</span></th>
+                <th>Nombre</th>
+                <th>Sub estado</th>
+                <th>Descripcion</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                string inactivo = "", disabled = "",SubEstado="No";
+                if (item.State == false)
+                {
+                    inactivo = "table-danger";
+                    disabled = "disabled";
+                }
+                if (item.RequiredSubStatus)
+                {
+                    SubEstado = "Si";
+                }
+                <tr class="@inactivo" id="Idtr_@item.IdMasterSites">
+                    <td class="text-center">
+                        <div class="btn-group" role="group">
+                            <button onclick="MostrarInforSitio(@item.IdMasterSites);" class="btn btn-sm btn-info BtnEdit">
+                                <i class="fas fa-edit fa-sm"></i>
+                                Editar
+                            </button>
+                            <button data-toggle="tooltip" onclick="DeleteSitio(@item.IdMasterSites);" @disabled class="btn btn-sm btn-danger BtnDelete">
+                                <i class="fas fa-trash-alt fa-sm"></i>
+                                Desactivar
+                            </button>
+                        </div>
+                    </td>
+                    <td>@item.NameSite</td>
+                    <td>@SubEstado</td>
+                    <td class="text-truncate" style="max-width: 800px;">@item.DescriptionSite</td>
+                    <td>
+                        @if (item.State == true)
+                        {
+                            <span class="badge badge-success text-wrap" style="font-size: 100%;">Activo</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-danger text-wrap" style="font-size: 100%;">Inactivo</span>
+
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

@@ -1,0 +1,41 @@
+﻿@model AIBTicketsMVC.Models.WH_Booth
+
+<div class="col-md-3">
+    <strong>Linea servicio</strong>
+    <input type="text" class="form-control" value="@Model.ServiceLine" disabled />
+</div>
+<div class="col-md-3">
+    <strong>Sede</strong>
+    <input type="text" class="form-control" value="@Model.Location" disabled />
+</div>
+<div class="col-md-3">
+    <strong>Plataforma</strong>
+    <input type="text" class="form-control" value="@Model.Platform" disabled />
+</div>
+<div class="col-md-3">
+    <strong># Puesto</strong>
+    <input type="text" class="form-control" value="@Model.BoothNumber" disabled />
+</div>
+<div class="col-md-3">
+    <strong>Nombre puesto</strong>
+    <input type="text" class="form-control" value="@Model.BoothName" disabled />
+</div>
+<div class="col-md-3">
+    <strong>Extension</strong>
+    <input type="text" class="form-control" value="@Model.Extension" disabled />
+</div>
+<div class="col-md-3">
+    <strong>Tipo puesto</strong>
+    @{ 
+        string TipoPuesto = "FISICO";
+        if (Model.SwSite == false)
+        {
+            TipoPuesto = "VIRTUAL";
+        }
+    }
+    <input type="text" class="form-control" value="@TipoPuesto" disabled />
+</div>
+<div class="col-md-3">
+    <strong>IP</strong>
+    <input type="text" class="form-control" value="@Model.IP" disabled />
+</div>

@@ -1,0 +1,216 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.NegacionLinea>
+
+<div id="myModalNegacion" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+           <form>
+                <div class="modal-header">
+                    <h5 class="modal-title">Crear / Negaci&oacute;n de Linea</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="HdIdCampo" />
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="TxtNameTraffic">Base</label>
+                            <input type="text" id="txtBase" class="form-control required" placeholder="Base" maxlength="50" />
+                            @{
+                                var i = 1;
+                                foreach (var item in Model)
+                                {
+                                    if (i == 1)
+                                    {
+
+                                        <input type="text" id="h_IdWorkOrder" value="@item.IdWorkOrder" hidden />
+                                        i = 0;
+                                    }
+
+
+                                }
+                            }
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="lblDescripcion">Imagen</label>
+                            <input type="text" id="txtImagen" class="form-control required" placeholder="Imagen" maxlength="50" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="lblpadre">MIN</label>
+                            <input type="number" id="txtMin" class="form-control required" placeholder="MIN" maxlength="10" onkeypress="return checkNumber(event)" />
+                        </div>
+
+                    </div>
+                    <br /><br />
+
+
+                    <div class="form-group row">
+
+                        <div class="col-md-4">
+                            <label for="lblpadreDesc">Fecha Activaci&oacute;n</label>
+                            <input id="txtFechaActivacion" type="date" class="form-control required" placeholder="Fecha " />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="lblpadre">Custcode</label>
+                            <input type="text" id="txtCurcode" class="form-control required" placeholder="Curcode" maxlength="50" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lblpadre">Nombre</label>
+                            <input type="text" id="txtNombre" class="form-control required" placeholder="Nombre" maxlength="50" />
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+
+                        <div class="col-md-4">
+                            <label for="lblpadre">Apellido</label>
+                            <input type="text" id="txtApellido" class="form-control required" placeholder="Apellido" maxlength="50" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="lblpadre">Canal</label>
+                            <input type="text" id="txtCanal" class="form-control required" placeholder="Canal" maxlength="50" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lblpadre">Ascard</label>
+                            <input type="text" id="txtAscard" class="form-control required" placeholder="Ascard" maxlength="50" />
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+
+                        <div class="col-md-4">
+                            <label for="lblpadreDesc">Fecha Reposici&oacute;n</label>
+                            <input id="TxtFechaReposicion" type="date" class="form-control required" placeholder="Fecha " />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="lblpadre">Contrato</label>
+                            <input type="text" id="txtContrato" class="form-control required" placeholder="Contrato" maxlength="50" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lblpadre">Grabaci&oacute;n</label>
+                            <input type="text" id="txtGrabacion" class="form-control required" placeholder="Grabacion" maxlength="50" />
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+
+                        <div class="col-md-4">
+                            <label for="lblpadreDesc">Reasignaci&oacute;n</label>
+                            <input type="text" id="TxtReasignacion" class="form-control required" placeholder="Reasignacion" maxlength="50" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="lblpadre">Estado</label>
+                            <input type="text" id="txtEstado" class="form-control required" placeholder="Estado" maxlength="50" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lblpadre">Legalizado</label>
+                            <input type="text" id="txtLegalizado" class="form-control required" placeholder="Legalizado" maxlength="50" />
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group row">
+
+                        <div class="col-md-4">
+                            <label for="lblpadreDesc">Observaciones</label>
+                            <input type="text" id="txtObservaciones" class="form-control required" placeholder="Observaciones" maxlength="200" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="lblpadre">Rango probable</label>
+                            <input type="text" id="txtRangoProbable" class="form-control required" placeholder="Rango" maxlength="50" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lblpadre">Direcci&oacute;n informa cliente</label>
+                            <input type="text" id="txtDireccion" class="form-control required" placeholder="Direccion" maxlength="50" />
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+
+                        <div class="col-md-4">
+                            <label for="lblpadreDesc">Customer ID</label>
+                            <input type="text" id="txtCustomerId" class="form-control required" placeholder="Customer" maxlength="50" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="lblpadre">Ciudad</label>
+                            <input type="text" id="txtCiudad" class="form-control required" placeholder="Ciudad" maxlength="50" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lblpadre">Departamento</label>
+                            <input type="text" id="txtDepartamento" class="form-control required" placeholder="Departamento" maxlength="50" />
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+
+                        <div class="col-md-4">
+                            <label for="lblpadreDesc">Fecha de Radicaci&oacute;n</label>
+                            <input id="txtFechaRadicacion" type="date" class="form-control required" placeholder="Fecha " />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="lblpadre">Notificaci&oacute;n</label>
+                            <input type="text" id="txtNotificacion" class="form-control required" placeholder="Notificacion" maxlength="50" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lblpadre">Fecha Desactivaci&oacute;n</label>
+                            <input id="txtFechaDesactivacion" type="text" class="form-control required" placeholder="Fecha" />
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+
+                        <div class="col-md-4">
+                            <label for="lblpadreDesc">PQR</label>
+                            <input id="txtPqr" type="number" class="form-control required" placeholder="PQR" maxlength="12" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="lblpadre">Cedula</label>
+                            <input type="number" id="txtCedula" class="form-control required" placeholder="Cedula" maxlength="12" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lblpadre">Area Radicaci&oacute;n</label>
+                            <input id="txtAreaRadica" type="text" class="form-control required" placeholder="AreaRadicacion" maxlength="50" />
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+
+                        <div class="col-md-4">
+                            <label for="lblpadreDesc">Tipo Reclamo</label>
+                            <input id="txtTipoReclamo" type="text" class="form-control required" placeholder="TipoReclamo" maxlength="50" />
+                        </div>
+
+                    </div>
+
+
+                </div>
+                          
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-primary" id="BtnGuardar" value="Guardar" onclick="SaveNegacion(this)" />
+                    <button id="BtnGuardar-load" class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+          </form>
+       </div>
+   </div>
+</div>

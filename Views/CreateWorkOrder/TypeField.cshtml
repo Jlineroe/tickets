@@ -1,0 +1,121 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.FieldsUDF>
+@foreach (var item in Model)
+{
+    int IdFieldsTypes = item.FieldType.IdFieldsTypesUDF;
+    int IdFieldsDepend = item.ParentDispositions.IdFieldsUDF;
+    string divFieldsDepend = "",
+    onChangeList = "onChange=onChangeList(this);";
+    if (IdFieldsDepend != 0)
+    {
+        divFieldsDepend = $"divFieldsDepend{IdFieldsDepend}";
+    }
+    string required = "", asteri = "";
+    if (item.TypeRequired.IdTypeRequired == 2)
+    {
+        required = "required";
+        asteri = "*";
+    }
+    int NumColums = 3;
+    if (IdFieldsTypes == 8) //Campo Tipo busqueda de Puestos
+    {
+        NumColums = 6;
+    }
+    
+    <div class="col-md-@NumColums">
+        <div class="form-group">
+            @{
+                if (IdFieldsTypes == 1) //Fecha
+                {
+                    <strong id="lbl_@item.IdFieldsUDF" for="field_@item.IdFieldsUDF">
+                        @item.NameField
+                        <span class="text-danger">@asteri</span>
+                    </strong>
+                    <div class="input-group date">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                        </span>
+                        <input type="text" readonly data-idfieldstypes="@item.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@item.NameFieldsUDF"
+                               class="form-control fieldSave datepicker @required" placeholder="@item.FieldType.NameTypeFieldsShort" id="field_@item.IdFieldsUDF" />
+                    </div>
+                }
+                else if (IdFieldsTypes == 2) //Numero
+                {
+                    <strong id="lbl_@item.IdFieldsUDF" for="field_@item.IdFieldsUDF">
+                        @item.NameField
+                        <span class="text-danger">@asteri</span>
+                    </strong>
+                    <input type="number" data-idfieldstypes="@item.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@item.NameFieldsUDF"
+                           class="form-control fieldSave @required" placeholder="@item.FieldType.NameTypeFieldsShort" onkeypress="return solonumeros(event);" id="field_@item.IdFieldsUDF" />
+                }
+                else if (IdFieldsTypes == 3) //Linea de texto simple
+                {
+                    <strong id="lbl_@item.IdFieldsUDF" for="field_@item.IdFieldsUDF">
+                        @item.NameField
+                        <span class="text-danger">@asteri</span>
+                    </strong>
+                    <input type="text" data-idfieldstypes="@item.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@item.NameFieldsUDF"
+                           class="form-control fieldSave @required" placeholder="@item.FieldType.NameTypeFieldsShort" maxlength="@item.Longitud" id="field_@item.IdFieldsUDF" />
+                }
+                else if (IdFieldsTypes == 5) //Caja de verificacion
+                {
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" data-idfieldstypes="@item.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@item.NameFieldsUDF"
+                               class="custom-control-input fieldSave" id="field_@item.IdFieldsUDF" />
+                        <label id="lbl_@item.IdFieldsUDF" class="custom-control-label" for="field_@item.IdFieldsUDF">@item.NameField</label>
+                    </div>
+                }
+                else if (IdFieldsTypes == 6) //Lista desplegable
+                {
+                    <strong id="lbl_@item.IdFieldsUDF" for="field_@item.IdFieldsUDF">
+                        @item.NameField
+                        <span class="text-danger">@asteri</span>
+                    </strong>
+                    <select data-idfieldstypes="@item.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@item.IdFieldsUDF" data-namefieldsudf="@item.NameFieldsUDF"
+                            class="form-control fieldSave @required @divFieldsDepend" id="field_@item.IdFieldsUDF" @onChangeList>
+                        <option value="">--Seleccionar--</option>
+                        @if (IdFieldsDepend == 0)
+                        {
+                            foreach (var disp in item.Dispositions)
+                            {
+                                <option value="@disp.IdFieldsDispositions">@disp.Dispositions</option>
+                            }
+                        }
+                    </select>
+                }
+                else if (IdFieldsTypes == 8) //Campo Tipo busqueda de Puestos
+                {
+                    <div class="row">
+                        <div class="col-md-4">
+                            <strong for="DdlSedes-@item.IdFieldsUDF">Sede</strong>
+                            <select id="DdlSedes-@item.IdFieldsUDF" class="form-control" onchange="getListPlataformas(this)" data-idfieldsudf="@item.IdFieldsUDF">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var Location in ViewBag.ListLocation)
+                                {
+                                    <option value="@Location.IdLocation">@Location.Description</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <strong for="DdlPlataforma-@item.IdFieldsUDF">Plataforma</strong>
+                            <select id="DdlPlataforma-@item.IdFieldsUDF" class="form-control" onchange="getListPuestos(this)" data-idfieldsudf="@item.IdFieldsUDF">
+                                <option value="">--Seleccionar--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <strong id="lbl_@item.IdFieldsUDF" for="field_@item.IdFieldsUDF">
+                                @item.NameField
+                                <span class="text-danger">@asteri</span>
+                            </strong>
+                            <select data-placeholder="Seleccione puesto..." class="chosen-select @required fieldSave" data-idfieldstypes="@item.FieldType.IdFieldsTypesUDF" 
+                                    data-namefieldsudf="@item.NameFieldsUDF" placeholder="@item.FieldType.NameTypeFieldsShort" id="field_@item.IdFieldsUDF">
+                                <option value="">Buscar por Numero,IP,Extension o nombre</option>
+                            </select>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+}

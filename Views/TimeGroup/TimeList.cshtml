@@ -1,0 +1,55 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.TimeList>
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Nombre Agente</th>
+            <th>IdWorkOrder</th>
+            <th>Grupo</th>
+            <th>Fecha Apertura</th>
+            <th>Hora Apertura</th>
+            <th>Fecha Cierre</th>
+            <th>Hora Cierre</th>
+            <th>Tiempo Real (Minutos)</th>
+            <th>Duracion Gestion(Minutos)</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var bg = "";
+            var col = "";
+            if (item.TiempoReal <= 20)
+            {
+                bg = "#1cc88a";
+                col = "white";
+            }
+            else if (item.TiempoReal > 20 && item.TiempoReal <= 30)
+            {
+                bg = "yellow";
+                col = "black";
+            }
+            else
+            {
+                bg = "#e74a3b";
+                col = "white";
+            }
+            <tr>
+                <td></td>
+                <td>@item.NombreAgente</td>
+                <td>@item.IdWorkOrder</td>
+                <td>@item.Grupo</td>
+                <td>@item.FechaApertura</td>
+                <td>@item.HoraApertura</td>
+                <td>@item.FechaCierre</td>
+                <td>@item.HoraCierre</td>
+                <td style="background-color:@bg; color: @col;">@item.TiempoReal</td>
+                <td>@item.DuracionGestion</td>
+                <td>@item.Estado</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

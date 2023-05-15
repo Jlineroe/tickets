@@ -1,0 +1,149 @@
+﻿@{
+    @model AIBTicketsMVC.Models.Templates
+    ViewData["Title"] = "Plantillas";
+}
+@section Styles {
+    <link href="~/wwwroot/assets/css/stylesGeneral.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/datapicker/datepicker3.css" rel="stylesheet" />
+    <style type="text/css">
+        label {
+            margin-bottom: 0px !important;
+            margin-top: 0px !important;
+        }
+
+        hr {
+            margin: 0px;
+        }
+
+        #sortable, #sortableSolutions .col-md-3 {
+            cursor: pointer;
+        }
+
+        th, td {
+            white-space: nowrap;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/jquery-ui/jquery-ui.js"></script>
+    <script src="~/wwwroot/vendor/toastr/toastr.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/datapicker/bootstrap-datepicker.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/FormEditTemplates.js"></script>
+}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Parametrizacion de plantillas</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <form id="formTemplate">
+                <input type="hidden" id="HdIdPlantilla" value="@Model.IdTemplates.ToString()" />
+                <div class="card-header">
+                    <h6 class="m-0 font-weight-bold text-primary">Informacion de plantilla</h6>
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <div class="col-md-2">
+                            <label for="TxtNameTemplate">Nombre Plantilla</label>
+                            <input type="text" id="TxtNameTemplate" value="@Model.NameTemplate" class="form-control required" onkeyup="VerifyNameTemplate(this.value)" placeholder="Nombre Plantila" maxlength="30" />
+                            <span id="TxtNameTemplate-error" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="DdlSitio">Sitio</label>
+                            <select id="DdlSitio" class="form-control required">
+                                <option value="">--Seleccionar--</option>
+                                @foreach (var item in ViewBag.Listas.Sitios)
+                                {
+                                    string selected = "";
+                                    if (Model.Sitio.IdMasterSites == item.IdMasterSites) { selected = "selected"; }
+                                    <option value="@item.IdMasterSites" @selected>@item.NameSite</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-8">
+                            <label for="TxtDescriptionTemplate">Descripcion</label>
+                            <textarea id="TxtDescriptionTemplate" class="form-control" placeholder="Descripcion" maxlength="500" rows="1">@Model.DescriptionTemplate</textarea>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="card-header">
+                    <h6 class="m-0 font-weight-bold text-dark">Campos de plantilla de creacion o importacion</h6>
+                </div>
+                <div class="card-body">
+                    <div id="sortable" class="row">
+                        <div class="col-md-3 text-center no">
+                            <div class="form-group">
+                                <button type="button" onclick="SearchInforInput(false);" style="margin-top: 20px;" class="btn btn-primary btn-icon-split btn-lg">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-align-justify"></i>
+                                    </span>
+                                    <span class="text">Agregar nuevo campo</span>
+                                </button>
+                            </div>
+                        </div>
+                        @foreach (var item in Model.ListFieldsUDF)
+                        {
+                            @Html.Partial("ViewTypeField", item)
+                        }
+                    </div>
+                </div>
+                <hr />
+                <div class="card-header">
+                    <h6 class="m-0 font-weight-bold text-dark">Campos de plantilla de gestion</h6>
+                </div>
+                <div class="card-body">
+                    <div id="sortableSolutions" class="row">
+                        <div class="col-md-3 text-center no">
+                            <div class="form-group">
+                                <button type="button" onclick="SearchInforInput(true);" style="margin-top: 20px;" class="btn btn-primary btn-icon-split btn-lg">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-align-justify"></i>
+                                    </span>
+                                    <span class="text">Agregar nuevo campo</span>
+                                </button>
+                            </div>
+                        </div>
+                        @foreach (var item in Model.ListFieldsUDFSolutions)
+                        {
+                            @Html.Partial("ViewTypeField", item)
+                        }
+                    </div>
+                </div>
+                <hr />
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md text-right">
+                            @if (Model.IdTemplates == 0)
+                            {
+                                <input type="submit" class="btn btn-primary btn-lg" id="BtnGuardarTemplate" value="Crear plantilla" />
+                                <button class="btn btn-primary btn-lg BtnLoading" type="submit" style="display:none;" disabled>
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                    Loading...
+                                </button>
+                            }
+                            else
+                            {
+                                <input type="submit" class="btn btn-success btn-lg" id="BtnUpdateTemplate" value="Guardar cambios de plantilla" />
+                                <button class="btn btn-success btn-lg BtnLoading" type="submit" style="display:none;" disabled>
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                    Loading...
+                                </button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@Html.Action("ModalEditInput")

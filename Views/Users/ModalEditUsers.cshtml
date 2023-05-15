@@ -1,0 +1,85 @@
+﻿@model AIBTicketsMVC.Models.ListasDesplegables
+<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h5 class="modal-title">Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="HdIdUsuario" />
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="DdlPerfiles">Perfiles</label>
+                            <select id="DdlPerfiles" data-placeholder="Seleccionar Perfiles..." multiple class="chosen-select">
+                                @foreach (var item in Model.Perfiles)
+                                {
+                                    <option value="@item.IdMasterProfiles">@item.NameProfile</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="DdlGrupos">Grupos</label>
+                            <select id="DdlGrupos" data-placeholder="Seleccionar Grupos..." multiple class="chosen-select">
+                                @foreach (var item in Model.Grupos)
+                                {
+                                    <option value="@item.IdMasterGroups">@item.NameGroup</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="DdlEstado">Estado</label>
+                            <select id="DdlEstado" class="form-control " disabled>
+                                <option value="1">Activo</option>
+                                <option value="0">Inactivo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row" id="divUsers">
+                        <div class="col-md-12">
+                            <label for="DdlUsuarios"><strong>Agregar usuarios</strong> (puedes agregar varios usuarios al tiempo)</label>
+                            <select id="DdlUsuarios" data-placeholder="Seleccionar usuarios..." multiple class="chosen-select">
+                                @foreach (var item in Model.Usuarios)
+                                {
+                                <option value="@item.PkEmpleado">@item.Nombres.Trim() @item.PrimerApellido.Trim() @item.SegundoApellido.Trim() - @item.Identificacion</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div id="divDetalle" class="form-group row" style="display:none;">
+                        <div class="col-md-4">
+                            <label for="TxtIdentificacion">Identificacion</label>
+                            <input type="text" id="TxtIdentificacion" class="form-control" disabled />
+                        </div>
+                        <div class="col-md-8">
+                            <label for="TxtNombre">Nombre</label>
+                            <input type="text" id="TxtNombre" class="form-control" disabled />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="TxtCentroCosto">Centro Costo</label>
+                            <input type="text" id="TxtCentroCosto" class="form-control" disabled />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="TxtWinser">Winuser</label>
+                            <input type="text" id="TxtWinser" class="form-control" disabled />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="TxtEmail">Email Corporativo</label>
+                            <input type="text" id="TxtEmail" class="form-control" disabled />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" onclick="BtnGuardar();" class="btn btn-primary" id="BtnNewGuardar" value="Guardar" />
+                    <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

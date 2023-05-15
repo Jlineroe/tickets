@@ -1,0 +1,74 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.Users>
+
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Identificacion</th>
+            <th>Nombre</th>
+            <th>Grupos</th>
+            <th>Perfiles</th>
+            <th>Centro Costo</th>
+            <th>Winuser</th>
+            <th>Email Corporativo</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            string inactivo = "", disabled="";
+            if (item.State == false)
+            {
+                inactivo = "table-danger";
+                disabled = "disabled";
+            }
+            <tr class="@inactivo" id="Idtr_@item.IdMasterUsers">
+                <td>
+                    <div class="btn-group" role="group">
+                        <button onclick="SearchInforUser(@item.IdMasterUsers);" class="btn btn-sm btn-info BtnEdit">
+                            <i class="fas fa-edit fa-sm"></i>
+                            Editar
+                        </button>
+                        <button onclick="DeleteUser(@item.IdMasterUsers);" class="btn btn-sm btn-danger BtnDelete" @disabled>
+                            <i class="fas fa-trash-alt fa-sm"></i>
+                            Desactivar
+                        </button>
+                    </div>
+                </td>
+                <td>@item.Identificacion</td>
+                <td>@item.Nombres @item.PrimerApellido @item.SegundoApellido</td>
+                <td class="text-center">
+                    @{
+                        string Grupos = string.Join("-", item.Grupos.Select(lq => lq.NameGroup).ToArray());
+                        string Perfiles = string.Join("-", item.Perfiles.Select(lq => lq.NameProfile).ToArray());
+                    }
+                    <button class="btn btn-info btn-sm" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="@Grupos">
+                        <i class="fas fa-eye fa-sm"></i>
+                        Ver grupos
+                    </button>
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-info btn-sm" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="@Perfiles">
+                        <i class="fas fa-eye fa-sm"></i>
+                        Ver perfiles
+                    </button>
+                </td>
+                <td>@item.CentroCosto</td>
+                <td>@item.Winuser</td>
+                <td>@item.EmailCorporativo</td>
+                <td>
+                    @if (item.State == true)
+                    {
+                        <span class="badge badge-success text-wrap" style="font-size: 100%;">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-danger text-wrap" style="font-size: 100%;">Inactivo</span>
+
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

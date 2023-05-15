@@ -1,0 +1,68 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.Semaphores>
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Sitio</th>
+            <th>Horas SLA</th>
+            <th>Categoria</th>
+            <th>Sub Categoria</th>
+            <th>Fecha Creacion</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            string inactivo = "", disabled = "",textEditar=" Editar";
+            if (item.State == false | item.IdSemaphore==0)
+            {
+                inactivo = "table-danger";
+                disabled = "disabled";
+                textEditar = (item.IdSemaphore==0 ? "Agregar":" Editar");
+            }
+        <tr class="@inactivo">
+            <td>
+                <div class="btn-group" role="group">
+                    <button onclick="SearchInforSemaphore(@item.IdSemaphore,@item.SubCategory.IdCategory);" class="btn btn-sm btn-info BtnEdit">
+                        <i class="fas fa-edit fa-sm"></i>
+                        @textEditar
+                    </button>
+                    @if (item.IdSemaphore != 0)
+                    {
+                        if (item.State == true)
+                        {
+                            <button onclick="ActivarDesactivarSemaphore(@item.IdSemaphore,false);" class="btn btn-sm btn-danger BtnDelete">
+                                <i class="fas fa-trash-alt fa-sm"></i>
+                                Desactivar
+                            </button>
+                        }
+                        else
+                        {
+                            <button onclick="ActivarDesactivarSemaphore(@item.IdSemaphore,true);" class="btn btn-sm btn-success BtnDelete">
+                                <i class="fas fa-check fa-sm"></i>
+                                Activar
+                            </button>
+                        }
+                    }
+                </div>
+            </td>
+            <td>@item.Sitio.NameSite</td>
+            <td>@item.SLA_HOUR</td>
+            <td>@item.Category.NameCategory</td>
+            <td>@item.SubCategory.NameCategory</td>
+            <td>@item.DateLog</td>
+            <td>
+                @if (item.State == true & item.IdSemaphore > 0)
+                {
+                    <span class="badge badge-success text-wrap" style="font-size: 100%;">Activo</span>
+                }
+                else
+                {
+                    <span class="badge badge-danger text-wrap" style="font-size: 100%;">Inactivo</span>
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

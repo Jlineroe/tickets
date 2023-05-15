@@ -1,0 +1,123 @@
+﻿@model AIBTicketsMVC.Models.PaginModel
+@{
+    var cantPagi = (int)Math.Ceiling((double)Model.TotalRegis / Model.RegisXPagina);
+
+    int Inicial = 1;
+    var radio = 1;
+    var cantMaxPag = radio * 2 + 1;
+    int Final = (cantPagi > cantMaxPag) ? cantMaxPag : cantPagi;
+    if (Model.PaginaActual > radio + 1)
+    {
+        Inicial = Model.PaginaActual - radio;
+        if (cantPagi > Model.PaginaActual + radio)
+        {
+            Final = Model.PaginaActual + radio;
+        }
+        else
+        {
+            Final = cantPagi;
+        }
+    }
+}
+<div class="row">
+    <div class="col-md-4 col-form-label pager-description col-xs-12">
+        <span class="fa fa-th-list fa-fw"></span>
+        <span id="divTotalRegis">@Model.TotalRegis</span> registros totales
+    </div>
+    <div class="col-md">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+                @if (Model.TotalRegis == 0)
+                {
+                    <li class="page-item disabled">
+                        <button class="page-link">Anterior</button>
+                    </li>
+                    <li class="page-item disabled">
+                        <button class="page-link">Siguiente</button>
+                    </li>
+                }
+                else
+                {
+                    if (Model.PaginaActual == 1)
+                    {
+                        <li class="page-item disabled">
+                            <button class="page-link" onclick="clickBtnPaginator(1,@Model.RegisXPagina);">Anterior</button>
+                        </li>
+                    }
+                    else
+                    {
+                        int PgAct = Model.PaginaActual - 1;
+                        <li class="page-item">
+                            <button class="page-link" onclick="clickBtnPaginator(@PgAct,@Model.RegisXPagina);">Anterior</button>
+                        </li>
+                    }
+
+                    if (Model.PaginaActual > 4)
+                    {
+                        <li class="page-item">
+                            <button class="page-link" onclick="clickBtnPaginator(1,@Model.RegisXPagina);">1</button>
+                        </li>
+                        <li class="page-item disabled">
+                            <a href="#" class="page-link">…</a>
+                        </li>
+                    }
+                    else if (Model.PaginaActual == 4)
+                    {
+                        <li class="page-item">
+                            <button class="page-link" onclick="clickBtnPaginator(1,@Model.RegisXPagina);">1</button>
+                        </li>
+                        <li class="page-item">
+                            <button class="page-link" onclick="clickBtnPaginator(2,@Model.RegisXPagina);">2</button>
+                        </li>
+                    }
+                    else if (Model.PaginaActual == 3)
+                    {
+                        <li class="page-item">
+                            <button class="page-link" onclick="clickBtnPaginator(1,@Model.RegisXPagina);">1</button>
+                        </li>
+                    }
+
+                    for (int i = Inicial; i <= Final; i++)
+                    {
+                        if (i == Model.PaginaActual)
+                        {
+                            <li class="page-item active">
+                                <button class="page-link" onclick="clickBtnPaginator(@i,@Model.RegisXPagina);">@i.ToString()</button>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item">
+                                <button class="page-link" onclick="clickBtnPaginator(@i,@Model.RegisXPagina);">@i.ToString()</button>
+                            </li>
+                        }
+                    }
+
+                    if (cantPagi > 5 & Model.PaginaActual < cantPagi - 1)
+                    {
+                        <li class="page-item disabled">
+                            <a href="#" class="page-link">…</a>
+                        </li>
+                        <li class="page-item">
+                            <button class="page-link" onclick="clickBtnPaginator(@cantPagi,@Model.RegisXPagina);">@cantPagi.ToString()</button>
+                        </li>
+                    }
+
+                    if (Model.PaginaActual == cantPagi)
+                    {
+                        <li class="page-item disabled">
+                            <button class="page-link" onclick="clickBtnPaginator(@cantPagi,@Model.RegisXPagina);">Siguiente</button>
+                        </li>
+                    }
+                    else
+                    {
+                        int PgAct = Model.PaginaActual + 1;
+                        <li class="page-item">
+                            <button class="page-link" onclick="clickBtnPaginator(@PgAct,@Model.RegisXPagina);">Siguiente</button>
+                        </li>
+                    }
+                }
+            </ul>
+        </nav>
+    </div>
+</div>

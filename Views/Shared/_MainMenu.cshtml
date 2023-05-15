@@ -1,0 +1,36 @@
+﻿@model AIBTicketsMVC.Models.NivelesMenu
+<!-- Nav Item - Solicitudes -->
+@if (Model.MenuLvl1 != null)
+{
+    foreach (var menu1 in Model.MenuLvl1)
+    {
+        //MENU LVL 1
+        if (menu1.Controller != "")
+        {
+            <li class="nav-item">
+                <a class="nav-link" href="/@menu1.Controller">@menu1.Name</a>
+            </li>
+        }
+        else
+        { 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @menu1.Name
+                </a>
+                <div class="dropdown-menu dropdown-menu-right animated--grow-in" aria-labelledby="navbarDropdown">
+                    @foreach (var menu2 in Model.MenuLvl2)
+                    {
+                        if (menu2.Parent_IdMenu == menu1.IdMasterMenu)
+                        {
+                            if (menu2.Controller != "")
+                            {
+                                //MENU LVL 2
+                                <a class="dropdown-item" href="/@menu2.Controller">@menu2.Name</a>
+                            }
+                        }
+                    }
+                </div>
+            </li>
+        }
+    }
+}

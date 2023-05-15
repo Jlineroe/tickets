@@ -1,0 +1,53 @@
+﻿@{
+    @*@model AIBTicketsMVC.Models.WorkOrder*@
+    ViewData["Title"] = "Gestión Bitacora Agentes";
+}
+
+@section Styles {
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/datapicker/datepicker3.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.css" rel="stylesheet" />
+    <style type="text/css">
+        hr {
+            margin: 0px;
+        }
+
+        h3, h4, h5, h6 {
+            margin: 0;
+        }
+
+        .backgroundBlue {
+            background: #F2F9FE;
+        }
+
+        p {
+            margin-bottom: 0px;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.min.js"></script>
+    <script src="~/wwwroot/vendor/datapicker/bootstrap-datepicker.js"></script>
+    <script src="~/wwwroot/vendor/toastr/toastr.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/WorkOrderSolutions.js"></script>
+}
+
+<div class="form-group row">
+
+
+    <div class="col-md-3">
+        <div class="form-group">
+            <strong id="lbl_PQR" for="field_PQR">
+                PQR
+                <span class="text-danger lblrequi- lblReq-PQR">vacio</span>
+            </strong>
+            <input type="number" class="form-control Req- fieldSave" placeholder="PQR" onkeypress="return solonumeros(event);" id="field_PQR" />
+        </div>
+    </div>
+</div>

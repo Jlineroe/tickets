@@ -1,0 +1,562 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.ColocacionPrestamo>
+@{ ViewData["Title"] = "Reclamo centrales de riesgo";}
+
+
+<script>
+//const { async } = require("q");
+
+
+    DataTables();
+    //$('#divLoaderMaster').hide();
+
+    async function DataTables() {
+        try {
+            var result = await GenerarDTFiltros('divTable');
+        } catch (ex) {
+            //alert(ex);
+        } finally {
+            //$.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+        }
+    }
+
+
+    $(document).ready(function () {
+
+
+        $('#tblAnalysis').DataTable({
+            "oLanguage": {
+                "sProcessing": "Procesando...",
+                "sLengthMenu": "Mostrar _MENU_ registros",
+                "sZeroRecords": "No se encontraron resultados",
+                "sEmptyTable": "Ningún dato disponible en esta tabla",
+                "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix": "",
+                "sSearch": "Buscar:",
+                "sUrl": "",
+                "sInfoThousands": ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sLast": "Último",
+                    "sNext": "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "oAria": {
+                    "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                },
+                "buttons": {
+                    "copy": "Copiar",
+                    "colvis": "Visibilidad"
+                }
+            }
+        });
+    });
+
+
+    $("#fuSubirExcel").on('change', function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+
+    })
+
+    $("#Importar").on('click', function () {
+        $(this).show;
+
+    })
+
+   async function MostrarInforRegistro(Id) {
+        //$('#Mymodal').modal({ show: true });
+
+        var params = new Object();
+        params["Id"] = Id;
+        var result = await $.ajax({
+            type: "post",
+            url: '/ColocacionPrestamo/ListColocacionPrestamosId',
+            data: params
+        });
+        
+        //limpiarCampos();
+        $('#div_tipo').hide();
+        
+        $('#div_state').show();
+        $('#BtnActualizar').show();
+        $('#BtnUpdate').hide();
+
+
+        $('#HdIdEstado').val(result.Id);
+        $('#TxtIdRegistro').val(result.Id);
+        $('#TxtNombreCompleto').val(result.NombreCompleto);
+        $('#TxtTelefono').val(result.Telefono);
+        $('#TxtEmail').val(result.Email);
+        $('#TxtEspecialidades').val(result.Especialidades);
+        $('#TxtCiudadResidencia').val(result.CiudadResidencia);
+        var tc = result.TipoCredito;
+       if (tc == '' || tc == null) {
+           $('#TipoCredito').val('');
+       } else {
+           $('#TipoCredito').val(result.TipoCredito);
+       }
+        
+        $('#tip1').val(result.Tipificacion1);
+        $('#tip2').val(result.Tipificacion2);
+        $('#tip3').val(result.Tipificacion3);
+        $('#tip4').val(result.Tipificacion4);
+        $('#ingresos').val(result.ingresos);
+        $('#Valor_interesado').val(result.Valor_interesado);
+        $('#Valor_cuota').val(result.Valor_cuota);
+        $('#Plazo').val(result.Plazo);
+        $('#FechaLLamada').val(result.FechaLLamada);
+        //$('#DdlEstado').val(state).prop('disabled', result.state);
+        var tipo = (result.Estado == true ? 1 : 0);
+        $('#DdlTipo').val(tipo).prop('disabled', result.Estado);
+        var state = (result.state == true ? 1 : 0);
+        $('#DdlEstado').val(state).prop('enabled', result.state);
+
+
+        //$("#div_tip2").hide();
+        //$("#div_tip3").hide();
+        //$("#div_tip4").hide();
+        $('#div_calendario').hide();
+            //$("#tblAnalysis").hide();
+    }
+   
+
+    async function ActualizarColocacionPrestamo() {
+        var tc = $('#TipoCredito').val();
+        var t1 = $('#tip1').val();
+        var t2 = $('#tip2').val();
+        var t3 = $('#tip3').val();
+        var t4 = $('#tip4').val();
+        var fecha = $('#FechaLLamada').val();
+        var sw = 0;
+
+        if ((t1 == 'CONTACTO' && t2 == 'ACEPTA' && t3 == 'SEGUIMIENTO') && (t4 == 'DESEMBOLSO' || t4 == 'PDTE DOCUMENTACIÓN' || t4 == 'VERIFICACIÓN' || t4 == 'APROBADO' || t4 == 'ANÁLISIS')) {
+            sw = 1;
+        } else if ((t1 == 'CONTACTO' && t2 == 'DESCARTADO') && (t3 == 'SIN CAPACIDAD DE PAGO' || t3 == 'NO LE INTERESA' || t3 == 'EN GESTION POR OTRO EJECUTIVO' || t3 == 'TASA DE INTERES NO ATRACTIVA') && (t4 =='') ) {
+            sw = 1;
+        } else if ((t1 == 'CONTACTO' && t2 == 'VOLVER A LLAMAR') && (t3 == 'MENSAJE CON TERCERO' || t3 == 'OCUPADO') && (t4 == '') && (fecha != '')) {
+            sw = 1;
+        } else if ((t1 == 'NO CONTACTO') && (t2 == 'NÚMERO EQUIVOCADO' || t2 == 'CUELGA' || t2 == 'LÍNEA FUERA DE SERVICIO' || t2 == 'BUZÓN') && (t3 == '') && (t4 == '')) {
+            sw = 1;
+        }
+        else {
+            sw = 0;
+        }
+
+        if (sw == 1) {
+            guardar();
+        } else {
+            $('#tip1').val('');
+            $('#tip2').val('');
+            $('#tip3').val('');
+            $('#tip4').val('');
+            swal("Error en tipificaciones", "Verificar las tipificaciones", "error");
+            
+        }
+    }
+
+    async function guardar() {
+        swal({
+            title: "¿Deseas actualizar este estado?",
+            text: "¿Estas seguro?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Si, actualizar!",
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        }, async function () {
+            var params = new Object();
+            params["Id"] = $('#TxtIdRegistro').val();
+            params["TipoCredito"] = $('#TipoCredito').val();
+            params["Tipificacion1"] = $('#tip1').val();
+            params["Tipificacion2"] = $('#tip2').val();
+            params["Tipificacion3"] = $('#tip3').val();
+            params["Tipificacion4"] = $('#tip4').val();
+            if ($('#Fechallamada').val() === '') {
+                params["FechaLLamada"] = "1/1/2000 12:00:00 AM";
+            } else {
+                params["FechaLLamada"] = $('#FechaLLamada').val();
+            }
+            params["ingresos"] = $('#ingresos').val();
+            params["Valor_interesado"] = $('#Valor_interesado').val();
+            params["Valor_cuota"] = $('#Valor_cuota').val();
+            params["Plazo"] = $('#Plazo').val();
+            var result = await $.ajax({
+                type: "post",
+                url: '/ColocacionPrestamo/ActualizarRegistro',
+                data: params
+            });
+
+            swal("Bien Hecho!", "Accion realizada correctamente!", "success");
+            setInterval("location.reload()", 2000);
+
+        });
+    }
+
+
+    async function onChangeList($select) {
+        $("div_calendario").hide();
+        var cmb_tip1 = $("#tip1").val();
+        var cmb_tip2 = $("#tip2").val();
+        var cmb_tip3 = $("#tip3").val();
+        var cmb_tip4 = $("#tip4").val();
+
+        if (cmb_tip1 === 'CONTACTO') {
+
+            $('#tip2 option:contains("NÚMERO EQUIVOCADO")').hide();
+            $('#tip2 option:contains("LÍNEA FUERA DE SERVICIO")').hide();
+            $('#tip2 option:contains("CUELGA")').hide();
+            $('#tip2 option:contains("ACEPTA")').show();
+            $('#tip2 option:contains("DESCARTADO")').show();
+            $('#tip2 option:contains("VOLVER A LLAMAR")').show();
+
+            $('#tip3 option:contains("SEGUIMIENTO")').hide();
+            $('#tip3 option:contains("SIN CAPACIDAD DE PAGO")').hide();
+            $('#tip3 option:contains("NO LE INTERESA")').hide();
+            $('#tip3 option:contains("EN GESTION POR OTRO EJECUTIVO")').hide();
+            $('#tip3 option:contains("TASA DE INTERES NO ATRACTIVA")').hide();
+            $('#tip3 option:contains("MENSAJE CON TERCERO")').hide();
+            $('#tip3 option:contains("OCUPADO")').show();
+
+            $('#tip4 option:contains("DESEMBOLSO")').hide();
+            $('#tip4 option:contains("PDTE DOCUMENTACIÓN")').hide();
+            $('#tip4 option:contains("VERIFICACIÓN")').hide();
+            $('#tip4 option:contains("APROBADO")').hide();
+            $('#tip4 option:contains("ANÁLISIS")').hide();
+
+            if (cmb_tip2 === 'ACEPTA') {
+                $("#tip3").val('SEGUIMIENTO');
+                $("#tip3").attr('disabled', true);
+
+                $('#tip4 option:contains("DESEMBOLSO")').show();
+                $('#tip4 option:contains("PDTE DOCUMENTACIÓN")').show();
+                $('#tip4 option:contains("VERIFICACIÓN")').show();
+                $('#tip4 option:contains("APROBADO")').show();
+                $('#tip4 option:contains("ANÁLISIS")').show();
+
+
+            }
+            if (cmb_tip2 === 'DESCARTADO') {
+                $("#tip3").attr('disabled', false);
+
+                $('#tip3 option:contains("SEGUIMIENTO")').hide();
+                $('#tip3 option:contains("SIN CAPACIDAD DE PAGO")').show();
+                $('#tip3 option:contains("NO LE INTERESA")').show();
+                $('#tip3 option:contains("EN GESTION POR OTRO EJECUTIVO")').show();
+                $('#tip3 option:contains("TASA DE INTERES NO ATRACTIVA")').show();
+                $('#tip3 option:contains("MENSAJE CON TERCERO")').hide();
+                $('#tip3 option:contains("OCUPADO")').hide();
+
+                $('#tip4 option:contains("DESEMBOLSO")').hide();
+                $('#tip4 option:contains("PDTE DOCUMENTACIÓN")').hide();
+                $('#tip4 option:contains("VERIFICACIÓN")').hide();
+                $('#tip4 option:contains("APROBADO")').hide();
+                $('#tip4 option:contains("ANÁLISIS")').hide();
+
+                //$("#tip3").val('');
+            }
+            if (cmb_tip2 === 'VOLVER A LLAMAR') {
+                $("#tip3").attr('disabled', false);
+
+                $("#div_calendario").show();
+
+                $('#tip3 option:contains("SEGUIMIENTO")').hide();
+                $('#tip3 option:contains("SIN CAPACIDAD DE PAGO")').hide();
+                $('#tip3 option:contains("NO LE INTERESA")').hide();
+                $('#tip3 option:contains("EN GESTION POR OTRO EJECUTIVO")').hide();
+                $('#tip3 option:contains("TASA DE INTERES NO ATRACTIVA")').hide();
+                $('#tip3 option:contains("MENSAJE CON TERCERO")').show();
+                $('#tip3 option:contains("OCUPADO")').show();
+
+                $('#tip4 option:contains("DESEMBOLSO")').hide();
+                $('#tip4 option:contains("PDTE DOCUMENTACIÓN")').hide();
+                $('#tip4 option:contains("VERIFICACIÓN")').hide();
+                $('#tip4 option:contains("APROBADO")').hide();
+                $('#tip4 option:contains("ANÁLISIS")').hide();
+
+            } else {
+                $("#div_calendario").hide();
+            }
+
+        }
+
+        if (cmb_tip1 === 'NO CONTACTO') {
+
+            $('#tip2 option:contains("CUELGA")').show();
+            $('#tip2 option:contains("LÍNEA FUERA DE SERVICIO")').show();
+            $('#tip2 option:contains("NÚMERO EQUIVOCADO")').show();
+            $('#tip2 option:contains("ACEPTA")').hide();
+            $('#tip2 option:contains("DESCARTADO")').hide();
+            $('#tip2 option:contains("VOLVER A LLAMAR")').hide();
+            $('#tip2 option:contains("BUZÓN")').show();
+
+            $('#tip3 option:contains("SEGUIMIENTO")').hide();
+            $('#tip3 option:contains("SIN CAPACIDAD DE PAGO")').hide();
+            $('#tip3 option:contains("NO LE INTERESA")').hide();
+            $('#tip3 option:contains("EN GESTION POR OTRO EJECUTIVO")').hide();
+            $('#tip3 option:contains("TASA DE INTERES NO ATRACTIVA")').hide();
+            $('#tip3 option:contains("MENSAJE CON TERCERO")').hide();
+            $('#tip3 option:contains("OCUPADO")').hide();
+
+            $('#tip4 option:contains("DESEMBOLSO")').hide();
+            $('#tip4 option:contains("PDTE DOCUMENTACIÓN")').hide();
+            $('#tip4 option:contains("VERIFICACIÓN")').hide();
+            $('#tip4 option:contains("APROBADO")').hide();
+            $('#tip4 option:contains("ANÁLISIS")').hide();
+
+        }
+
+    }
+
+    async function Tip2_Acepta() {
+        $('#tip3 option:contains("SEGUIMIENTO")').show();
+        $('#tip3 option:contains("SIN CAPACIDAD DE PAGO")').hide();
+        $('#tip3 option:contains("NO LE INTERESA")').hide();
+        $('#tip3 option:contains("EN GESTION POR OTRO EJECUTIVO")').hide();
+        $('#tip3 option:contains("TASA DE INTERES NO ATRACTIVA")').hide();
+        $('#tip3 option:contains("MENSAJE CON TERCERO")').hide();
+        $('#tip3 option:contains("OCUPADO")').hide();
+    }
+
+    function noPuntoComa(event) {
+
+        var e = event || window.event;
+        var key = e.keyCode || e.which;
+
+        if (key === 110 || key === 190 || key === 188 || key === 111 || key === 187 || key === 189 || key === 220 || key === 109) {
+
+            e.preventDefault();
+        }
+    }
+
+</script>
+
+
+@*inicio modal*@
+
+<div id="Mymodal" class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Gestionar Listas desplegables</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div><h3></h3>
+                    <div class="modal-body">
+                        <input type="hidden" id="HdIdEstado" />
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label for="TxtIdRegistro">Id registro </label>
+                                <input type="text" id="TxtIdRegistro" class="form-control required" maxlength="50" disabled />
+                                <span id="TxtIdRegistromodal-error" class="invalid-feedback"></span>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="TxtNombreCompleto">Nombre Completo </label>
+                                <input type="text" id="TxtNombreCompleto" class="form-control required" placeholder="Nombre Completo" maxlength="50" disabled />
+                                <span id="TxtNombreCompleto-error" class="invalid-feedback"></span>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="TxtTelefono">Telefono</label>
+                                <input type="text" id="TxtTelefono" class="form-control required" maxlength="50" disabled />
+                                <span id="TxtTelefono-error" class="invalid-feedback"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="TxtEmail">Email </label>
+                                <input type="text" id="TxtEmail" class="form-control required" maxlength="50" disabled />
+                                <span id="TxtEmail-error" class="invalid-feedback"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="TxtEspecialidades">Especialidades </label>
+                                <input type="text" id="TxtEspecialidades" class="form-control required" maxlength="50" disabled />
+                                <span id="TxtEspecialidadesmodal-error" class="invalid-feedback"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="TxtCiudadResidencia">Ciudad de Residencia </label>
+                                <input type="text" id="TxtCiudadResidencia" class="form-control required" maxlength="50" disabled />
+                                <span id="TxtCiudadResidenciamodal-error" class="invalid-feedback"></span>
+                            </div>
+                            <div class="col-md-6" id="div_tipoCredito">
+                                <label for="DdlTipoCredito">Tipo Credito</label>
+                                <select id="TipoCredito" class="form-control">
+                                    <option value=""> --Seleccionar-- </option>
+                                    @foreach (var item1 in ViewBag.TipoCredito)
+                                    {
+                                        <option value="@item1.Descripcion"> @item1.Descripcion</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-6" id="div_tip1">
+                                <label for="Ddltip1">Tipificación 1</label>
+                                <select id="tip1" class="form-control" onchange="onChangeList()">
+                                    <option value=""> --Seleccionar-- </option>
+                                    @foreach (var item1 in ViewBag.Tip1)
+                                    {
+                                        <option value="@item1.Descripcion"> @item1.Descripcion</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-6" id="div_tip2">
+                                <label for="Ddltip2">Tipificación 2</label>
+                                <select id="tip2" class="form-control" onchange="onChangeList()">
+                                    <option value=""> --Seleccionar-- </option>
+                                    @foreach (var item1 in ViewBag.Tip2)
+                                    {
+                                        <option value="@item1.Descripcion"> @item1.Descripcion</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-6" id="div_tip3">
+                                <label for="Ddltip3">Tipificación 3</label>
+                                <select id="tip3" class="form-control" onchange="onChangeList()">
+                                    <option value=""> --Seleccionar-- </option>
+                                    @foreach (var item1 in ViewBag.Tip3)
+                                    {
+                                        <option value="@item1.Descripcion"> @item1.Descripcion</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-6" id="div_calendario">
+                                <label for="Ddlfechallamada">Fecha y hora de llamada</label>
+                                <input type="datetime-local" class="form-control" id="FechaLLamada" />
+                            </div>
+                            <div class="col-md-6" id="div_tip4">
+                                <label for="Ddltip4">Tipificación 4</label>
+                                <select id="tip4" class="form-control" onchange="onChangeList()">
+                                    <option value=""> --Seleccionar-- </option>
+                                    @foreach (var item1 in ViewBag.Tip4)
+                                    {
+                                        <option value="@item1.Descripcion"> @item1.Descripcion</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-3" id="div_ingresos">
+                                <label for="ingresos">Ingresos</label>
+                                <input type="text" class="form-control" id="ingresos" min="0" onkeypress="if (event.keyCode <45 || event.keyCode > 57 ) event.returnValue = false" onkeydown="noPuntoComa(event)" />
+                            </div>
+                            <div class="col-md-3" id="div_Valor_interesado">
+                                <label for="Valor_interesado">Valor Interesado</label>
+                                <input type="text" class="form-control" id="Valor_interesado" min="0" onkeypress="if (event.keyCode <45 || event.keyCode > 57 ) event.returnValue = false" onkeydown="noPuntoComa(event)" />
+                            </div>
+                            <div class="col-md-3" id="div_Valor_cuota">
+                                <label for="Valor_cuota">Valor Cuota</label>
+                                <input type="text" class="form-control" id="Valor_cuota" min="0" onkeypress="if (event.keyCode <45 || event.keyCode > 57 ) event.returnValue = false" onkeydown="noPuntoComa(event)" />
+                            </div>
+                            <div class="col-md-3" id="div_Plazo">
+                                <label for="Plazo">Plazo</label>
+                                <input type="text" class="form-control" id="Plazo" min="0" maxlength="3" onkeypress="if (event.keyCode <45 || event.keyCode > 57 ) event.returnValue = false" onkeydown="noPuntoComa(event)" />
+                            </div>
+
+                            @*<div class="col-md-3" id="div_State">
+            <label for="DdlEstado">Estado</label>
+            <select id="DdlEstado" class="form-control">
+                <option value="1">Activo</option>
+                <option value="0">Inactivo</option>
+            </select>
+        </div>*@
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button id="BtnActualizar" type="button" class="btn btn-primary" onclick="ActualizarColocacionPrestamo()">
+                            <i class="fas fa-save fa-sm"></i>
+                            &nbspGuardar
+                        </button>
+                        <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                            <span class="spinner-border spinner-border-sm"></span>
+                            Loading...
+                        </button>
+                    </div>
+                    @*<div class="modal-footer">
+                        <button id="BtnUpdate" type="button" class="btn btn-primary" onclick="AddEstado()">
+                            <i class="fas fa-save fa-sm"></i>
+                            &nbspGuardar estado
+                        </button>
+                        <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                            <span class="spinner-border spinner-border-sm"></span>
+                            Loading...
+                        </button>
+                    </div>*@
+
+
+                </div>
+            </div>
+  
+</div>
+
+@*fin modal*@
+
+
+
+
+@*<table id="tblAnalysis" class="table table-sm table-bordered table-hover" style="width:100%;">*@
+@*<table id="tblAnalysis" class="table table-sm table-bordered table-hover dataTable no-footer" style="width:100%;">*@
+<table id="tblAnalysis" class="display" style="width:100%;">
+    <thead>
+        <tr>
+
+            <th></th>
+            <th>Identificacion</th>
+            <th>Nombre Completo</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Especialidades</th>
+            <th>Ciudad de Residencia</th>
+            <th>Tipo de Credito</th>
+            <th>Tipificacion 1</th>
+            <th>Tipificacion 2</th>
+            <th>Tipificacion 3</th>
+            <th>Tipificacion 4</th>
+            @*<th>NombreArchivo</th>
+                <th>DataActiva</th>
+                <th>FechaCreacion</th>
+                <th>FechaCarga</th>
+                <th>FechaModificacion</th>
+                <th>HostName</th>
+                <th>winuser</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <div class="btn-group">
+                            <a href="" class="btn btn-sm btn-success BtnEdit" onclick="MostrarInforRegistro(@item.Id)" data-toggle="modal" data-target="#Mymodal">
+                                <i class="fas fa-eye fa-sm"></i>
+                                Ver
+                            </a>
+                            <input type="hidden" id="IdRegistro" />
+                        </div>
+                    </td>
+                    <th>@item.Identificacion</th>
+                    <td>@item.NombreCompleto</td>
+                    <td>@item.Telefono</td>
+                    <td>@item.Email</td>
+                    <td>@item.Especialidades</td>
+                    <td>@item.CiudadResidencia</td>
+                    <td>@item.TipoCredito</td>
+                    <td>@item.Tipificacion1</td>
+                    <td>@item.Tipificacion2</td>
+                    <td>@item.Tipificacion3</td>
+                    <td>@item.Tipificacion4</td>
+                    @*<td>@item.NombreArchivo</td>
+                        <td>@item.DataActiva</td>
+                        <td>@item.FechaCreacion</td>
+                        <td>@item.FechaCarga</td>
+                        <td>@item.FechaModificacion</td>
+                        <td>@item.HostName</td>
+                        <td>@item.winuser</td>*@
+                </tr>
+                i++;
+            }
+        }
+    </tbody>
+</table>

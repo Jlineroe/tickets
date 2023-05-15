@@ -1,0 +1,433 @@
+﻿@model AIBTicketsMVC.Models.FieldsUDF
+@{ int IdFieldsTypes = Model.FieldType.IdFieldsTypesUDF;
+                int IdFieldsDepend = Model.ParentDispositions.IdFieldsUDF;
+                string NameField = Model.NameField;
+                string divFieldsDepend = "",
+                onChangeList = "onChange=onChangeList(this);";
+                if (IdFieldsDepend != 0)
+                {
+                    divFieldsDepend = $"divFieldsDepend{IdFieldsDepend}";
+                }
+                string required = "", asteri = "";
+                if (Model.TypeRequired.IdTypeRequired == 2)
+                {
+                    required = "requiredForever";
+                    asteri = "*";
+                }
+                int NumColums = 3;
+                if (IdFieldsTypes == 8) //Campo Tipo busqueda de Puestos
+                {
+                    NumColums = 6;
+                }
+                if (Model.Template.IdTemplates == 12)
+                {
+    <div class="col-md-@NumColums" id="div_@Model.IdFieldsUDF">
+        <div class="form-group">
+            @{ if (IdFieldsTypes == 1) //Fecha
+                {
+                    string ResultFecha = "";
+                    if (Model.Value != "")
+                    {
+                        ResultFecha = DateTime.Parse(Model.Value).ToString("yyyy/MM/dd");
+                    }
+                    <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                        @Model.NameField
+                        <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                    </strong>
+                    <div class="input-group date">
+                        <span class="input-group-prepend" id="@Model.IdFieldsUDF">
+                            <span class="input-group-text">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                        </span>
+                        <input type="text" readonly data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                               placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave datepicker @required" id="field_@Model.IdFieldsUDF" value="@ResultFecha" onchange=" inputdate()" />
+                    </div> }
+                else if (IdFieldsTypes == 2) //Numero
+                {
+                    <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                        @Model.NameField
+                        <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                    </strong>
+                    <input type="number" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                           placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required" onkeypress="return solonumeros(event);" id="field_@Model.IdFieldsUDF" value="@Model.Value" /> }
+                else if (IdFieldsTypes == 3) //Linea de texto simple
+                {
+
+                    <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                        @Model.NameField
+                        <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                    </strong>
+                            if (Model.NameField.ToUpper().Contains("BPB_AREA_QUE_GENERO_INCONSISTENCIA"))
+                            {
+                                @*<input type="number" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF" placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required" maxlength="@Model.Longitud" id="field_@Model.IdFieldsUDF" value="@Model.Value" />*@
+                                @*@Html.DropDownList(@Model.NameFieldsUDF, (SelectList)ViewBag.Area_genero_ajuste, "--Seleccionar--", new { @class = "selectpicker form-control fieldSave required ", data_live_search = "true" })*@
+
+                                    <select  data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF" 
+                                            placeholder="@Model.NameField"class="chosen-select fieldSave Req-@Model.TypeRequired.IdTypeRequired" id="field_@Model.IdFieldsUDF" onchange="changeArea(this);">
+                                        <option value=""></option>
+                                        @foreach (var item in ViewBag.area_genero_ajuste)
+                                         {
+                                            @*<option>@item.Text</option>*@
+                                            string selected = "";
+                                            if (Model.Value == item.Text) { selected = "selected"; }
+                                            <option @selected>@item.Text</option>
+                                         }
+                                    </select>
+
+                            }
+                            else if (Model.NameField.ToUpper().Contains("BPB_SERVICIO"))
+                            {
+                            @*<input type="number" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF" placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required" maxlength="@Model.Longitud" id="field_@Model.IdFieldsUDF" value="@Model.Value" />*@
+                            @*@Html.DropDownList(@Model.NameFieldsUDF, (SelectList)ViewBag.Area_genero_ajuste, "--Seleccionar--", new { @class = "selectpicker form-control fieldSave required ", data_live_search = "true" })*@
+
+                            <select  data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF" 
+                                    placeholder="@Model.NameField"class="chosen-select fieldSave Req-@Model.TypeRequired.IdTypeRequired" id="field_@Model.IdFieldsUDF" onchange="changeCuenta(this);">
+                                <option value=""></option>
+                                @foreach (var item in ViewBag.Cuenta)
+                                {
+                                    string selected = "";
+                                            if (Model.Value == item.Value) { selected = "selected"; }
+                                            <option value="@item.Value" @selected>@item.Text</option>
+                                }
+                            </select>
+
+                            }
+                            else
+                            {
+                            <input type="text" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                                   placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required" maxlength="@Model.Longitud" id="field_@Model.IdFieldsUDF" value="@Model.Value" />
+                            }
+
+
+
+
+
+
+
+
+                            }
+                            else if (IdFieldsTypes == 5) //Caja de verificacion
+                            {
+                            string Checked = "";
+                            if (Model.Value == "True")
+                            {
+                            Checked = "checked";
+                            }
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                                       class="custom-control-input fieldSave" id="field_@Model.IdFieldsUDF" @Checked />
+                                <label id="lbl_@Model.IdFieldsUDF" class="custom-control-label" for="field_@Model.IdFieldsUDF">@Model.NameField</label>
+                            </div>
+                            }
+                            else if (IdFieldsTypes == 6) //Lista desplegable
+                            {
+                            if (NameField == "Favorabilidad" || NameField == "Ajuste" || NameField == "Centrales" || NameField == "Pretensiones")
+                            {
+                            <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                                @Model.NameField
+                                <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                            </strong>
+                            <select data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                                    placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required @divFieldsDepend" id="field_@Model.IdFieldsUDF" @onChangeList>
+
+                                @foreach (var disp in Model.Dispositions)
+                                {
+                                    string selected = "";
+                                    if (Model.Value == disp.Dispositions) { selected = "selected"; }
+                                    <option value="@disp.IdFieldsDispositions" @selected>@disp.Dispositions</option>
+                                }
+
+
+                            </select> }
+
+
+                            else //Lista desplegable
+                            {
+                            <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                                @Model.NameField
+                                <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                            </strong>
+                            <select data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                                    placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required @divFieldsDepend" id="field_@Model.IdFieldsUDF" @onChangeList>
+
+                                @foreach (var disp in Model.Dispositions)
+                                {
+                                    string selected = "";
+                                    if (Model.Value == disp.Dispositions) { selected = "selected"; }
+                                    <option value="@disp.IdFieldsDispositions" @selected>@disp.Dispositions</option>
+                                }
+
+
+                            </select> }
+                            } @*else if (IdFieldsTypes == 6 ) //Lista desplegable
+                        {
+                                <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF" style="display:none;">
+                                    @Model.NameField
+                                    <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                                </strong>
+                                <select data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                                        placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required @divFieldsDepend" id="field_@Model.IdFieldsUDF" @onChangeList style="display:none;">
+                                    <option value="">--Seleccionar--</option>
+                                    @if (IdFieldsDepend == 0)
+                                {
+                                    foreach (var disp in Model.Dispositions)
+                                    {
+                                        string selected = "";
+                                        if (Model.Value == disp.Dispositions) { selected = "selected"; }
+                                            <option value="@disp.IdFieldsDispositions" @selected>@disp.Dispositions</option>
+                                     }
+                                }
+                                    else if (Model.Value != "")
+                                    {
+                                        <option value="@Model.Value" selected>@Model.Value</option>
+                                    }
+
+                                </select>
+
+                         }*@ }
+
+
+
+
+
+
+                    </div>
+    </div> }else if (Model.Template.IdTemplates == 13)
+                {
+    <div class="col-md-@NumColums" id="div_@Model.IdFieldsUDF">
+        <div class="form-group">
+
+            @{ if (IdFieldsTypes == 1) //Fecha
+                {
+                    string ResultFecha = "";
+                    if (Model.Value != "")
+                    {
+                        ResultFecha = DateTime.Parse(Model.Value).ToString("yyyy/MM/dd");
+                    }
+                    <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                        @Model.NameField
+                        <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                    </strong>
+                    <div class="input-group date">
+                        <span class="input-group-prepend" id="@Model.IdFieldsUDF">
+                            <span class="input-group-text">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                        </span>
+                        <input type="text" readonly data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                               placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave datepicker @required" id="field_@Model.IdFieldsUDF" value="@ResultFecha" onchange=" inputdate()" />
+                    </div>
+                }
+                else if (IdFieldsTypes == 2) //Numero
+                {
+                    <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                        @Model.NameField
+                        <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                    </strong>
+                    <input type="number" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                           placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required" onkeypress="return solonumeros(event);" id="field_@Model.IdFieldsUDF" value="@Model.Value" />
+                }
+                else if (IdFieldsTypes == 3) //Linea de texto simple
+                {
+                    <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                        @Model.NameField
+                        <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                    </strong>
+                    if (Model.NameField.ToUpper().Contains("BPB_AREA_SOLICITA_AJUSTE_V"))
+                    {
+                        @*<input type="number" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF" placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required" maxlength="@Model.Longitud" id="field_@Model.IdFieldsUDF" value="@Model.Value" />*@
+                        @*@Html.DropDownList(@Model.NameFieldsUDF, (SelectList)ViewBag.Area_genero_ajuste, "--Seleccionar--", new { @class = "selectpicker form-control fieldSave required ", data_live_search = "true" })*@
+
+                        <select  data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF" 
+                                    placeholder="@Model.NameField"class="chosen-select fieldSave Req-@Model.TypeRequired.IdTypeRequired" id="field_@Model.IdFieldsUDF" onchange="changeArea(this);">
+                                <option value=""></option>
+                            @foreach (var item in ViewBag.area_genero_ajuste)
+                            {
+                                string selected = "";
+                                            if (Model.Value == item.Text) { selected = "selected"; }
+                                            <option @selected>@item.Text</option>
+                            }
+                        </select>
+
+                    }
+                    else if (Model.NameField.ToUpper().Contains("BPB_SERVICIO_V"))
+                    {
+                        @*<input type="number" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF" placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required" maxlength="@Model.Longitud" id="field_@Model.IdFieldsUDF" value="@Model.Value" />*@
+                        @*@Html.DropDownList(@Model.NameFieldsUDF, (SelectList)ViewBag.Area_genero_ajuste, "--Seleccionar--", new { @class = "selectpicker form-control fieldSave required ", data_live_search = "true" })*@
+
+                        <select  data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF" 
+                                    placeholder="@Model.NameField"class="chosen-select fieldSave Req-@Model.TypeRequired.IdTypeRequired" id="field_@Model.IdFieldsUDF" onchange="changeCuenta(this);">
+                                <option value=""></option>
+                            @foreach (var item in ViewBag.Cuenta)
+                            {
+                                string selected = "";
+                                            if (Model.Value == item.Value) { selected = "selected"; }
+                                                <option value="@item.Value" @selected>@item.Text</option>
+                            }
+                        </select>
+
+                    }
+                    else
+                    {
+                        <input type = "text" data-idfieldstypes = "@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf = "@Model.NameFieldsUDF"
+                               placeholder = "@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required" maxlength="@Model.Longitud" id="field_@Model.IdFieldsUDF" value="@Model.Value" />
+                    }
+}
+                else if (IdFieldsTypes == 5) //Caja de verificacion
+{
+    string Checked = "";
+    if (Model.Value == "True")
+    {
+        Checked = "checked";
+    }
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                   class="custom-control-input fieldSave" id="field_@Model.IdFieldsUDF" @Checked />
+            <label id="lbl_@Model.IdFieldsUDF" class="custom-control-label" for="field_@Model.IdFieldsUDF">@Model.NameField</label>
+        </div>
+}
+else if (IdFieldsTypes == 6) //Lista desplegable
+{
+        if (NameField == "Favorabilidad" || NameField == "Ajuste" || NameField == "Centrales" || NameField == "Pretensiones")
+        {
+                <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                    @Model.NameField
+                    <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                </strong>
+                <select data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                        placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required @divFieldsDepend" id="field_@Model.IdFieldsUDF" @onChangeList>
+
+                    @foreach (var disp in Model.Dispositions)
+                    {
+                        string selected = "";
+                        if (Model.Value == disp.Dispositions) { selected = "selected"; }
+                        <option value="@disp.IdFieldsDispositions" @selected>@disp.Dispositions</option>
+                    }
+
+                </select>
+        }
+        else //Lista desplegable
+        {
+                <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                    @Model.NameField
+                    <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                </strong>
+                <select data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                        placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required @divFieldsDepend" id="field_@Model.IdFieldsUDF" @onChangeList>
+
+                    @foreach (var disp in Model.Dispositions)
+                    {
+                        string selected = "";
+                        if (Model.Value == disp.Dispositions) { selected = "selected"; }
+                        <option value="@disp.IdFieldsDispositions" @selected>@disp.Dispositions</option>
+                    }
+                </select>
+        }
+} @*else if (IdFieldsTypes == 6 ) //Lista desplegable
+    {
+            <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF" style="display:none;">
+                @Model.NameField
+                <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+            </strong>
+            <select data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                    placeholder="@Model.NameField" class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required @divFieldsDepend" id="field_@Model.IdFieldsUDF" @onChangeList style="display:none;">
+                <option value="">--Seleccionar--</option>
+                @if (IdFieldsDepend == 0)
+            {
+                foreach (var disp in Model.Dispositions)
+                {
+                    string selected = "";
+                    if (Model.Value == disp.Dispositions) { selected = "selected"; }
+                        <option value="@disp.IdFieldsDispositions" @selected>@disp.Dispositions</option>
+                 }
+            }
+                else if (Model.Value != "")
+                {
+                    <option value="@Model.Value" selected>@Model.Value</option>
+                }
+
+            </select>
+
+     }*@  }
+
+
+
+
+        </div>
+    </div> }
+                else
+                {
+    <div class="col-md-@NumColums"  id="div_@Model.IdFieldsUDF">
+        <div class="form-group">
+            @{ if (IdFieldsTypes == 1) //Fecha
+                                {
+                                    string ResultFecha = "";
+                                    if (Model.Value != "")
+                                    {
+                                        ResultFecha = DateTime.Parse(Model.Value).ToString("yyyy/MM/dd");
+                                    }
+                <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                    @Model.NameField
+                    <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                </strong>
+                                    <div class="input-group date">
+                                        <span class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                        <input type="text" readonly data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                                               placeholder=@Model.NameField class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave datepicker @required" id="field_@Model.IdFieldsUDF" value="@ResultFecha" />
+                                    </div> }
+                                                    else if (IdFieldsTypes == 2) //Numero
+                                                    {
+                                    <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                                        @Model.NameField
+                                        <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                                    </strong>
+                                                        <input type="number" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                                                               placeholder=@Model.NameField class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required" onkeypress="return solonumeros(event);" id="field_@Model.IdFieldsUDF" value="@Model.Value" /> }
+                                                                        else if (IdFieldsTypes == 3) //Linea de texto simple
+                                                                        {
+                                                        <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                                                            @Model.NameField
+                                                            <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                                                        </strong>
+                                                                            <input type="text" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                                                                                   placeholder=@Model.NameField class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required" maxlength="@Model.Longitud" id="field_@Model.IdFieldsUDF" value="@Model.Value" /> }
+                                                                                            else if (IdFieldsTypes == 5) //Caja de verificacion
+                                                                                            {
+                                                                                                string Checked = "";
+                                                                                                if (Model.Value == "True")
+                                                                                                {
+                                                                                                    Checked = "checked";
+                                                                                                }
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                                                                                       class="custom-control-input fieldSave" id="field_@Model.IdFieldsUDF" @Checked />
+                                                                                <label id="lbl_@Model.IdFieldsUDF" class="custom-control-label" for="field_@Model.IdFieldsUDF">@Model.NameField</label>
+                                                                            </div> }
+                                                                                            else if (IdFieldsTypes == 6) //Lista desplegable
+                                                                                            {
+                                                                            <strong id="lbl_@Model.IdFieldsUDF" for="field_@Model.IdFieldsUDF">
+                                                                                @Model.NameField
+                                                                                <span class="text-danger lblrequi-@asteri lblReq-@Model.TypeRequired.IdTypeRequired">@asteri</span>
+                                                                            </strong>
+                                                                                                <select data-idfieldstypes="@Model.FieldType.IdFieldsTypesUDF" data-idfieldsudf="@Model.IdFieldsUDF" data-namefieldsudf="@Model.NameFieldsUDF"
+                                                                                                        placeholder=@Model.NameField class="form-control Req-@Model.TypeRequired.IdTypeRequired fieldSave @required @divFieldsDepend" id="field_@Model.IdFieldsUDF" @onChangeList>
+                                                                                                    <option value="">--Seleccionar--</option>
+                                                                                                    @if (IdFieldsDepend == 0)
+                                                                                                    {
+                                                                                                        foreach (var disp in Model.Dispositions)
+                                                                                                        {
+                                                                                                            string selected = "";
+                                                                                                            if (Model.Value == disp.Dispositions) { selected = "selected"; }
+                                                                                <option value="@disp.IdFieldsDispositions" @selected>@disp.Dispositions</option> }
+                                                                                                    }
+                                                                                                    else if (Model.Value != "")
+                                                                                                    {
+                                                                                <option value="@Model.Value" selected>@Model.Value</option>}
+                                                                                                </select> } }
+        </div>
+    </div> } }

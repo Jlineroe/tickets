@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.CasosPqrMovilEscrita>
+
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>IdSolutions</th>
+            <th>Radicado</th>
+            <th>Tipo de reclamo</th>
+            <th>Nombre_Titular</th>
+            <th>CUSTCODE</th>
+            <th>Valor</th>
+            <th>Concepto</th>
+            <th>Analista</th>
+            <th>Periodo_Ajustado_Desde</th>
+            <th>Periodo_Ajustado_Hasta</th>
+            <th>Aliado</th>
+            <th>Estado</th>
+            @*<th>Actualizacion_Anterior</th>*@
+            <th>Ultima_Actualizacion</th>            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td></td>
+            <td>@item.WorKOrder</td>
+            <td>@item.PRE_Radicacion</td>
+            <td>@item.PRE_Tipo_Reclamo</td>
+            <td>@item.PRE_Nombre_Titular</td>
+            <td>@item.PRE_CUSTCODE</td>
+            <td>@item.PRE_Valor</td>
+            <td>@item.PRE_Concepto</td>
+            <td>@item.PRE_Analista</td>
+            <td>@item.PRE_Periodo_Ajustado_Desde</td>
+            <td>@item.PRE_Periodo_Ajustado_Hasta</td>
+            <td>@item.PRE_Aliado</td>
+            <td>@item.PRE_Estado</td>
+            @*<td>@item.PRE_Actualizacion_Anterior</td>*@
+            <td>@item.PRE_Ultima_Actualizacion</td>
+            
+
+        </tr>
+        }
+
+    </tbody>
+</table>
+

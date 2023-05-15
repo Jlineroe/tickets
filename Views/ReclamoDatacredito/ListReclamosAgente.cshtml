@@ -1,0 +1,103 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.ReclamoDatacredito>
+
+@*<table id="tblAnalysis" class="table table-sm table-bordered table-hover" style="width:100%;">*@
+@*<table id="tblAnalysis" class="table table-sm table-bordered table-hover dataTable no-footer" style="width:100%;">*@
+<table id="tblAnalysis" class="display" style="width:100%;">
+    <thead>
+        <tr>
+            <th>Estado&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+            <th>Numero ID</th>
+            <th>Tipo Ident.</th>
+            <th>Nombre</th>
+            <th>Entidad</th>
+            <th>NIT</th>
+            <th>No Cuenta</th>
+            <th>No Reclamo</th>
+            <th>Reclamo Entidad</th>
+            <th>Estado</th>
+            <th>Tipo Reclamo</th>
+            <th>Subtipo Reclamo</th>
+            <th>Leyenda Reclamo</th>
+            <th>Tipo Solucion</th>
+            <th>Fecha Colocacion</th>
+            <th>Fecha Aplicacion</th>
+            <th>Canal</th>
+            <th>Origen</th>
+            <th>Empresa Origen</th>
+            <th>Estado Robot</th>
+            @*<th>EstadoProceso</th>
+        <th>Observacion</th>
+        <th>Fecha_Procesamiento</th>
+        <th>HostName</th>
+        <th>WinUser</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            foreach (var item in Model)
+            {
+
+                <tr class="isres">
+                            <td>
+                                <div id="est_@item.No_Reclamo">
+                                    <select id="est" class="form-control" onchange="cambioestado()">
+                                        <option value=""> Estado...</option>
+                                        @foreach (var item1 in ViewBag.EstadoReclamo)
+                                        {
+
+                                            <option value=@item1.Text> @item1.Text</option>
+                                        }
+                                    </select>
+                                </div>
+                                
+                                <div id="subest_@item.No_Reclamo" class="sub" onload="mostrar_select()">
+                                    <select id="subest" class="form-control hide">
+                                        <option value=""> SubEstado...</option>
+                                        @foreach (var item1 in ViewBag.SubEst)
+                                        {
+                                            <option value=@item1.Text> @item1.Text</option>
+                                        }
+                                    </select>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-info btn-icon-split" onclick="">
+                                    <span class="text">Gestionar</span>
+                                </button>
+                            </td>
+                    <th scope="row">@item.Numero_ID</th>
+                    <td>@item.Tipo_Identificacion</td>
+                    <td>@item.Nombre</td>
+                    <td>@item.Entidad</td>
+                    <td>@item.NIT</td>
+                    <td>@item.No_Cuenta</td>
+                    <td>@item.No_Reclamo</td>
+                    <td>@item.Reclamo_Entidad</td>
+                    <td>@item.Estado</td>
+                    <td>@item.Tipo_Reclamo</td>
+                    <td>@item.Subtipo_Reclamo</td>
+                    <td>@item.Leyenda_Reclamo</td>
+                    <td>@item.Tipo_Solucion</td>
+                    <td>@item.Fecha_Colocacion</td>
+                    <td>@item.Fecha_Aplicacion</td>
+                    <td>@item.Canal</td>
+                    <td>@item.Origen</td>
+                    <td>@item.Empresa_Origen</td>
+                    <td>@item.Estado_Robot</td>
+                    @*<td>@item.EstadoProceso</td>
+                        <td>@item.Observacion</td>
+                        <td>@item.Fecha_Procesamiento</td>
+                        <td>@item.HostName</td>
+                        <td>@item.WinUser</td>*@
+                </tr>
+                i++;
+
+            }
+        }
+    </tbody>
+</table>
+<script>
+    function mostrar_select() {
+        document.getElementsByClassName('.sub').style.display = 'none';
+        document.getElementsByClassName('.sub').style.display = '';
+    }
+</script>

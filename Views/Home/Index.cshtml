@@ -1,0 +1,132 @@
+﻿
+@{
+    @model AIBTicketsMVC.Models.HomeHistory
+    ViewData["Title"] = "Home";
+}
+
+
+@*<input type="hidden" name="UserActual" id="UserActual" value="ViewBag.Perfil" />
+    <input type="hidden" name="GrupoActual" id="GrupoActual" value="ViewBag.GrupoUsuario" />*@
+<div class="container-fluid mt-3 mb-3">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>  <i class="fas fa-tachometer-alt"></i> DASHBOARD  -  @ViewBag.UserActual</h3>
+            <br />
+            <div class="alert alert-secondary" role="alert">
+                <h3>Bienvenido a AQI Tickets</h3>
+                <p>Por medio de esta herramienta podras crear o gestionar los tickets que tengas asignados.</p>
+            </div>
+        </div>
+    </div>
+    @if (ViewBag.scare == 3)
+    {
+        <div class="row">
+            <div class="col-md-12">
+
+                <button type="button" class="btn btn-sm btn-primary btn-icon-split" onclick="irColocacionPrestamo()">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-bell"></i>
+                    </span>
+                    <span class="text" id="BtnTiempos">Notificaciones Scare (@ViewBag.Notificacion_colocacion)</span>
+                </button>
+
+
+            </div>
+        </div>
+    }
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            @{ if (ViewBag.Perfil == 1)
+                {
+    <button type="button" class="btn btn-sm btn-success btn-icon-split" onclick="irTableroTiempos()">
+        <span class="icon text-white-50">
+            <i class="fas fa-user-clock"></i>
+        </span>
+        <span class="text" id="BtnTiempos">Tiempos</span>
+    </button>
+
+                    <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-sm btn-primary btn-icon-split" onclick="">
+                        <span class="icon text-white-50">
+                            <i class="fa fa-users"></i>
+                        </span>
+                        <span class="text" id="BtnTiempos">Metas x Grupos</span>
+                    </button> } }
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-3">
+            <strong>Seleccionar grupo</strong>
+            <select id="SelGrupo" class="form-control" onchange="Dashboard(this.value)">
+                <option value="">--Seleccione--</option>
+                @foreach (var item in ViewBag.Grupos)
+                {
+    <option value="@item.IdMasterGroups">@item.NameGroup</option>
+}
+            </select>
+        </div>
+    </div>
+    <br />
+    <div id="Historico">
+
+    </div>
+</div>
+
+
+
+<input type="hidden" id="displayname" />
+
+@section Styles {
+    <link href="~/wwwroot/assets/css/stylesGeneral.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/datapicker/datepicker3.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.css" rel="stylesheet" />
+    <style type="text/css">
+        hr {
+            margin: 0px;
+        }
+
+        h3, h4, h5, h6 {
+            margin: 0;
+        }
+    </style>
+
+
+}
+@section Scripts {
+
+    <script src="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.min.js"></script>
+    <script src="~/wwwroot/vendor/datapicker/bootstrap-datepicker.js"></script>
+    <script src="~/wwwroot/vendor/toastr/toastr.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/Home.js"></script>
+
+    <style type="text/css">
+        div.scroll_horizontal {
+            width: 3000px;
+            overflow: auto;
+            border: 1px solid #666;
+            background-color: #ccc;
+            padding: 8px;
+        }
+
+        .contenedor-tabla {
+            display: table;
+        }
+
+        .contenedor-fila {
+            display: table-row;
+        }
+
+        .contenedor-columna {
+            display: table-cell;
+        }
+    </style>
+}
+
+@Html.Partial("ModalMetasGrupos", Model)

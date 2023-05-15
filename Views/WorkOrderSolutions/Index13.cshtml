@@ -1,0 +1,235 @@
+﻿
+@{
+    @model AIBTicketsMVC.Models.WorkOrder
+    ViewData["Title"] = "Gestion de solicitudes";
+}
+
+@section Styles {
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/datapicker/datepicker3.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.css" rel="stylesheet" />
+    <style type="text/css">
+        hr {
+            margin: 0px;
+        }
+
+        h3, h4, h5, h6 {
+            margin: 0;
+        }
+
+        .backgroundBlue {
+            background: #F2F9FE;
+        }
+
+        p {
+            margin-bottom: 0px;
+        }
+    </style>
+}
+
+@section Scripts {
+
+
+    <script src="~/wwwroot/vendor/chosen/chosen-clickable-optgroup.js"></script>
+    <script src="~/wwwroot/vendor/Summernote-Editor/summernote-bs4.min.js"></script>
+    <script src="~/wwwroot/vendor/datapicker/bootstrap-datepicker.js"></script>
+    <script src="~/wwwroot/vendor/toastr/toastr.min.js"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/wwwroot/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/WorkOrderSolutions13.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/CasosPQRMovil.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/Users.js"></script>
+
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Gestion de solicitudes</h1>
+</div>
+<form id="formCreate" method="post" enctype="multipart/form-data" data-idworkorder="@Model.IdWorkOrder" @*data-Template.IdTemplates="@Model.Template.IdTemplates"*@>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="m-0 font-weight-bold">ID de la solicitud: @Model.IdWorkOrder</h6>
+                </div>
+                <input type="text" value="@Model.IdWorkOrder" id="IdWorkOrderh2" hidden />
+                <div class="card-body backgroundBlue" style="padding-top: 10px;padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="font-weight-bold text-info">@Model.Title</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <p>
+                                <strong>Creado por: </strong>@Model.UsersCreate.FullName
+                                el @Model.DateLog
+                            </p>
+                        </div>
+
+                        <div class="col-md-3 text-right">
+                            @{if (Model.Template.IdTemplates == 12)
+                                {
+                                    <a id="btnAjuste" style="color: white" class="btn btn-danger" target="_blank" href="http://clarocolincidencias/">Ajustes</a>
+                                }
+                                else if (Model.Template.IdTemplates == 42)
+                                {
+                                    <a id="btnNegaLinea" style="color: white" class="btn btn-danger" href="~/AgentBinnacle/Index">Negación Linea</a>
+                                }
+                            }
+                        </div>
+
+
+                        <div class="col-md-2 text-right">
+                            <span class="badge badge-warning text-wrap" style="font-size: 100%;">Estado: <strong>@Model.Status.NameStatus</strong></span>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p>
+                                <strong>Asignado a: </strong>@Model.UsersAssigned.FullName
+                            </p>
+                        </div>
+                        <div class="col-md-3 text-right" style="top: 10px;">
+                            @if (ViewBag.TicketsRelacionados == true)
+                            {
+                                <a id="idmodalRelacionados" href="#" onclick="limpiarCampos();" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-icon-split badge badge-warning text-wrap" style="background-color: #2607a2 !important;">
+                                    <span class="badge badge-warning text-wrap" style="font-size: 100%;background-color: #2607a2 !important; top: 3px;">
+                                        <i class="fa fa-list"></i>
+                                    </span>
+                                    <span class="text">Tickets relacionados</span>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                    @if (Model.WorkOrderSolution.WorkOrderEscalations.IdWorkOrderEscalations != 0)
+                    {
+                        <div class="row">
+                            fuente
+                            <div class="col-md-9">
+                                <p>
+                                    <strong>Escalado a: </strong>@Model.UsersScaled.FullName
+                                    el @Model.WorkOrderSolution.WorkOrderEscalations.DateLog
+                                </p>
+                            </div>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><strong>Fecha de vencimiento:</strong> @Model.DateSAP</p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="card-body" style="padding-top: 10px;padding-bottom: 10px;">
+                    @{
+                        if (Model.Template.IdTemplates == 42)
+                        {
+                            @Html.Action("NegacionLinea_Alistamiento", "WorkOrderSolutions")
+                            @Html.Action("FieldsSolutions", Model)
+
+                        }
+                        else
+                        {
+                            @Html.Action("FieldsSolutions", Model)
+                        }
+                    }
+                </div>
+                <hr />
+                @Html.Action("ViewAttachments", Model.IdWorkOrder)
+                <hr />
+                @*<div class="card-body" style="padding-top: 10px;padding-bottom: 10px;">
+                        @{
+                            if (Model.Template.IdTemplates == 42)
+                            {
+                            <button type="button" class="btn btn-primary btn-icon-split" onclick="BtnGuardar_Ng()">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-flag"></i>
+                                </span>
+                                <span class="text">Guardar Cambios</span>
+                            </button>
+                            }
+                        }
+                    </div>*@
+                <div class="card-body" style="padding-top: 10px;padding-bottom: 10px;">
+                    <h5 class="font-weight-bold">Detalle de solicitud</h5>
+                </div>
+                <hr />
+                <div class="card-body">
+                    @Html.Partial("FieldsClients", Model)
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">Listado de casos PQR móvil escritas y verbales</h6>
+            </div>
+            <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnPrepago" onclick="ViewCasosPrepago13(this)">
+                <span class="icon text-white-50">
+                    <i class="fas fa-search"></i>
+                </span>
+                <span class="text">Prepago</span>
+            </button>
+            <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnPospago" onclick="ViewCasosPospago13(this)">
+                <span class="icon text-white-50">
+                    <i class="fas fa-search"></i>
+                </span>
+                <span class="text">Pospago</span>
+            </button>
+            <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnAscard" onclick="ViewCasosAscard13(this)">
+                <span class="icon text-white-50">
+                    <i class="fas fa-search"></i>
+                </span>
+                <span class="text">Ascard</span>
+            </button>
+            <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnCuotasAscard" onclick="ViewCasosCuotasAscard13(this)">
+                <span class="icon text-white-50">
+                    <i class="fas fa-search"></i>
+                </span>
+                <span class="text">Cuotas Ascard</span>
+            </button>
+            <button type="button" class="btn btn-primary btn-md btn-icon-split" id="BtnEliminacionCentrales" onclick="ViewCasosEliminacionCentrales13(this)">
+                <span class="icon text-white-50">
+                    <i class="fas fa-search"></i>
+                </span>
+                <span class="text">Eliminacion Centrales</span>
+            </button>
+            <div class="card-body">
+                <div id="DivBtnSave" class="form-group row"></div>
+                <div class="form-group row">
+                    <div class="table-responsive" id="divTableprepago13">
+
+                    </div>
+                    <div class="table-responsive" id="divTablepospago13">
+
+                    </div>
+                    <div class="table-responsive" id="divTableascard13">
+
+                    </div>
+                    <div class="table-responsive" id="divTableascard213">
+
+                    </div>
+                    <div class="table-responsive" id="divTableeliminar13">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@Html.Partial("ModalRelacionados", Model)
+

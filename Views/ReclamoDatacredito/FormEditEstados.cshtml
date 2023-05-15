@@ -1,0 +1,133 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.ReclamoDatacredito>
+@{ ViewData["Title"] = "Reclamo centrales de riesgo";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+@section Styles {
+    <link href="~/wwwroot/assets/css/stylesGeneral.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/chosen/component-chosen.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/wwwroot/vendor/datapicker/datepicker3.css" rel="stylesheet" />
+    <style type="text/css">
+        label {
+            margin-bottom: 0px !important;
+            margin-top: 0px !important;
+        }
+
+        hr {
+            margin: 0px;
+        }
+
+        #sortable, #sortableSolutions .col-md-3 {
+            cursor: pointer;
+        }
+
+        th, td {
+            white-space: nowrap;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="~/wwwroot/vendor/jquery-ui/jquery-ui.js?@(DateTime.Now.Ticks)"></script>
+    <script src="~/wwwroot/vendor/datapicker/bootstrap-datepicker.js?@(DateTime.Now.Ticks)"></script>
+    <script src="~/wwwroot/assets/js/Forms/UtilitiesJS.js?@(DateTime.Now.Ticks)"></script>
+    <script src="~/wwwroot/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="~/wwwroot/assets/js/Forms/JSReclamoDatacredito.js"></script>
+}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Cambio de estado</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <form id="formTemplate">
+                <div class="modal-body">
+                    <input type="hidden" id="HdIdInput" class="form-control" />
+                    <input type="hidden" id="HdSolutionField" class="form-control" />
+                    <div class="form-group row">
+
+                        @*<div class="col-md-4">
+                <label for="TxtNoReclamo">No reclamo</label>
+                <input type="text" id="TxtNoReclamo" value="@Model." class="form-control required" maxlength="100" />
+                <span id="TxtNoReclamo-error" class="text-danger inputError"></span>
+            </div>
+            <div class="col-md-4">
+                <label for="TxtNombre">Nombre</label>
+                <input type="text" id="TxtNombre" class="form-control required" maxlength="100" />
+                <span id="TxtNombre-error" class="text-danger inputError"></span>
+            </div>*@
+                        @*<div class="col-md-2 divFields divFieldsTypes3" style="display:none;">
+                <label for="TxtLongitudCampo">Longitud</label>
+                <input type="number" id="TxtLongitudCampo" disabled="disabled" class="noEdit form-control required" placeholder="Longitud Campo" maxlength="4" onkeypress="return solonumeros(event);" />
+            </div>*@
+                    </div>
+                    <div class="form-group row divFields divFieldsTypes5">
+                        <div class="col-md-12">
+                            <b id="msjListas"></b>
+                        </div>
+                    </div>
+
+                    <div class="form-group row divFields divFieldsTypes5">
+                        <div class="col-md-4" id="estado">
+                            <label for="DdlListDependent">Estado</label>
+                            <select id="est" class="form-control" onchange="cambio(this.value);">
+                                <option value=""> --Seleccionar-- </option>
+                                @foreach (var item1 in ViewBag.EstadoReclamo)
+                                {
+
+                    <option value="@item1.Text"> @item1.Text</option>}
+                            </select>
+                        </div>
+                        <div class="col-md-4" id="subestado">
+                            <label for="DdlItemDependent">SubEstado</label>
+                            <select id="subest" class="form-control hide">
+                                <option value=""> --Seleccionar-- </option>
+                                @foreach (var item1 in ViewBag.SubEst)
+                                {
+                    <option value="@item1.Text"> @item1.Text</option>}
+                            </select>
+                        </div>
+                    </div>
+                    @*<div class="form-group row divFields divFieldsTypes5" style="display:none;">
+            <div class="col-md-4">
+                <label for="TxtItemLista">Item de lista:</label>
+                <input type="text" id="TxtItemLista" onkeyup="ValidaItemListas(this.value)" class="form-control" placeholder="Item lista desplegable" maxlength="100" />
+                <span id="TxtItemLista-error" class="text-danger"></span>
+            </div>
+            <div class="col-md-2">
+                <button type="button" style="margin-top: 23px;" class="btn btn-success" title="Agregar" onclick="AddOptionItemListas();">
+                    <i class="fa fa-plus"></i>
+                    Agregar
+                </button>
+            </div>
+            <div class="col-md-4">
+                <label for="DdlItemLista">Eliminar item de esta lista:</label>
+                <select id="DdlItemLista" class="form-control">
+                    <option value="">--Seleccionar--</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button type="button" style="margin-top: 23px;" class="btn btn-danger" onclick="DeleteItemLista();">
+                    <i class="fa fa-trash-alt"></i>
+                    Eliminar
+                </button>
+            </div>
+        </div>*@
+                </div>
+   
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button id="BtnGuardarInput" type="button" class="btn btn-primary" onclick="GuardarEstado(this)">Guardar</button>
+                    <button id="BtnGuardarInput-load" class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@*@Html.Partial("ModalEditInput")*@

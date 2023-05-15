@@ -1,0 +1,13 @@
+﻿@model AIBTicketsMVC.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "Acceso denegado";
+}
+<div class="container-fluid">
+
+    <!-- 404 Error Text -->
+    <div class="text-center">
+        <div class="error mx-auto" data-text="404">@Model.TituloError</div>
+        <p class="lead text-gray-800 mb-5">@Model.DetalleError</p>
+        <p class="text-gray-500 mb-0">Si tienes dudas comunicate con tu superior o con el area de IT.</p>
+    </div>
+</div>

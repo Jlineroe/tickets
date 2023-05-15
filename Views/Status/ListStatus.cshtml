@@ -1,0 +1,68 @@
+﻿@model IEnumerable<AIBTicketsMVC.Models.StatusDefinition>
+<table id="TableGeneral" class="table table-sm table-bordered table-hover" style="width:100%;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Nombre Estado</th>
+            <th>Tipo estado</th>
+            <th>Sitio</th>
+            <th>Descripcion</th>
+            <th>Fecha Creacion</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            string inactivo = "", disabled="";
+            if (item.State == false)
+            {
+                inactivo = "table-danger";
+                disabled = "disabled";
+            }
+            <tr class="@inactivo">
+                <td>
+                    @if (item.Universal == false)
+                    {
+                        <div class="btn-group" role="group">
+                            <button onclick="SearchInforStatus(@item.IdStatusDefinition);" class="btn btn-sm btn-info BtnEdit">
+                                <i class="fas fa-edit fa-sm"></i>
+                                Editar
+                            </button>
+                            <button onclick="DeleteStatus(@item.IdStatusDefinition);" @disabled class="btn btn-sm btn-danger BtnDelete">
+                                <i class="fas fa-trash-alt fa-sm"></i>
+                                Desactivar
+                            </button>
+                        </div>
+                    }
+                </td>
+                <td>@item.NameStatus</td>
+                <td>@item.TypeAction.NameTypeAction</td>
+                <td>
+                    @if (item.Universal == false)
+                    {
+                        <div>
+                            @item.Sitio.NameSite
+                        </div>
+                    }
+                </td>
+                <td class="text-truncate" style="max-width: 400px;">
+                    @item.DescriptionStatus
+                </td>
+                <td>@item.DateLog</td>
+                <td>
+                    @if (item.State == true)
+                    {
+                        <span class="badge badge-success text-wrap" style="font-size: 100%;">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-danger text-wrap" style="font-size: 100%;">Inactivo</span>
+
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

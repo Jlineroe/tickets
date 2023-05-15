@@ -1,0 +1,115 @@
+﻿@model AIBTicketsMVC.Models.ListasDesplegables
+    <div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Categorias</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="HdIdCategory" />
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label for="TxtNameCategory">Nombre Categoria</label>
+                                <input type="text" id="TxtNameCategory" class="form-control required" @*onkeyup="VerifyNameCategory(this.value)"*@ placeholder="Nombre Categoria" maxlength="50" />
+                                <span id="TxtNameCategory-error" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="DdlGroups">Grupo a asignar</label>
+                                <select id="DdlGroups" class="form-control required">
+                                    <option value="">--Seleccionar--</option>
+                                    @foreach (var item in Model.Grupos)
+                                    {
+                                        <option value="@item.IdMasterGroups"> @item.NameGroup</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="DdlSitio">Sitio</label>
+                                <select id="DdlSitio" class="form-control required" onchange="ListTemplate(this.value)">
+                                    <option value="">--Seleccionar--</option>
+                                    @foreach (var item in Model.Sitios)
+                                    {
+                                        <option value="@item.IdMasterSites"> @item.NameSite</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="DdlEstado">Estado</label>
+                                <select id="DdlEstado" class="form-control" disabled>
+                                    <option value="1">Activo</option>
+                                    <option value="0">Inactivo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-7">
+                                <label for="TxtDescriptionGroup">Descripcion del grupo</label>
+                                <textarea id="TxtDescriptionGroup" class="form-control" placeholder="Descripcion" maxlength="500"></textarea>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="DdlPlantilla">Plantilla (opcional)</label>
+                                <select data-placeholder="Seleccione Plantilla..." class="chosen-select" id="DdlPlantilla" onchange="changeTemplates(this.value);">
+                                    <option value="">--Seleccionar--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label for="TxtSubCategoria">Agregar Sub Categorias:</label>
+                                <input type="text" id="TxtSubCategoria" maxlength="50" class="form-control" placeholder="Nombre Sub Categoria" @*onkeyup="VerifyNameSubCategoria(this.value)"*@ />
+                                <span id="TxtSubCategoria-error" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="TxtHorasSLA">Horas SLA:</label>
+                                <input type="number" id="TxtHorasSLA" class="form-control" placeholder="Horas SLA" onkeypress="return solonumeros(event);" />
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" style="margin-top: 23px;" class="btn btn-success" title="Agregar" onclick="AddOptionSubCategoria();">
+                                    <i class="fa fa-plus"></i>
+                                    Agregar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label for="DdlSubCategoria">Sub Categorias:</label>
+                                <select id="DdlSubCategoria" class="form-control" onchange="changeSubCategory(this.value);">
+                                    <option value="">--Seleccionar--</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 HorasSLA" style="display:none;">
+                                <label for="TxtEditHorasSLA">Horas SLA:</label>
+                                <input type="number" id="TxtEditHorasSLA" class="form-control" onkeypress="return solonumeros(event);" />
+                            </div>
+                            <div class="col-md-5">
+                                <button type="button" style="margin-top: 23px;display:none;" class="btn btn-info HorasSLA" onclick="UpdateSLASubCategoria();">
+                                    <i class="fa fa-edit"></i>
+                                    Editar SLA
+                                </button>
+                                <button type="button" style="margin-top: 23px;" class="btn btn-danger" onclick="DeleteSubCategoria();">
+                                    <i class="fa fa-trash-alt"></i>
+                                    Desactivar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md">
+                                <span class="text-info">Recuerda que al actualizar el SLA de una sub categoria el semaforo que tenga se desactivara y necesitaras parametrizarlo nuevamente.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-primary" id="BtnGuardar" value="Guardar" />
+                        <button class="btn btn-primary BtnLoading" type="submit" style="display:none;" disabled>
+                            <span class="spinner-border spinner-border-sm"></span>
+                            Loading...
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
